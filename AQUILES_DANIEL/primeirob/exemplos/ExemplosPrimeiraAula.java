@@ -21,7 +21,8 @@ public class ExemplosPrimeiraAula {
     // numero maior quebrado
     char letra = 'a';
     boolean verdadeiro = true;
-    
+    System.out.println(verdadeiro);
+
     System.out.println(letra);
 
     System.out.println("Informe sua idade amigo");
