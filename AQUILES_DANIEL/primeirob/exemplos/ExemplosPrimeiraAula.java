@@ -19,7 +19,11 @@ public class ExemplosPrimeiraAula {
     // numero quebrado
     double dolarDnv = 15.55d;
     // numero maior quebrado
-    // aguenta apenas uma letra
+    char letra = 'a';
+    boolean verdadeiro = true;
+    
+    System.out.println(letra);
+
     System.out.println("Informe sua idade amigo");
     Scanner input = new Scanner(System.in);
 
