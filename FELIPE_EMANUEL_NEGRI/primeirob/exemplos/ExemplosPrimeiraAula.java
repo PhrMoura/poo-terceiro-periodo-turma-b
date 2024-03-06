@@ -1,5 +1,7 @@
 package primeirob.exemplos;
 
+import java.util.Scanner;
+
 public class ExemplosPrimeiraAula {
     public static void main(String[] args) {
         
@@ -27,6 +29,14 @@ public class ExemplosPrimeiraAula {
 
         char letraA = 65;
         System.out.println("char: " + letraA);
+        
+        System.out.println("--------------------");
+
+        System.out.println("informe a sua idade");
+        Scanner input = new Scanner(System.in);
+        int idadeDois = input.nextInt();
+        System.out.println("Sua idade é: " + idadeDois);
+
     }
 
 
