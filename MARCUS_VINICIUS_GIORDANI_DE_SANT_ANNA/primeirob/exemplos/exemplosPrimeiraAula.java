@@ -1,5 +1,7 @@
 package primeirob.exemplos;
 
+//import java.util.Scanner;
+
 public class exemplosPrimeiraAula {
     public static void main(String[] args) {
 
@@ -20,9 +22,27 @@ public class exemplosPrimeiraAula {
         //long
 
         float valorProduto = 20.5f;
-        double valorTaxa = 0.3;
         System.out.println("float: " + valorProduto);
+        //float 
+        
+        double valorTaxa = 0.3;
         System.out.println("double: " + valorTaxa);
+        //double
+
+        char letraA = 65;
+        System.out.println("char: " + letraA);
+        //char
+
+        //System.out.println(idade> 18? É maior de idade});
+        //double
+
+        //Scanner input = new Scanner(System.in);
+        
+        //System.out.println("Informe sua idade:");
+        //int idadeDois = input.nextInt();    
+        //System.out.println("Sua idade é" + idadeDois);
     }
+
+
     
 }
