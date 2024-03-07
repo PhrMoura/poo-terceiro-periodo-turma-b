@@ -1,5 +1,7 @@
 package primeirob.Exemplos;
 
+import java.util.Scanner;
+
 public class ExemplosPrimeiraAula {
     public static void main(String[] args) {
 
@@ -7,6 +9,8 @@ public class ExemplosPrimeiraAula {
 
         byte parcela = 23;
         System.out.println("byte: " + parcela); // byte
+
+        System.out.println("----------------");
 
         short idade = 12;
         System.out.println("short: " + idade); //short
@@ -39,8 +43,18 @@ public class ExemplosPrimeiraAula {
         System.out.println("----------------");
 
         boolean isMaiorDeIdade = false;
+
         System.out.println("booleano: " + isMaiorDeIdade);
 
+        System.out.println(idade > 18 ? "É maior de idade": "Não é maior");
+
         System.out.println("----------------");
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Informe sua idade:");
+        int idadeDois = input.nextInt();
+        System.out.println("Sua idade é " + idadeDois);
+        input.close();
+        
     }
 }
