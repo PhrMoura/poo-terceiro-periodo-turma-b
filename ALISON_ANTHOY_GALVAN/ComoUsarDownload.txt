@@ -1,0 +1,1 @@
+Baixe o arquivo .bat e arraste para dentro dele arquivos que precisam de acesso de administrador para baixar.
