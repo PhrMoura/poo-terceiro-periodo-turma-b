@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class ExemplosPrimeiraAula {
     public static void main(String[] args) {
 
-        try (Scanner leitor = new Scanner(System.in)) {
-            int idade;
+        Scanner leitor = new Scanner(System.in);
+        
+        int idade;
 
-            System.out.println("Insira sua idade: ");
-            idade = leitor.nextInt();
-            
-            System.out.println("Sua idade é: " + idade);
-        }
+        System.out.println("Insira sua idade: ");
+        idade = leitor.nextInt();
+        
+        System.out.println("Sua idade é: " + idade);
 
 
         /*System.out.println("------------------------------------------------");
