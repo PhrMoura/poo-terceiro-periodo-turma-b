@@ -28,7 +28,9 @@ public class AtividadeUm {
         Scanner scanner = new Scanner(System.in);
         int opcao = input.nextInt();
 
-        if (opcao == 1) {
+        
+
+        if (opcao == 1) { 
             System.out.println("Valor total: " + subtotal);
         }
         if (opcao == 2) {
