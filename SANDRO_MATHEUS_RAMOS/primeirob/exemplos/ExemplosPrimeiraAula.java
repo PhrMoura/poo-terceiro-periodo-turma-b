@@ -40,6 +40,7 @@ public class ExemplosPrimeiraAula {
         System.out.println("Informe sua idade");
         int idadeDois = input.nextInt();
         System.out.println("Sua idade é" + idadeDois);
+        input.close();
     }
 
 }
