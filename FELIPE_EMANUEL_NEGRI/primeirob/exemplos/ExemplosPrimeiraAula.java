@@ -36,7 +36,7 @@ public class ExemplosPrimeiraAula {
         Scanner input = new Scanner(System.in);
         int idadeDois = input.nextInt();
         System.out.println("Sua idade é: " + idadeDois);
-
+        
     }
 
 
