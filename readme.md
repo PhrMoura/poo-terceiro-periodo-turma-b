@@ -46,7 +46,7 @@ BUSCAR POR Gerenciador de Credenciais no windows e remover o acesso dado ao GIT
 
 3º Então será criado o repo no seu git com base no fork do repo principal
 
-![Fork_pt_03](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-b/assets/61207420/23b2c306-cacb-4439-aa72-28eb3c8efad3)
+![Fork_pt_03](https://github.com/Sandrolaxx/frostNext/assets/61207420/cbe8b4ce-4ac4-4421-8f7b-7edbea6aab0b)
 
 ### 4º ⚠ATENÇÃO⚠ - Criar pasta com Snake Case 
 Irá fazer o clone do repositorio localmente, adicionar uma pasta com **SEU_NOME**, isso mesmo com snake case, exemplo "Roberto_Faria", e irá adicionar outra pasta chamada `aula` com um arquivo dentro, IRÁ fazer o **commit** para o repositorio com as suas alterações, ficando como a imagem abaixo
@@ -63,7 +63,7 @@ Irá fazer o clone do repositorio localmente, adicionar uma pasta com **SEU_NOME
 
 7º Nesse passo você adiciona um pequeno descrivo do que você realizou. Ao final clicar em "Create pull request".
 
-![Fork_pt_07](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-b/assets/61207420/86dde404-55cc-4174-a863-50c61aa392ea)
+![Fork_pt_07](https://github.com/Sandrolaxx/frostNext/assets/61207420/24661c15-e838-45c9-b61b-b0cc120d5018)
 
 8º Feito!🥳🎉 A partir daqui seu pull request já está aberto e pronto para, se tudo correto, ser realizado o merge de suas alterações no projeto principal.
 ![Fork_pt_08](https://github.com/Sandrolaxx/frostNext/assets/61207420/604aed94-78b8-4400-a83c-c127f5341335)
