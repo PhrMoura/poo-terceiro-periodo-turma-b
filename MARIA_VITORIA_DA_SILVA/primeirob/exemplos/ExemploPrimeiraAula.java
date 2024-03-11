@@ -30,7 +30,6 @@ public class ExemploPrimeiraAula {
         System.out.println("boolean: " + ehMaiorDeIdade);//boolean
 
         System.out.println("-------------------");
-
         Scanner input = new Scanner(System.in);
 
         System.out.println("Informe sua idade: ");
