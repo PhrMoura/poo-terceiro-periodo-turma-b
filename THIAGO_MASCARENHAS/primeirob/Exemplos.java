@@ -1,4 +1,4 @@
-package primeirob;
+
 
 import java.util.Scanner;
 
