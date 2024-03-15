@@ -12,8 +12,6 @@ public class ExemploSegundaAula {
                 System.out.println("É menor que dez");
             }
         
-          
-
             int[] vetor1;
             int[] vetor2 = new int[2];
             int[] vetor3 = new int[] {23,45,72};
