@@ -60,7 +60,7 @@ public class floricultura {
                 return i;
             }
         }
-        return -1; // Retorna -1 se não houver espaço disponível no array
+        return -1;
     }
 
     public static void exibirRegistroVendas() {
