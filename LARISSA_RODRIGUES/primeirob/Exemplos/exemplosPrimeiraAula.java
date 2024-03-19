@@ -1,6 +1,8 @@
 package primeirob.Exemplos;
+import java.util.Scanner;
 
 public class exemplosPrimeiraAula {
+
     public static void main(String[] args) {
         System.out.println("----- Números inteiros -----");
 
@@ -28,12 +30,24 @@ public class exemplosPrimeiraAula {
         
         System.out.println("----- Letras -----");
 
-        char letraA = 'A'; //aspas simples
+        char letraA = 'A'; //aspas simples, 1 caracter
         System.out.println("char: " + letraA); //print do char
 
         boolean isMaiorDeIdade = idade > 18; //verdadeiro ou falso
         System.out.println("boolean: " + isMaiorDeIdade); //print do boolean
 
 
+        System.out.println("----- Operador ternário -----"); //substitui o if simples
+
+        System.out.println(idade > 18 ? "É maior de idade." : "Não é maior de idade."); //condição ? true : false
+
+
+        System.out.println("----- Classe Scanner -----");
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Informe sua idade:");
+        int idadeDois = input.nextInt();
+        System.out.println("Sua idade é: " + idadeDois);
+        input.close();
     }
 }
