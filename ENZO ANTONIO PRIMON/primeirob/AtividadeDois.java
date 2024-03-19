@@ -7,6 +7,7 @@ public class AtividadeDois {
 
         Scanner leitor = new Scanner(System.in);
         int opcao = 0;
+        int i = 0;
 
         int produtosVetor[] = new int[99];
         double descontoVetor[] = new double[99];
@@ -14,7 +15,6 @@ public class AtividadeDois {
 
         while (opcao != 4) {
 
-            int i = 0;
 
             System.out.println("Calculadora da Dona Gabrielinha");
             System.out.println("Insira 1 para calcular o valor total da compra");
@@ -47,6 +47,7 @@ public class AtividadeDois {
                         System.out.println("O valor total da compra é de: " + valorTotal + " reais");
 
                         valorTotalVetor[i] = valorTotal;
+                        descontoVetor[i] = 0;
                     }
 
                     break;
