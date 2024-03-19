@@ -61,16 +61,17 @@ public class AttDois {
                         System.out.println("O preço com desconto foi de:" + arrayPreco[i]);
                     }
                     break;
-
+                   
                 default:
                     System.out.println("Opção não válida");
                     break;
-            }
 
+            }
+            menu.close();
         }
 
         System.exit(0);
-
+       
     }
 
 }
