@@ -1,3 +1,5 @@
+package primeirob.exemplos;
+
 import java.io.ObjectInputFilter.Status;
 import java.util.Scanner;
 
