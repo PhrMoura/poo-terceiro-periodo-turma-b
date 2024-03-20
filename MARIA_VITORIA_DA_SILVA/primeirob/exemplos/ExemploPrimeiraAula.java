@@ -1,4 +1,4 @@
-package primeirob.exemplos;
+ /*package primeirob.exemplos;
 
 import java.util.Scanner;
 
@@ -29,12 +29,12 @@ public class ExemploPrimeiraAula {
         boolean ehMaiorDeIdade = true;
         System.out.println("boolean: " + ehMaiorDeIdade);//boolean
 
-        System.out.println("-------------------");
-        Scanner input = new Scanner(System.in);
+       System.out.println("-------------------");
+        Scanner input = new Scanner(System.in); 
 
         System.out.println("Informe sua idade: ");
         int idadeDois = input.nextInt();
         System.out.println("Idade informada: " + idadeDois);
         
     }
-}
+}*/
