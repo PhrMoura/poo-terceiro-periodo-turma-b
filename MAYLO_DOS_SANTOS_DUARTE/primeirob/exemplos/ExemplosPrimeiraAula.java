@@ -68,6 +68,8 @@ public class ExemplosPrimeiraAula {
         idade = leitor.nextInt(); // Solicitando a Entrada de Dados
 
         System.out.println("Sua idade é: " + idade);
+
+        leitor.close();
     }
     
 }

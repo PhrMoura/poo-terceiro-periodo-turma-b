@@ -31,5 +31,8 @@ public class Atividade02 {
             System.out.println("O cliente ainda deve: " + (resultado) + " reais");
         }
         System.out.println("~~~~~~~~~~~~~~~~~~~~");
+
+        total_input.close();
+        valor_pago_input.close();
     }
 }
