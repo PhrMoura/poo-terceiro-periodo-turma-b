@@ -5,53 +5,23 @@ import java.util.Scanner;
 public class ExemplosPrimeiraAula {
     public static void main(String[] args) {
 
-        Scanner leitor = new Scanner(System.in);
+        Scanner scanner  = new Scanner(System.in);
+
+        int[] vetor1;
+        int[] vetor2 = new int[2];
+        int[] vetor3 = new int[] { 13, 14, 15 };
+        int[] vetor4 = vetor2; // Se o vetor 2 for alterado o vetor 4 também será alterado.
         
-        int idade;
+        vetor2[0] = 15;
 
-        System.out.println("Insira sua idade: ");
-        idade = leitor.nextInt();
+        //System.out.println(vetor1);
+        System.out.println(vetor2[0]);
+        System.out.println(vetor3[2]);
         
-        System.out.println("Sua idade é: " + idade);
+        String[] palavras = new String[] { "a", "b", "c" };
 
-
-        /*System.out.println("------------------------------------------------");
-
-        byte covid = 19;
-        //Tipos de numeros, só consegue dar run se tiver valor.
-        System.out.println("byte: " + covid);
-
-        short generos = 2;
-        System.out.println("gêneros: " + generos);
-
-        int population = 24658;
-        System.out.println("População de Ubiratã: " + population);
-
-        long phone = 1240028922l;
-        //Em valores com long, colocar l no final.
-        System.out.println("Telefone: " + phone);
-
-        System.out.println("------------------------------------------------");
-
-        float pi = 3.14f;
-        //" " Por f no final
-        System.out.println("Pi: " + pi);
-
-        double preco = 14.9d;
-        //" " Por D no final
-        System.out.println("Preço: " + preco);
-        
-        System.out.println("------------------------------------------------");
-
-        char letraA = 'A';
-        System.out.println("Letra: " + letraA);
-
-        System.out.println("------------------------------------------------");
-
-        boolean habilitado = true;
-        System.out.println("Habilitado: " + habilitado);
-
-        System.out.println("------------------------------------------------");
-        */
+        System.out.println(palavras[0]);
+        System.out.println(palavras[1]);
+        System.out.println(palavras[2]);
     }
 }
