@@ -21,6 +21,7 @@ public class Atividade03 {
             System.out.println("");
             Scanner action_input = new Scanner(System.in);
             String action = action_input.nextLine();
+            // action_input.close();
 
             switch (action) {
                 case "1":
@@ -42,6 +43,8 @@ public class Atividade03 {
             }
             System.out.println("");
             System.out.println("==================");
+
+            action_input.close();
         }
     }
     static void calcularPrecoTotal () {
@@ -49,19 +52,25 @@ public class Atividade03 {
         System.out.println("Quantidade de Plantas x Vendidas: ");
         Scanner qtd_input = new Scanner(System.in);
         int qtd = qtd_input.nextInt();
+        // qtd_input.close();
         System.out.println("~~~~~~~~~~~~~~~~~~~~");
         System.out.println("Preço de cada Planta x: ");
         Scanner valor_input = new Scanner(System.in);
         float valor = valor_input.nextFloat();
+        // valor_input.close();
         float total = qtd * valor;
         System.out.println("~~~~~~~~~~~~~~~~~~~~");
         System.out.println("Valor Total (qtd de plantas vendidas * preço da planta): " + total);
+        
+        qtd_input.close();
+        valor_input.close();
     }
     static void calcularTroco () {
         System.out.println("Aplicação 'Calculadora de Troco' Selecionada ");
         System.out.println("Valor total da compra: ");
         Scanner total_input = new Scanner(System.in);
         float total = total_input.nextFloat();
+
         System.out.println("~~~~~~~~~~~~~~~~~~~~");
         System.out.println("Valor pago pelo cliente: ");
         Scanner valor_pago_input = new Scanner(System.in);
@@ -75,6 +84,11 @@ public class Atividade03 {
         } else if (resultado > 0) {
             System.out.println("O cliente ainda deve: " + (resultado) + " reais");
         }
-        System.out.println("~~~~~~~~~~~~~~~~~~~~");
+        System.out.println
+        ("~~~~~~~~~~~~~~~~~~~~");
+
+        total_input.close();
+        valor_pago_input.close();
+
     }
 }
