@@ -23,8 +23,8 @@ public class TerceiraAula {
         for (int linha = 0; linha < matriz.length; linha++) {
             for (int coluna = 0; coluna < matriz[linha].length; coluna++) {
                 System.out.println(matriz[linha][coluna]);
-        }
-        System.out.println();
+            }
+            System.out.println();
     }
     
 }
