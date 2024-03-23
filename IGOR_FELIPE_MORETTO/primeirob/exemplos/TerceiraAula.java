@@ -24,8 +24,9 @@ public class TerceiraAula {
             for (int coluna = 0; coluna < matriz[linha].length; coluna++) {
                 System.out.println(matriz[linha][coluna]);
             }
+        
             System.out.println();
-    }
+        }
     
 }
 }

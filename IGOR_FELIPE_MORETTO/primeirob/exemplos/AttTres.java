@@ -17,13 +17,14 @@ public class AttTres {
         System.out.println("Olá Dona Gabrielinha, me informe que dia e mês estamos, por gentileza?");
                     Scanner demo1 = new Scanner(System.in);
                     System.out.print("Dia: ");
-                    int dia = demo1.nextInt();
+                    linha = demo1.nextInt();
                     System.out.print("Mês: ");
-                    int mes = demo1.nextInt();
+                    coluna = demo1.nextInt();
+                    matrizData[linha][coluna] = true;
                     
-        while (num != 3) {
-            do {  
-            System.out.println("\nMenu\n [1] Calcular Preço Total\n [2] Calcular Troco\n [3] Sair\n [4] Registro de vendas\n [5] Finalizar o código");
+        while (num != 5) {
+            
+            System.out.println("\nMenu\n [1] Calcular Preço Total\n [2] Calcular Troco\n [3] Ir para outro dia\n [4] Registro de vendas\n [5] Sair");
 
             Scanner demo = new Scanner(System.in);
 
@@ -46,7 +47,6 @@ public class AttTres {
                 contMenu++;
                 vetor[posicao] = quantPlanta;
                 vetorPreco[posicao] = precoTotal;
-                matrizData[dia][mes] = true;
                 posicao++;
             }
             if (num == 2) {
@@ -58,41 +58,33 @@ public class AttTres {
             if (num == 3) {
                 System.out.println("Olá Dona Gabrielinha, me informe que dia e mês estamos, por gentileza?");
                 System.out.print("Dia: ");
-                dia = demo1.nextInt();
+                linha = demo1.nextInt();
                 System.out.print("Mês: ");
-                mes = demo1.nextInt();
-                matrizData[dia][mes] = true;
-                
+                coluna = demo1.nextInt();
+                matrizData[linha][coluna] = true;
             }
 
             if (num == 4) {
                 System.out.println("Consulta de Vendas");
                 System.out.print("Digite o dia: ");
-                dia = demo1.nextInt();
+                linha = demo1.nextInt();
                 System.out.print("Digite o mês: ");
-                mes = demo1.nextInt();
+                coluna = demo1.nextInt();
 
-                System.out.println("Vendas do dia " + dia + " do mês " + mes + ":");
+                System.out.println("Vendas do dia " + linha + " do mês " + coluna + ":");
                 
-                    for (int i = 0; i < contMenu; i++) {
-                        System.out.println("Quantidade de planta vendida: " + vetor[i]);
-                        System.out.println("Valor total da venda: " + vetorPreco[i]);
-                        System.out.println("Desconto aplicado: " + vetorDesconto[i]);
-                        }
-                
+                        for (int i = 0; i < contMenu; i++) {
+                            System.out.println("Quantidade de planta vendida: " + vetor[i]);
+                            System.out.println("Valor total da venda: " + vetorPreco[i]);
+                            System.out.println("Desconto aplicado: " + vetorDesconto[i]);
+                            }
                     
                 }
             
             if (num == 5){
-            
+                System.out.println("Saindo...");
             }
 
-        } while (coluna < matrizData[linha].length);
-        coluna = 1;
-        linha++;
-        // fim do do-while
-        
-        
     } // fim do while
 
     System.exit(5); 
