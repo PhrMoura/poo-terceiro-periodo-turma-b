@@ -2,22 +2,28 @@ package primeirob;
 
 import java.util.Scanner;
 
-public class AtividadeDois {
+public class atividade3 {
     public static void main(String[] args) {
 
         Scanner leitor = new Scanner(System.in);
         int opcao = 0;
-        int i = 0;
 
-        int produtosVetor[] = new int[99];
-        double descontoVetor[] = new double[99];
-        double valorTotalVetor[] = new double[99];
+        int mes;
+        int dia;
+        double valorTotal;
+
+
+        // int produtosVetor[] = new int[99];
+        // double descontoVetor[] = new double[99];
+        // double valorTotalVetor[] = new double[99];
+
+        double[][] mesesDias = new double[12][30];
 
         while (opcao != 4) {
 
 
             System.out.println("Calculadora da Dona Gabrielinha");
-            System.out.println("Insira 1 para calcular o valor total da compra");
+            System.out.println("Insira 1 para registrar a compra ");
             System.out.println("Insira 2 para calcular o troco");
             System.out.println("Insira 3 para visualizar histórico de compras");
             System.out.println("Insira 4 para sair");
@@ -26,30 +32,27 @@ public class AtividadeDois {
 
             switch (opcao) {
                 case 1:
+                    System.out.println("Insira o mês e o dia respectivamente.");
+                    mes = leitor.nextInt();
+                    dia = leitor.nextInt();
+
                     System.out.println("Insira o numero de produtos comprados");
                     int produtos = leitor.nextInt();
-
-                    produtosVetor[i] = produtos;
-
+            
                     System.out.println("Insira o valor dos produtos");
                     double valor = leitor.nextDouble();
 
                     if (produtos > 10) {
-                        double valorTotal = (produtos * valor) * 0.05;
+                        valorTotal = (produtos * valor) * 0.05;
                         System.out.println(
                                 "A compra teve desconto de 5%. O valor total da compra é de: " + valorTotal + " reais");
 
-                        valorTotalVetor[i] = valorTotal;
-                        descontoVetor[i] = (produtos * valor) - valorTotal;
-
                     } else {
-                        double valorTotal = produtos * valor;
+                        valorTotal = produtos * valor;
                         System.out.println("O valor total da compra é de: " + valorTotal + " reais");
-
-                        valorTotalVetor[i] = valorTotal;
-                        descontoVetor[i] = 0;
                     }
 
+                    mesesDias[mes - 1][dia - 1] += valorTotal;
                     break;
 
                 case 2:
@@ -66,17 +69,12 @@ public class AtividadeDois {
                     break;
 
                 case 3:
-                    for (int j = 0; j < 100; j++) {
-                        if (produtosVetor[j] == 0) {
-                            break;
-                        } else {
-                            System.out.println("-----------------");
-                            System.out.println("Produtos comprados " + produtosVetor[j]);
-                            System.out.println("Produtos valor total da compra: " + valorTotalVetor[j]);
-                            System.out.println("Desconto da compra: " + descontoVetor[j]);
-                            System.out.println("-----------------");
-                        }
-                    }
+                    System.out.println("Insira o mes e dia para pesquisa de valor");
+
+                    mes = leitor.nextInt();
+                    dia = leitor.nextInt();
+
+                    System.out.println("Vendas totais do dia selecionado: " + mesesDias[mes - 1][dia - 1]);
 
                     break;
 
@@ -86,7 +84,6 @@ public class AtividadeDois {
                 default:
                     break;
             }
-            i++;
         }
         leitor.close();
     }
