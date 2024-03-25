@@ -24,5 +24,8 @@ public class Atividade01 {
         float total = qtd * valor;
         System.out.println("~~~~~~~~~~~~~~~~~~~~");
         System.out.println("Valor Total (qtd de plantas vendidas * preço da planta): " + total);
+
+        qtd_input.close();
+        valor_input.close();
     }
 }
