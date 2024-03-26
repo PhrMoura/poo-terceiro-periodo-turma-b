@@ -42,7 +42,7 @@ public class lista3 {
 
             switch (usuario) {
                 case 1:
-                System.out.println("Entre com o mês e o dia");
+                System.out.println("Entre com o mês");
                 mes = entrada.nextInt();
                 int mesCorreto = mes -1;
 
