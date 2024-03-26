@@ -6,13 +6,13 @@ public class Lojinha {
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
 
-    int escolha = 0;
-    int totalVendas = 0;
+    int escolha = 0, totalVendas = 0;
     int plantasVendidas[] = new int[100];
     double valorDaVenda[] = new double[100];
     double descontoAplicado[] = new double[100];
+    double matriz[][] = new double[30][12];
 
-    while (escolha != 5) {
+    while (escolha != 7) {
       System.out.println("|-----------------------------------------------|");
       System.out.println("|   Bem vindo a vendinha da Dona Gabrielinha!   |");
       System.out.println("|-----------------------------------------------|");
@@ -57,9 +57,13 @@ public class Lojinha {
       System.out.println("[ 2 ] Calcular troco");
       System.out.println("[ 3 ] Registro de vendas");
       System.out.println("[ 4 ] Fazer uma nova compra");
-      System.out.println("[ 5 ] Sair da loja");
+      System.out.println("[ 5 ] Alocar valor em um dia do mês");
+      System.out.println("[ 6 ] Pesquisar total do dia em um mês");
+      System.out.println("[ 7 ] Sair da loja");
 
       escolha = input.nextInt();
+      int dia = 0, mes = 0;
+
       switch (escolha) {
         case 1:
           System.out.println("Preço total dessa compra: " + valorTotal);
@@ -76,6 +80,20 @@ public class Lojinha {
         case 4:
           break;
         case 5:
+          System.out.println("Coloque o dia:");
+          dia = input.nextInt();
+          System.out.println("Coloque o mês:");
+          mes = input.nextInt();
+          matriz[dia][mes] += valorTotal;
+          break;
+        case 6:
+          System.out.println("Coloque o dia:");
+          dia = input.nextInt();
+          System.out.println("Coloque o mês:");
+          mes = input.nextInt();
+          System.out.println("Total de valor vendido nesse dia é: " + matriz[dia][mes]);
+          break;
+        case 7:
           System.out.println("Volte sempre !");
           break;
         default:
