@@ -1,4 +1,4 @@
-package primeirob;
+package exemplos;
 
 public class exemplos5 {
     public static void main(String[] args) {
