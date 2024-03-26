@@ -5,7 +5,8 @@ import java.util.Scanner;
 
 public class Atividade01 {
     public static void main(String[] args) {
-        double[][] matrizVendas = fillMatriz();         
+        double[][] matrizVendas = new double[12][30];
+        matrizVendas = fillMatriz(matrizVendas);         
 
         buscarValores(matrizVendas);
     }
