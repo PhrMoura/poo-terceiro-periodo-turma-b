@@ -1,10 +1,10 @@
-package primeirob;
+package atividades;
 
 import java.util.Scanner;
 
-public class AtividadeUm {
+public class Atividade1 {
     public static void main(String[] args) {
-        
+
         System.out.println("Calculadora da Dona Gabrielinha");
         System.out.println("Insira 1 para calcular o valor total da compra");
         System.out.println("Insira 2 para calcular o troco");
@@ -17,14 +17,14 @@ public class AtividadeUm {
             case 1:
                 System.out.println("Insira o numero de produtos comprados");
                 int produtos = leitor.nextInt();
-                
+
                 System.out.println("Insira o valor dos produtos");
                 double valor = leitor.nextDouble();
 
                 double valorTotal = produtos * valor;
                 System.out.println("O valor total da compra é de: " + valorTotal + " reais");
                 break;
-            
+
             case 2:
                 System.out.println("Insira o valor dado pelo cliente");
                 double valorCliente = leitor.nextDouble();
@@ -36,14 +36,15 @@ public class AtividadeUm {
 
                 System.out.println("O troco é de: " + troco + " reais");
 
-                break; 
-            
+                break;
+
             case 3:
                 System.out.println("Fechando a aplicação");
                 break;
+
             default:
                 break;
         }
-            leitor.close();
+        leitor.close();
     }
 }
