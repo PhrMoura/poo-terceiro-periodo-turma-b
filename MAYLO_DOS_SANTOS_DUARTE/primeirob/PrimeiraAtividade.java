@@ -14,8 +14,7 @@ public class PrimeiraAtividade {
         Scanner leitor = new Scanner(System.in);
         int opcao = leitor.nextInt();
         
-        switch(opcao) 
-        {
+        switch(opcao) {
             case 1:
                 System.out.print("Insira a quantidade de plantas compradas: ");
                 int quantidadePlantas = leitor.nextInt();
@@ -26,7 +25,6 @@ public class PrimeiraAtividade {
 
                 System.out.println("O valor total da compra é: " + valorTotal);
                 break;
-
             case 2:
                 System.out.print("Insira o valor do pagamento do cliente: ");
                 double valorPagamento = leitor.nextDouble();
@@ -37,7 +35,7 @@ public class PrimeiraAtividade {
 
                 System.out.println("O valor do troco do cliente: " + troco);
                 break;
-
+                
              case 3:
                 System.out.println("Encerrando o sistema...");
                 break;
