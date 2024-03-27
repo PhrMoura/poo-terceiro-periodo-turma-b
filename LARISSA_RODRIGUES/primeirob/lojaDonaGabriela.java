@@ -5,7 +5,7 @@ public class LojaDonaGabriela {
     public static void main(String[] args) {
         int opcao = 0;
         Scanner input = new Scanner(System.in);
-        double[][] matriz = new double[11][29];
+        double[][] matriz = new double[13][31];
 
         do {
             System.out.println("Bem vindo(a) à floricultura da dona Gabriela!");
@@ -50,7 +50,7 @@ public class LojaDonaGabriela {
                 System.out.println("Insira o valor da venda:");
                 valorTotal = input.nextDouble();
                 matriz[mes][dia] = valorTotal;
-                System.out.println("Valor registrado na data " + dia + "/" + mes + ": R$" + matriz[mes][dia] + "\n\n");
+                System.out.println("\nValor registrado na data " + dia + "/" + mes + ": R$" + matriz[mes][dia] + "\n\n");
                 break;
 
                 case 4:
@@ -58,7 +58,7 @@ public class LojaDonaGabriela {
                 mes = input.nextInt();
                 System.out.println("Insira o dia da venda registrada:");
                 dia = input.nextInt();
-                System.out.println("Valor registrado na data " + dia + "/" + mes + ": R$" + matriz[mes][dia] + "\n\n");
+                System.out.println("\nValor registrado na data " + dia + "/" + mes + ": R$" + matriz[mes][dia] + "\n\n");
                 break;
     
                 case 5:
@@ -69,7 +69,6 @@ public class LojaDonaGabriela {
                 System.out.println("\nOpção inválida.");
                 break;
             }
-
         } while (opcao != 5);
         input.close();
     }
