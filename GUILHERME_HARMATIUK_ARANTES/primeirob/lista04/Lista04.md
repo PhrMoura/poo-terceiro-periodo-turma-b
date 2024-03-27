@@ -6,6 +6,10 @@ Exemplo: Progração orientada a objetos
 
 
 ## Abordagens
+Podem ser "Imperativas" ou ""Declarativas"
+
+![alt text](./assets/Group-80-1-1.png)
+
 ### Paradigma Imperativo
 Diz ao computador linha á linha oq deve ser feito. Coisa bem específica.
 
@@ -36,31 +40,33 @@ Dá uma instrução á máquina e a máquina irá fazer o trabalho.
     - Se importa somente com o resultado.
     - Num `select * from tabela`, você não se importaria de como os resultados seriam buscados, o algoritmo de busca, etc. Você só quer os resultados.
 
-
+> Exemplo:
+```
 Fato = Pai("Weber", "Roberto")
 
-Pai("Weber", y) -> y = "Roberto"
-Pai("Weber", "Isabela") ? = false 
-
-
+Teste: Pai("Weber", y) -> y = "Roberto"
+Teste: Pai("Weber", "Isabela") ? = false 
+```
 
 
 
 
 ---
-
 ## Programação Orientada a Objetos:
+
+![teste](./assets/images.png)
+
 Útil para que humanos possam ler e entender código mais fácil.
 Tornar código mais legível.
 
 ### Pilares 
-- Herança: Criação de novos classes com base em classes existentes
-- Polimorfismo: Polimorfismo
-- Encapsulamento: 
-- Abstração
+- **Herança:** Criação de novos classes com base em classes existentes (permite que você compartilhe propriedades e métodos entre classes);
+- **Polimorfismo:** permite que você trate objetos de classes diferentes de maneira uniforme, tornando seu código mais flexível e extensível;
+- **Encapsulamento:** a ideia de que cada objeto deve manter a integridade de seus dados, garantindo que estes sejam acessados apenas por meio de métodos específicos da classe 
+- **Abstração:** é a capacidade de ocultar detalhes irrelevantes ou complexos de um problema e focar nos aspectos essenciais.
 
 ### Benefícios:
-- Reutilização do Còdigo
-- Modularidade: A POO incentiva a divisão do código em módulos independentes.
-- Flexibilidade e escalabildiade: uma classe de 9000 linhas não deve existir na POO. Deve ser quebrada em múltiplas classes e feita aí.
-- Organização e coesão do código
+- **Reutilização do Còdigo:** prevente a repetição de código que podria ser reutilizado.
+- **Modularidade:** A POO incentiva a divisão do código em módulos independentes.
+- **Flexibilidade e Escalabildiade:** uma classe de 9000 linhas não deve existir na POO. Deve ser quebrada em múltiplas classes e feita aí.
+- **Organização e Coesão do Código**

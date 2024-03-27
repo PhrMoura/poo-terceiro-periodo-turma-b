@@ -32,7 +32,7 @@ public class AtividadeExtra {
                     adicionarVenda(list);
                     break;
                 case 2:
-                    System.out.println(calcularTotal(list));
+                    calcularTotal(list);
                     break;
                 case 3:
                     break;
@@ -44,10 +44,22 @@ public class AtividadeExtra {
 
     public static double calcularTotal(List<Double> list) {
         double sum = 0;
-        Iterator<Double> it = list.iterator();
+
+        // Primeira Maneira:
         sum = list.stream()
-            .collect(Collectors.summingDouble(Double::doubleValue))
-        ;
+            .collect(Collectors.summingDouble(Double::doubleValue));
+        System.out.println(sum);
+
+        // Segunda Maneira:
+        sum = list.stream()
+            .mapToDouble(Double::valueOf).sum();
+        System.out.println(sum);
+
+        // Terceira Maneira:
+        sum = list.stream()
+            .reduce(0.0, Double::sum);
+        System.out.println(sum);
+
         return sum;
     }
 
