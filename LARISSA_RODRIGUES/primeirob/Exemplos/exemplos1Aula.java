@@ -1,7 +1,7 @@
 package primeirob.Exemplos;
 import java.util.Scanner;
 
-public class exemplos1Aula {
+public class Exemplos1Aula {
 
     public static void main(String[] args) {
         System.out.println("----- Números inteiros -----");

@@ -1,6 +1,6 @@
 package primeirob.Exemplos;
 
-public class exemplos2Aula {
+public class Exemplos2Aula {
     public static void main(String[] args) {
         
         int contador = 9;
