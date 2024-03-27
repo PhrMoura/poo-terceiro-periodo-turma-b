@@ -1,4 +1,4 @@
-package primeirob.Exemplos;
+package primeirob.Atividade;
 
 
 import java.util.Scanner;
@@ -20,7 +20,7 @@ static int numeroDeVendas = 0;
 
 
                 Scanner input = new Scanner(System.in);
-                System.out.println("Selecione a opção: 1, 2 ou 3");
+                System.out.println("Selecione a opção: 1, 2, 3 ou 4");
                 int escolha = input.nextInt();
 
 
