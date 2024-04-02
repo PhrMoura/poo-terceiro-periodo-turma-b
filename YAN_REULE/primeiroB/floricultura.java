@@ -1,7 +1,7 @@
 package poo;
 
 import java.util.Scanner;
-
+ 
 public class floricultura {
     static int numDias = 30;
     static int numMeses = 12;
