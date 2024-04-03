@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ExemplosPrimeiraAula {
     
     public static void main(String[] args) {
-        
+
         byte parcela = 23;
         System.out.println("byte: " + parcela);
         
