@@ -30,7 +30,7 @@ Teve sua criação da decada de 1970 por Alan Kay. Se baseia na criação de obj
 
 ## Pilares do Java: 
 
-- Herança: NOvas classes com bases nas classes existentes
+- Herança: Novas classes com bases nas classes existentes
 - Polimorfimo: Capacidade de se passar por outro.
 - Encapsulamento: Gerenciamento de acesso a atributos e metodos.
 - Abstração: Representação de conceitos do mundo real.
