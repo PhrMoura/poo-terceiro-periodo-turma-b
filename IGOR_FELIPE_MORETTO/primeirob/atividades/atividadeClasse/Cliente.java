@@ -8,11 +8,14 @@ public class Cliente {
     String cidade;
     String bairro;
     String rua;
-    @Override
-    public String toString() {
-        return "Cliente [nome=" + nome + ", idade=" + idade + "]";
-    }
-
     
+    public void apresentarse() {
+        String msg = "Sou o cliente "
+        .concat(nome)
+        .concat(" e tenho " + idade)
+        .concat(" anos");
+
+        System.out.println(msg);
+    }
 
 }
