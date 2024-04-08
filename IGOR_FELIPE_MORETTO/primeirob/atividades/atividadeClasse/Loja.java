@@ -1,4 +1,4 @@
-package primeirob.atividades.atividadeClasse;
+package primeirob.atividades.atividadeclasse;
 
 public class Loja {
     
@@ -8,23 +8,29 @@ public class Loja {
     String cidade;
     String bairro;
     String rua;
-    int[] contarCliente = new int[99];
-    int[] contarVendedores = new int[99];
+    int contadorCliente = 0;
+    int contadorVendedor = 0;
+
+    public void contarClientes(){
+        System.out.println("A quantidade de clientes é " + contadorCliente);
+    }
+    public void contarVendedores(){
+       System.out.println("A quantidade de vendedores é " + contadorVendedor);
+    }
+    
     
     public void apresentarse() {
         String msg = "Empresa "
         .concat(nomeFantasia)
         .concat(", CNPJ: ")
         .concat(cnpj)
-        .concat(" e o meu endereço é em ")
+        .concat(" e o endereço é em ")
         .concat(cidade)
         .concat(", na " + rua)
         .concat(", bairro " + bairro);
-        
 
         System.out.println(msg);
 
-        
     }
     
 }

@@ -1,4 +1,4 @@
-package primeirob.atividades.atividadeClasse;
+package primeirob.atividades.atividadeclasse;
 
 public class Cliente {
     
