@@ -27,16 +27,16 @@ public class mainAtividade5 {
         vendedor1.salarioRecebido.add(1550.0);
 
         Vendedor vendedor2 = new Vendedor();
-        vendedor1.loja = "Myy Plant";
-        vendedor1.cidadeVendedor = "Cascavel";
-        vendedor1.nomeVendedor = "Bruno";
-        vendedor1.bairroVendedor = "arabe";
-        vendedor1.ruaVendedor = "mahal habib";
-        vendedor1.idadeVendedor = 47;
-        vendedor1.salarioRecebido = new ArrayList<Double>();
-        vendedor1.salarioRecebido.add(1500.0);
-        vendedor1.salarioRecebido.add(1500.0);
-        vendedor1.salarioRecebido.add(1550.0);
+        vendedor2.loja = "Myy Plant";
+        vendedor2.cidadeVendedor = "Cascavel";
+        vendedor2.nomeVendedor = "Bruno";
+        vendedor2.bairroVendedor = "arabe";
+        vendedor2.ruaVendedor = "mahal habib";
+        vendedor2.idadeVendedor = 47;
+        vendedor2.salarioRecebido = new ArrayList<Double>();
+        vendedor2.salarioRecebido.add(1500.0);
+        vendedor2.salarioRecebido.add(1500.0);
+        vendedor2.salarioRecebido.add(1550.0);
 
         Cliente cliente1 = new Cliente();
         cliente1.nomeCliente = "Felipe";
@@ -52,8 +52,8 @@ public class mainAtividade5 {
         loja.clientes.add(cliente1);
 
         loja.apresentarse();
-        loja.contarClientes();
         loja.contarVendedores();
+        loja.contarClientes();
 
         System.out.println("Vendedores:");
         Iterator<Vendedor> iteratorVendedor = loja.vendedores.iterator();
@@ -63,14 +63,13 @@ public class mainAtividade5 {
             vendedorIte.calcularMedia();
             vendedorIte.calcularBonus();
             System.out.println("\n");
+        }
 
-
-            System.out.println("Clientes:");
-            Iterator<Cliente> iteratorClientes = loja.clientes.iterator();
-            while (iteratorClientes.hasNext()) {
-                Cliente clienteIte = iteratorClientes.next();
-                clienteIte.apresentarse();
-            }
+        System.out.println("Clientes:");
+        Iterator<Cliente> iteratorClientes = loja.clientes.iterator();
+        while (iteratorClientes.hasNext()) {
+            Cliente clienteIte = iteratorClientes.next();
+            clienteIte.apresentarse();
         }
     }
 }
