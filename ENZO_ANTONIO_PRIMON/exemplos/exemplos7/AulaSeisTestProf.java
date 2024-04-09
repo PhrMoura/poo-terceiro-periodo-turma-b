@@ -1,4 +1,4 @@
-package  exemplos.exemplos6;
+package  exemplos.exemplos7;
 
 public class AulaSeisTestProf {
     public static void main(String[] args) {

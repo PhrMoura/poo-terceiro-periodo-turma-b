@@ -12,9 +12,8 @@ public class Cliente {
 
         String msg = "Nome do cliente "
             .concat(nomeCliente)
-            .concat(". ")
-            .concat(idadeCliente+toString())
-            .concat(" anos");
+            .concat(", ")
+            .concat(idadeCliente + " anos.");
 
             System.out.println(msg);
     }
