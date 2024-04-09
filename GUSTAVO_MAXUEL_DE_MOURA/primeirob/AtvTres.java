@@ -2,6 +2,10 @@ package primeirob;
 
 import java.util.Scanner;
 
+import primeirob.exemplos.Cliente;
+import primeirob.exemplos.Loja;
+import primeirob.exemplos.Vendedor;
+
 public class AtvTres {
     public static void main(String[] args) {
         int dia = 0, mes = 0, numero = 0, diaConsulta, mesConsulta;
@@ -11,6 +15,9 @@ public class AtvTres {
         double[] arrayDesconto = new double[99];
         double[][] matrizPreco = new double[30][13];
         Scanner menu = new Scanner(System.in);
+        Loja lojaImport = new Loja();
+        Vendedor vend = new Vendedor();
+        Cliente clienteIn = new Cliente();
 
         while (numero != 3) {
 
@@ -39,6 +46,9 @@ public class AtvTres {
                             "[3]-Sair\n" +
                             "[4]-Ver todas as vendas\n"
                             + "[5]-Novo dia"
+                            + "[6]-Mostrar descrição loja"
+                            + "[7]-Mostrar descrição vendedor"
+                            + "[8]-Mostrar descrição cliente"
                             + "\n--------------------------");
             numero = menu.nextInt();
 
@@ -106,6 +116,15 @@ public class AtvTres {
                             System.out.println("Data inválida!");
                         }
                     } while (dia > 30 || mes > 12);
+                    break;
+                    case 6:
+                    lojaImport.apresentarSe();
+                    break;
+                    case 7:
+                    vend.apresentarSe();
+                    break;
+                    case 8:
+                    clienteIn.apresentarSe();
                     break;
 
                 default:
