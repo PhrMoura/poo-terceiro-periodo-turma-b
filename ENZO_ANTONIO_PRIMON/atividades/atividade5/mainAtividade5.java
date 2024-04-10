@@ -45,6 +45,13 @@ public class mainAtividade5 {
         cliente1.ruaCliente = "bingbong";
         cliente1.idadeCliente = 19;
 
+        Cliente cliente2 = new Cliente();
+        cliente2.nomeCliente = "Aquiles";
+        cliente2.cidadeCliente = "Cascavel";
+        cliente2.bairroCliente = "Obstetra";
+        cliente2.ruaCliente = "Uva passa";
+        cliente2.idadeCliente = 37;
+
         loja.vendedores = new ArrayList<Vendedor>();
         loja.vendedores.add(vendedor1);
         loja.vendedores.add(vendedor2);
