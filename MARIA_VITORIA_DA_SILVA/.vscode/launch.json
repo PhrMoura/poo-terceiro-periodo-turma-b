@@ -1,0 +1,49 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ExemploTerceiraAula",
+            "request": "launch",
+            "mainClass": "primeirob.exemplos.ExemploTerceiraAula",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "HelloWorld",
+            "request": "launch",
+            "mainClass": "primeirob.HelloWorld",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "CalculadoraDaGabrielinha",
+            "request": "launch",
+            "mainClass": "primeirob.exemplos.CalculadoraDaGabrielinha",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "ExemploPrimeiraAula",
+            "request": "launch",
+            "mainClass": "primeirob.exemplos.ExemploPrimeiraAula",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "ExemploSegundaAula",
+            "request": "launch",
+            "mainClass": "primeirob.exemplos.ExemploSegundaAula",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        }
+    ]
+}

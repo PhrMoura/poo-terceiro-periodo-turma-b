@@ -1,0 +1,49 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "lista3",
+            "request": "launch",
+            "mainClass": "lista3.lista3",
+            "projectName": "CRYSTHIAN_SMARCK_FEISTAUER_96f949c5"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Calculadora",
+            "request": "launch",
+            "mainClass": "Calculadora",
+            "projectName": "CRYSTHIAN_SMARCK_FEISTAUER_96f949c5"
+        },
+        {
+            "type": "java",
+            "name": "CalculadoraDaDonaGabrielinha",
+            "request": "launch",
+            "mainClass": "Lista1CalculadoradaDonaGabrielinha.CalculadoraDaDonaGabrielinha",
+            "projectName": "CRYSTHIAN_SMARCK_FEISTAUER_96f949c5"
+        },
+        {
+            "type": "java",
+            "name": "exemploPrimeiraAula",
+            "request": "launch",
+            "mainClass": "exemplos.exemploPrimeiraAula",
+            "projectName": "CRYSTHIAN_SMARCK_FEISTAUER_96f949c5"
+        },
+        {
+            "type": "java",
+            "name": "exemplosAula3",
+            "request": "launch",
+            "mainClass": "exemplosAula3",
+            "projectName": "CRYSTHIAN_SMARCK_FEISTAUER_96f949c5"
+        }
+    ]
+}

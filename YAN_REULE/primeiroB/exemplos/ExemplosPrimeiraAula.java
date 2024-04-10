@@ -1,4 +1,4 @@
-package primeiroB.exemplos;
+package poo.exemplos;
 
 public class ExemplosPrimeiraAula {
 
