@@ -102,8 +102,8 @@ public class AttCinco {
                 vendedor.bairro = "São José Operário";
                 vendedor.cidade = "Capanema";
                 vendedor.rua = "Tamoios";
+                vendedor.loja = loja ;
                 loja.contadorVendedor++;
-                
                 vendedor.apresentarse();
             }
             if (num == 6) {
@@ -122,7 +122,7 @@ public class AttCinco {
                 clienteTres.apresentarse();
             }
             if (num == 7) {
-                loja.nomeFantasia = "Myy Plant";
+                
                 loja.razaoSocial = "Floricultura Dona Gabrielinha LTDA.";
                 loja.bairro = "Parque Verde";
                 loja.cidade = "Cascavel - PR";

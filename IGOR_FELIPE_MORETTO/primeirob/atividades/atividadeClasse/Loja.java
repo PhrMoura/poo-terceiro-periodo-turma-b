@@ -11,6 +11,9 @@ public class Loja {
     int contadorCliente = 0;
     int contadorVendedor = 0;
 
+    public Loja(){
+        this.nomeFantasia = "Myy Plant";
+    }
     public void contarClientes(){
         System.out.println("A quantidade de clientes é " + contadorCliente);
     }
