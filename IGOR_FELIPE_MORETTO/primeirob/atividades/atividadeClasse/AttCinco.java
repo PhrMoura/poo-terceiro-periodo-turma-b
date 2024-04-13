@@ -129,7 +129,7 @@ public class AttCinco {
                 loja.cnpj = "00.000.000/0001-01";
                 loja.rua = "Avenida da Torres";
 
-                loja.apresentarse();
+                loja.apresentarLogradouro();
                 loja.contarClientes();
                 loja.contarVendedores();
             }

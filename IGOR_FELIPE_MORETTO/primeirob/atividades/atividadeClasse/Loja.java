@@ -1,13 +1,13 @@
 package primeirob.atividades.atividadeclasse;
 
-public class Loja {
+public class Loja extends Endereço{
     
     String nomeFantasia;
     String razaoSocial;
     String cnpj;
-    String cidade;
-    String bairro;
-    String rua;
+    // String cidade;
+    // String bairro;
+    // String rua;
     int contadorCliente = 0;
     int contadorVendedor = 0;
 
@@ -22,18 +22,18 @@ public class Loja {
     }
     
     
-    public void apresentarse() {
-        String msg = "Empresa "
-        .concat(nomeFantasia)
-        .concat(", CNPJ: ")
-        .concat(cnpj)
-        .concat(" e o endereço é em ")
-        .concat(cidade)
-        .concat(", na " + rua)
-        .concat(", bairro " + bairro);
+    // public void apresentarse() {
+    //     String msg = "Empresa "
+    //     .concat(nomeFantasia)
+    //     .concat(", CNPJ: ")
+    //     .concat(cnpj)
+    //     .concat(" e o endereço é em ")
+    //     .concat(cidade)
+    //     .concat(", na " + rua)
+    //     .concat(", bairro " + bairro);
 
-        System.out.println(msg);
+    //     System.out.println(msg);
 
-    }
+    // }
     
 }

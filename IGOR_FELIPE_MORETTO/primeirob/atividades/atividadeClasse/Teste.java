@@ -8,12 +8,16 @@ public class Teste {
         Cliente clienteTres = new Cliente();
         Loja loja = new Loja();
         Vendedor vendedor = new Vendedor();
+        Item item = new Item();
+        Gerente gerente = new Gerente();
+        Pedido pedido = new Pedido();
 
         vendedor.nome = "Roger Guedes";
         vendedor.idade = 18;
         vendedor.bairro = "São José Operário";
         vendedor.cidade = "Capanema";
         vendedor.rua = "Tamoios";
+        vendedor.loja = loja ;
         loja.contadorVendedor++;
         
         vendedor.apresentarse();
@@ -37,11 +41,22 @@ public class Teste {
         loja.bairro = "Parque Verde";
         loja.cidade = "Cascavel - PR";
         loja.cnpj = "00.000.000/0001-01";
+        loja.numero = 1010;
+        loja.complemento = "Casa A";
         loja.rua = "Avenida da Torres";
 
-        loja.apresentarse();
+        loja.apresentarLogradouro();
         loja.contarClientes();
         loja.contarVendedores();
 
+        gerente.nome = "Neymar";
+        gerente.idade = 32;
+        gerente.loja = loja;
+
+        gerente.apresentarse();
+
+        item.gerarDescricao();
+
+        pedido.calcularValorTotal();
     }
 }

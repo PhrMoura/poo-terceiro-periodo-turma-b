@@ -1,17 +1,10 @@
 package primeirob.atividades.atividadeclasse;
 
-public class Vendedor extends Pessoa{
-
+public class Gerente extends Pessoa{
     Loja loja;
-    // String nome;
-    // Integer idade;
-    // String cidade;
-    // String bairro;
-    // String rua;
-    Integer salarioBase = 2000;
-    Integer[] salarioRecebido = new Integer[] {2000, 2250, 2500};
-    Integer soma = 0;    
-
+    Integer salarioBase = 4000;
+    Integer[] salarioRecebido = new Integer[] {4000, 4100, 4350};
+    Integer soma = 0;
     public void apresentarse() {
         
         for (Integer valor : salarioRecebido) {
@@ -19,9 +12,9 @@ public class Vendedor extends Pessoa{
         }
         double calcularMedia = soma / 3; //cálculo média
 
-        double calcularBonus = salarioBase * 0.2; //cálculo bônus
+        double calcularBonus = salarioBase * 0.35; //cálculo bônus
 
-        String msg = "Olá, sou o vendedor "
+        String msg = "Olá, sou o gerente de vendas "
         .concat(nome)
         .concat(", tenho " + idade)
         .concat(" anos")
@@ -33,5 +26,4 @@ public class Vendedor extends Pessoa{
 
         System.out.println(msg);
     }
-
 }
