@@ -10,7 +10,7 @@ public class Calculadora {
         int[] quantidadePlanta = new int[100];
         float[] valorPlanta = new float[100];
         float[] valorTotal = new float[100];
-        float[][] vendasPorDiaEMes = new float[12][30]; // Array para armazenar as vendas por dia e mês
+        float[][] vendasPorDiaEMes = new float[12][30];
 
         int indiceVenda = 0;
 
