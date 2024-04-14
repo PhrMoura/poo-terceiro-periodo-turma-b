@@ -2,7 +2,7 @@ package Listas;
 
 import java.util.Scanner;
 
-public class lista2 {
+public class lista1_lista2 {
 
     public static void main(String[] args) {
         Scanner scanner  = new Scanner(System.in);
