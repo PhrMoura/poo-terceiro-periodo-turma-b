@@ -1,25 +1,13 @@
 package primeirob.atividades.atividadeclasse;
 
-import java.util.Date;
-import java.util.Scanner;
+public class ProcessaPedido extends Pedido{
+    
+    int i = 0;
+    Long mlsDia = 86400000l;
 
-public class Pedido extends Item{
-    Integer id;
-    Date dataCriacao = new Date();
-    Date dataPagamento = new Date();
-    long dataVencimentoReserva;
-    String cliente;
-    String vendedor;
-    Loja lojaDois;
-    double valorT = 0.0d;
-    int [] item = new int []{1002, 1003, 1004};
-    Scanner demo = new Scanner(System.in);
-    double valorTotal = 0.0d;
-    long diaAtual;
-    int cond = 0;
-
-    public void calcularValorTotal(){
-        
+    public void processar(){
+        System.out.println("Cliente: ");
+        cliente = demo.next();
         System.out.println("Id do produto: ");
         id = demo.nextInt();
         if (id == 1002) {
@@ -68,13 +56,21 @@ public class Pedido extends Item{
                 } else {
                     break;
                 }
-        }
-            System.out.println("Valor total: R$" + valorT);
+                  
         }
         
+        System.out.println("Seu pedido ficou em R$" + valorT);
+        System.out.println(dataCriacao);
+        dataVencimentoReserva = dataCriacao.getTime() + (mlsDia * 3);
+        System.out.println(new java.util.Date(dataVencimentoReserva));
+    }
 
-    public void gerarDescricaoVenda(){
-
-        System.out.println("Data de criação: "+ dataCriacao + ", valor total: R$" + valorT);
+    public void confirmarPagamento(){
+        if (diaAtual > dataVencimentoReserva){
+            System.out.println("Infelizmente sua reserva está vencida");
+        }
+        else {
+            System.out.println("Certinho, sua reserva está em dia");
+        }
     }
 }

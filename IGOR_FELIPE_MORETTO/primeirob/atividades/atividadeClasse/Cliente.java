@@ -1,13 +1,6 @@
 package primeirob.atividades.atividadeclasse;
 
-public class Cliente {
-    
-    String nome;
-    Integer idade;
-    Loja loja;
-    String cidade;
-    String bairro;
-    String rua;
+public class Cliente extends Pessoa{
     
     public void apresentarse() {
         String msg = "Sou o cliente "

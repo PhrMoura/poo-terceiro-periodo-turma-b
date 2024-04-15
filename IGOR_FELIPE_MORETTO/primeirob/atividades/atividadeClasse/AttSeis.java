@@ -2,7 +2,7 @@ package primeirob.atividades.atividadeclasse;
 
 import java.util.Scanner;
 
-public class AttCinco {
+public class AttSeis {
     public static void main(String[] args) {
         int posicao = 0, num = 0, linha = 0, quantPlanta = 0, coluna = 0;
         double precoTotal = 0.00d;
@@ -42,7 +42,7 @@ public class AttCinco {
         } while (linha > 30 || coluna > 12);
     }
             
-            System.out.println("\nMenu\n [1] Calcular Preço Total\n [2] Calcular Troco\n [3] Ir para outro dia\n [4] Registro de vendas\n [5] Vendedores\n [6] Clientes\n [7] Loja\n [8] Gerentes\n [9] Itens\n [10] Realizar Pedido\n [11] Processar Pedido\n [12] Sair");
+            System.out.println("\nMenu\n [1] Calcular Preço Total\n [2] Calcular Troco\n [3] Ir para outro dia\n [4] Registro de vendas\n [5] Vendedores\n [6] Clientes\n [7] Loja\n [8] Gerentes\n [9] Itens\n [10] Pedido\n [11] Processar Pedido\n [12] Sair");
 
             num = demo.nextInt();
 
@@ -137,7 +137,7 @@ public class AttCinco {
                 loja.contarClientes();
                 loja.contarVendedores();
             }
-            if (num == 8){
+            if (num == 8) {
                 gerente.nome = "Neymar";
                 gerente.idade = 32;
                 gerente.loja = loja;
@@ -147,7 +147,7 @@ public class AttCinco {
             if (num == 9) {
                 item.gerarDescricao();
             }
-            if (num == 10){
+            if (num == 10) {
                 pedido.calcularValorTotal();
                 pedido.gerarDescricaoVenda();
             }
@@ -163,5 +163,5 @@ public class AttCinco {
 
     System.exit(8); 
     demo.close();
-    }
+}
 }

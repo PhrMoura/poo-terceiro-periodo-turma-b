@@ -7,11 +7,12 @@ public class Item {
     Double [] valor = new Double[] {30.0d, 20.0d, 35.0d};
 
     public void gerarDescricao(){
-        String msg = "Produtos: \n"
-        .concat("Item " + nome[0])
-        .concat(", id " + id[0])
-        .concat(", o tipo é " + tipo[0] + " e o valor é R$" + valor[0]);
-
-        System.out.println(msg);
+        for (int i = 0; i < id.length; i++) {
+            String msg = "Produtos: \n"
+            .concat("Item " + nome[i])
+            .concat(", id " + id[i])
+            .concat(", o tipo é " + tipo[i] + " e o valor é R$" + valor[i]);
+            System.out.println(msg);
+        }
     }
 }

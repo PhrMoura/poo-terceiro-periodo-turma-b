@@ -3,11 +3,6 @@ package primeirob.atividades.atividadeclasse;
 public class Vendedor extends Pessoa{
 
     Loja loja;
-    // String nome;
-    // Integer idade;
-    // String cidade;
-    // String bairro;
-    // String rua;
     Integer salarioBase = 2000;
     Integer[] salarioRecebido = new Integer[] {2000, 2250, 2500};
     Integer soma = 0;    
