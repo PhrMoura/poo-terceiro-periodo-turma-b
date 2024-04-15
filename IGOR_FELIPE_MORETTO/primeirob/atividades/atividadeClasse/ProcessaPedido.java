@@ -1,9 +1,11 @@
 package primeirob.atividades.atividadeclasse;
 
+
+
 public class ProcessaPedido extends Pedido{
     
     int i = 0;
-    Long mlsDia = 86400000l;
+    long mlsDia = 86400000l;
 
     public void processar(){
         System.out.println("Cliente: ");
@@ -63,13 +65,14 @@ public class ProcessaPedido extends Pedido{
         System.out.println(dataCriacao);
         dataVencimentoReserva = dataCriacao.getTime() + (mlsDia * 3);
         System.out.println(new java.util.Date(dataVencimentoReserva));
+   
     }
 
     public void confirmarPagamento(){
-        if (diaAtual > dataVencimentoReserva){
+        
+        if (diaAtual > dataVencimentoReserva) {
             System.out.println("Infelizmente sua reserva está vencida");
-        }
-        else {
+        } else {
             System.out.println("Certinho, sua reserva está em dia");
         }
     }

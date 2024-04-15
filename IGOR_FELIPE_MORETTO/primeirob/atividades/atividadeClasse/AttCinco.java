@@ -19,12 +19,9 @@ public class AttCinco {
         Cliente clienteTres = new Cliente();
         Vendedor vendedor = new Vendedor();
         Loja loja = new Loja();
-        Item item = new Item();
-        Gerente gerente = new Gerente();
-        Pedido pedido = new Pedido();
-        ProcessaPedido procPedido = new ProcessaPedido();
+        
                     
-        while (num != 12) {
+        while (num != 8) {
             if (linha != 0) {
                 System.out.println("\nEstamos no dia " + linha + " do " + coluna);
             }
@@ -42,7 +39,7 @@ public class AttCinco {
         } while (linha > 30 || coluna > 12);
     }
             
-            System.out.println("\nMenu\n [1] Calcular Preço Total\n [2] Calcular Troco\n [3] Ir para outro dia\n [4] Registro de vendas\n [5] Vendedores\n [6] Clientes\n [7] Loja\n [8] Gerentes\n [9] Itens\n [10] Realizar Pedido\n [11] Processar Pedido\n [12] Sair");
+            System.out.println("\nMenu\n [1] Calcular Preço Total\n [2] Calcular Troco\n [3] Ir para outro dia\n [4] Registro de vendas\n [5] Vendedores\n [6] Clientes\n [7] Loja\n [8] Sair");
 
             num = demo.nextInt();
 
@@ -137,25 +134,8 @@ public class AttCinco {
                 loja.contarClientes();
                 loja.contarVendedores();
             }
+            
             if (num == 8){
-                gerente.nome = "Neymar";
-                gerente.idade = 32;
-                gerente.loja = loja;
-
-                gerente.apresentarse();
-            }
-            if (num == 9) {
-                item.gerarDescricao();
-            }
-            if (num == 10){
-                pedido.calcularValorTotal();
-                pedido.gerarDescricaoVenda();
-            }
-            if (num == 11) {
-                procPedido.processar();
-                procPedido.confirmarPagamento();
-            }
-            if (num == 12){
                 System.out.println("Saindo...");
             }
 

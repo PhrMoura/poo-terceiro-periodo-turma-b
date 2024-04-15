@@ -5,9 +5,6 @@ public class Loja extends Endereço{
     String nomeFantasia;
     String razaoSocial;
     String cnpj;
-    // String cidade;
-    // String bairro;
-    // String rua;
     int contadorCliente = 0;
     int contadorVendedor = 0;
 
