@@ -1,11 +1,12 @@
 package primeirob.lista05.models;
 
-public class Cliente {
+import primeirob.lista06.models.AbstractPessoa;
+import primeirob.lista06.models.Endereco;
+
+public class Cliente extends AbstractPessoa {
     public String nome;
+    public Endereco endereco;
     public Integer idade;
-    public String cidade;
-    public String bairro;
-    public String rua;
 
     public void apresentarse () {
         String msg = "Olá, meu noem é "
