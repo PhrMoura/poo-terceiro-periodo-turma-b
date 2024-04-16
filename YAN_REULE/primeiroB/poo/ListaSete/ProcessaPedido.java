@@ -4,15 +4,16 @@ import java.util.Date;
 import java.util.ArrayList;
 
 public class ProcessaPedido {
+    Date dataAtual = new Date();
+    Date dataVencimento;
 
-
-    public void processar() {
-        System.out.println("Processando...");
+    private void ProcessaPedido() {
+        System.out.println("processando...");
     }
 
-    
-    private void confirmarPagamento(dataAtual) {
-
+    private void ConfirmaPedido() {
+        if (dataAtual.getTime() > dataVencimento.getTime()){
+            System.out.println("Error");
+        }
     }
-
 }
