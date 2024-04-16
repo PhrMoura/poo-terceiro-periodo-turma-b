@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Loja {
     private String nomeFantasia;
-    private String razaoSocial;
     private String cnpj;
     private String cidade;
     private String bairro;
@@ -15,7 +14,6 @@ public class Loja {
 
     public Loja(String nomeFantasia, String razaoSocial, String cnpj, String cidade, String bairro, String rua) {
         this.nomeFantasia = nomeFantasia;
-        this.razaoSocial = razaoSocial;
         this.cnpj = cnpj;
         this.cidade = cidade;
         this.bairro = bairro;
