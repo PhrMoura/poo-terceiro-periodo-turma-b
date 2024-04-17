@@ -1,5 +1,4 @@
 package primeirob.exemplos.listaseis;
 
-public class Cliente {
-    
+public class Cliente extends Pessoa {
 }
