@@ -8,10 +8,11 @@ public class LojaDonaGabriela {
         double[][] matriz = new double[13][31];
 
         do {
-            System.out.println("Bem vindo(a) à floricultura da dona Gabriela!");
+            System.out.println("Bem vindo(a) à FloriudaShop!");
             System.out.println("O que você deseja fazer?");
-            System.out.println("1- Calcular valor da venda.\n2- Calcular troco.\n3- Registrar venda.\n4- Acessar venda registrada.\n5- Sair.");
-            System.out.println("Opção desejada: ");
+            System.out.println("1- Calcular valor da venda.\n2- Calcular troco");
+            System.out.println("3- Registrar venda.\n4- Acessar venda registrada.\n5- Sair.");
+            System.out.println("Opção desejada:");
             opcao = input.nextInt();
 
             switch (opcao) {

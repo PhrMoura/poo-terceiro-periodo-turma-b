@@ -1,4 +1,4 @@
-package primeirob.Exemplos;
+package primeirob.exemplos;
 
 public class HelloWorld {
     public static void main(String[] args) {

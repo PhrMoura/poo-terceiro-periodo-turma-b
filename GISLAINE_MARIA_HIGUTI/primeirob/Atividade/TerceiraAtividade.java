@@ -14,8 +14,6 @@ static double[][] totalValorVendido = new double[12][30];
             do {
                 exibirMenu();
                 escolha = input.nextInt();
-
-
                     switch (escolha) {
                         case 1:
                             calcularPrecoTotal();
@@ -51,8 +49,6 @@ static double[][] totalValorVendido = new double[12][30];
         System.out.println("5 - Sair");
         System.out.println("Selecione a opção: 1, 2, 3, 4 ou 5");
     }
-
-
 
     public static void calcularPrecoTotal() {
         Scanner input = new Scanner(System.in);

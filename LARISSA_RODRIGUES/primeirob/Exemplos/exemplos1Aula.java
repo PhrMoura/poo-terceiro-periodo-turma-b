@@ -1,4 +1,4 @@
-package primeirob.Exemplos;
+package primeirob.exemplos;
 import java.util.Scanner;
 
 public class Exemplos1Aula {

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "lista2",
+            "request": "launch",
+            "mainClass": "lista2.lista2",
+            "projectName": "CRYSTHIAN_SMARCK_FEISTAUER_96f949c5"
+        },
+        {
+            "type": "java",
             "name": "lista3",
             "request": "launch",
             "mainClass": "lista3.lista3",
