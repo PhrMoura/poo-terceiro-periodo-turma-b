@@ -1,4 +1,4 @@
-package primeirob.ListaCinco;
+package primeirob.listaSeis;
 
 import java.util.ArrayList;
 
@@ -9,17 +9,13 @@ public class Vendedor {
 
     String loja;
 
-    String cidade;
-
-    String bairro;
-
-    String rua;
-
     double salarioBase;
 
     ArrayList<Double> salarioRecebido = new ArrayList<>();
 
-    public Vendedor(String nome, Integer idade, String loja){
+    Endereco endereco;
+
+    public Vendedor(String nome, Integer idade, String loja, Endereco endereco){
     
         this.nome = nome;
         this.idade = idade;
@@ -27,18 +23,17 @@ public class Vendedor {
         this.salarioRecebido.add(1200.0);
         this.salarioRecebido.add(1300.0);
         this.salarioRecebido.add(1500.0);
+        this.endereco = endereco;
 
     }
 
     public void apresentarSe() {
         
-        String msg = "Nome do vendedor: "
-                .concat(nome)
-                .concat(", " + idade)
-                .concat(" anos de idade, trabalha na loja ")
-                .concat(loja);
-
-        System.out.println(msg);
+        System.out.println("Nome do Vendedor: " + nome);
+        System.out.println("Idade: " + idade);
+        System.out.println("Loja: " + loja);
+        System.out.println("Endereço");
+        endereco.apresentarLogradouro();
 
     }
 
@@ -47,10 +42,11 @@ public class Vendedor {
         for (double salario : salarioRecebido) {
             soma += salario;  
         }
-        return soma / salarioRecebido.size();
+        return soma/salarioRecebido.size();
     }
 
     public double calcularBonus() {
-        return salarioBase * 0.2;
+        double mediaSalario = calcularMedia();
+        return mediaSalario * 0.2;
     }
 }
