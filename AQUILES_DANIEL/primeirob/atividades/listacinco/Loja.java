@@ -1,4 +1,4 @@
-package primeirob.atividades;
+package primeirob.atividades.listacinco;
 
 import java.util.ArrayList;
 

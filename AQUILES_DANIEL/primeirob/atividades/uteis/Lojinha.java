@@ -1,4 +1,4 @@
-package primeirob.atividades;
+package primeirob.atividades.uteis;
 
 import java.util.Scanner;
 
