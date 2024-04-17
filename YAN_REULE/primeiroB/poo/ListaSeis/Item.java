@@ -1,10 +1,10 @@
-package poo.ListaSete;
+package poo.ListaSeis;
 
 public class Item {
     int id;
     String nome;
     String tipo;
-    double valor;
+    Double valor;
 
     public void gerarDescricao() {
         System.out.println("ID: " + id);

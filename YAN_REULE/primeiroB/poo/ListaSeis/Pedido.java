@@ -1,9 +1,11 @@
-package poo.ListaSete;
+package poo.ListaSeis;
 
 import java.util.Date;
 import java.util.ArrayList;
 
 public class Pedido {
+    Item novoItem = new Item();
+
     int id;
     Date dataCriacao;
     Date dataPagamento;
@@ -13,7 +15,10 @@ public class Pedido {
     String loja;
     ArrayList<Item> itens;
 
-    // Método para calcular o valor total do pedido
+    public Pedido() {
+        this.itens = new ArrayList<>(); // Inicialização da lista no construtor
+    }
+
     public double calcularValorTotal() {
         double total = 0.0;
         for (Item item : itens) {
@@ -22,7 +27,6 @@ public class Pedido {
         return total;
     }
 
-    // Método para gerar descrição da venda
     public void gerarDescricaoVenda() {
         System.out.println("Pedido ID: " + id);
         System.out.println("Data de Criação: " + dataCriacao);

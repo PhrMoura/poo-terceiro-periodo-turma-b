@@ -1,4 +1,4 @@
-package poo.ListaSete;
+package poo.ListaSeis;
 
 public class Gerente {
     // Atributos

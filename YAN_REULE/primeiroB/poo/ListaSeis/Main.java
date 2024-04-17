@@ -1,4 +1,4 @@
-package poo.ListaSete;
+package poo.ListaSeis;
 
 import java.util.Date;
 import java.util.Scanner;
@@ -27,7 +27,7 @@ public class Main {
         do {
             System.out.println("Menu:");
             System.out.println("[1] - Criar Pedido");
-            System.out.println("[2] - novo Item");
+            // System.out.println("[2] - novo Item");
             System.out.println("[3] - Processar Pedido");
             System.out.println("[4] - Sair");
             System.out.print("Escolha uma opção: ");
@@ -38,7 +38,7 @@ public class Main {
                     criaPedido(entradaTeclado);
                     break;
                 case 2:
-                    criarItem(entradaTeclado);
+                    // criarItem(entradaTeclado);
                     break;
                 case 3:
                     processaPedido(entradaTeclado);
@@ -52,10 +52,9 @@ public class Main {
 
         entradaTeclado.close();
 
-        gerente1.apresentarse();
     }
 
-    public static void criarItem(Scanner scanner) {
+    public static Item criarItem(Scanner scanner) {
         Item novoItem = new Item();
 
         itensCriados += 1;
@@ -66,7 +65,7 @@ public class Main {
         novoItem.nome = scanner.next();
         System.out.println("digite o valor do produto:");
         novoItem.valor = scanner.nextDouble();
-
+        return novoItem;
     }
 
     public static void processaPedido(Scanner scanner) {
@@ -81,6 +80,37 @@ public class Main {
     }
 
     public static void criaPedido(Scanner scanner) {
+        Pedido novoPedido = new Pedido();
+        Date dataAtual = new Date();
 
+        int acao;
+
+        novoPedido.id = 1;
+        novoPedido.dataCriacao = dataAtual;
+
+        do {
+            System.out.println("Menu:");
+            System.out.println("[1] - adicionar Item");
+            System.out.println("[2] - calcula valor total");
+            System.out.println("[3] - Sair");
+            System.out.print("Escolha uma opção: ");
+            acao = scanner.nextInt();
+
+            switch (acao) {
+                case 1:
+                    novoPedido.itens.add(criarItem(scanner));
+                    break;
+                case 2:
+                    System.out.println(novoPedido.calcularValorTotal());
+
+                    break;
+                case 3:
+                    System.out.println("Saindo...");
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+            }
+        } while (acao != 3);
+
+        novoPedido.gerarDescricaoVenda();
     }
 }

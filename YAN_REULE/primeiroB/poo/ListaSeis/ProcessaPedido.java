@@ -1,7 +1,6 @@
-package poo.ListaSete;
+package poo.ListaSeis;
 
 import java.util.Date;
-import java.util.ArrayList;
 
 public class ProcessaPedido {
     Date dataAtual = new Date();
