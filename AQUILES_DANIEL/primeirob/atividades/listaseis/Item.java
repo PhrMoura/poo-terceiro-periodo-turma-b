@@ -7,7 +7,7 @@ public class Item {
 
   public void gerarDescricao() {
     System.out.println("#" + id + " " + nome);
-    System.out.println("Item do tipo: " + tipo + "R$" + valor);
+    System.out.println("Item do tipo: " + tipo + " R$ " + valor);
   }
 
 }

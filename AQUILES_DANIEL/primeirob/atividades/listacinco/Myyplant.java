@@ -2,8 +2,6 @@ package primeirob.atividades.listacinco;
 
 import java.util.Date;
 
-import primeirob.atividades.uteis.uteis;
-
 public class Myyplant {
   public static void main(String[] args) {
     System.out.println("-----------------------");
@@ -74,7 +72,7 @@ public class Myyplant {
     System.out.println("Data sem hora: " + dataSemHora);
     System.out.println("Meu aniversario: " + dataDeAniversario);
 
-    System.out.println("Dias de vida: " + uteis.isDataAniversario(dataAtual, dataDeAniversario));
+    System.out.println("Dias de vida: " + (dataAtual.getTime() - dataDeAniversario.getTime()) / diaEmMs);
 
   }
 }

@@ -2,6 +2,7 @@ package primeirob.atividades.listaseis;
 
 import java.util.Date;
 
+// TENTAR ARRUMAR ESSA BOMBA AQUI
 public class ProcessarPedido {
   private Pedido pedido;
 

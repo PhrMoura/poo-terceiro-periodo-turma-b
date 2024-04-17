@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class Myplantoficial {
   public static void main(String[] args) {
+    // Classe de gerente //
     System.out.println("------------------------------");
     Gerente gerenteUm = new Gerente();
     gerenteUm.rua = "Pioneiros";
@@ -21,30 +22,48 @@ public class Myplantoficial {
     gerenteUm.salarioRecebido[2] = 2600;
 
     gerenteUm.salarioBase = 2000;
-
-    gerenteUm.apresentarLogradouro();
-    System.out.println("- Media salarial: " + gerenteUm.calcularMedia());
-    System.out.println("- Bonus: " + gerenteUm.calcularBonus());
-
-    System.out.println("------------------------------");
-
     gerenteUm.apresentarse();
 
+    System.out.println("Media salarial: " + gerenteUm.calcularMedia());
+    System.out.println("Bonus: " + gerenteUm.calcularBonus());
+
+    // Classe de endereço //
+    System.out.println("------------------------------");
+
+    gerenteUm.apresentarLogradouro();
+
+    // Classe de item //
     System.out.println("------------------------------");
 
     Item itemUm = new Item();
-    Item itemDois = new Item();
-    itemUm.valor = 25;
-    itemDois.valor = 75;
+    itemUm.id = 8;
+    itemUm.nome = "Girassol";
+    itemUm.tipo = "Planta";
+    itemUm.valor = 75;
 
+    Item itemDois = new Item();
+    itemDois.id = 9;
+    itemDois.nome = "Rosa";
+    itemDois.tipo = "Planta";
+    itemDois.valor = 100;
+
+    itemUm.gerarDescricao();
+    itemDois.gerarDescricao();
+
+    // Classe de pedido //
+    System.out.println("------------------------------");
+
+    // ARRUMAR ESSA PARTE DE PEDIDOS DATA DE VENCIMENTO E DATA ATUAL
     ProcessarPedido processador = new ProcessarPedido();
 
-    // Inicializando os campos do objeto Pedido
     Pedido pedido = new Pedido();
-    pedido.dataCriacao = new Date(); // Defina uma data de criação válida
-    pedido.dataVencimentoReserva = new Date(); // Defina uma data de vencimento válida
+    pedido.dataCriacao = new Date();
+    pedido.dataVencimentoReserva = new Date();
 
-    // Processando o pedido e recebendo o objeto Pedido resultante
+    pedido.gerarDescricaoVenda();
+
+    // Classe de processaPedido //
+    System.out.println("------------------------------");
     Pedido pedidoProcessado = processador.processar(pedido);
 
   }

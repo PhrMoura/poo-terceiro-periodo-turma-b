@@ -5,10 +5,10 @@ public class Endereco {
   int numero;
 
   public void apresentarLogradouro() {
-    System.out.println("- Rua: " + rua);
-    System.out.println("- Bairro: " + bairro);
-    System.out.println("- Cidade: " + cidade);
-    System.out.println("- Numero: " + numero);
-    System.out.println("- Complemento: " + complemento);
+    System.out.println("Rua: " + rua);
+    System.out.println("Bairro: " + bairro);
+    System.out.println("Cidade: " + cidade);
+    System.out.println("Numero: " + numero);
+    System.out.println("Complemento: " + complemento);
   }
 }
