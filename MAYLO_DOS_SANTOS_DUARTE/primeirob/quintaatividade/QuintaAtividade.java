@@ -1,6 +1,6 @@
 package primeirob.quintaatividade;
 
-public class MainAtividades5 {
+public class QuintaAtividade {
     public static void main(String[] args) {
 
         // Criação da Loja - Instanciado Atributos e chamando Metodos.
@@ -52,7 +52,7 @@ public class MainAtividades5 {
         lojaMatriz.contarClientes();
         
 
-        // Criação de Clientes - Instanciado Atributos e chamando Metodos.
+        // Criação de Vendedores - Instanciado Atributos e chamando Metodos.
 
         // 1º Vendedor
 
