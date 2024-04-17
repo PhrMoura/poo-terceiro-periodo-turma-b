@@ -1,4 +1,4 @@
-package primeirob.exemplos.aulaseis;
+package primeirob.aulaseis;
 
 public class Professor {
 

@@ -1,89 +1,75 @@
 package primeirob.myyplant;
 
+import java.util.Date;
+
 public class Teste {
 
     public static void main(String[] args) {
-        // Criando uma instância da loja
-        Loja minhaLoja = new Loja();
-        minhaLoja.nomeFantasia = "Minha Loja";
-        minhaLoja.razaoSocial = "Empresa XYZ";
-        minhaLoja.cnpj = 123456789;
-        minhaLoja.cidade = "Minha Cidade";
-        minhaLoja.bairro = "Meu Bairro";
-        minhaLoja.rua = "Minha Rua";
+        testarGerente();
+        testarEndereco();
+        testarItem();
+        testarPedido();
+        testarProcessaPedido();
+    }
 
-        // Criando instâncias de clientes
-        Cliente cliente1 = new Cliente();
-        cliente1.nome = "Cliente 1";
-        cliente1.idade = 30;
-        cliente1.cidade = "Cidade do Cliente 1";
-        cliente1.bairro = "Bairro do Cliente 1";
-        cliente1.rua = "Rua do Cliente 1";
+    public static void testarGerente() {
+        Integer[] salarioBase = {2000, 2500, 2200};
+        Integer[] salarioRecebido = {2200, 2300, 2400};
+        Loja loja = new Loja("Minha Loja", "Empresa XYZ", "Minha Cidade", "Meu Bairro", "Minha Rua", 123456789);
+        Gerente gerente = new Gerente("João", 40, "Minha Cidade", "Meu Bairro", "Minha Rua", loja, salarioBase, salarioRecebido);
+        
+        System.out.println("Testando Gerente:");
+        gerente.apresentarse();
+        System.out.println("Média salarial: " + gerente.calcularMedia());
+        System.out.println("Bônus: " + gerente.calcularBonus());
+        System.out.println();
+    }
 
-        Cliente cliente2 = new Cliente();
-        cliente2.nome = "Cliente 2";
-        cliente2.idade = 25;
-        cliente2.cidade = "Cidade do Cliente 2";
-        cliente2.bairro = "Bairro do Cliente 2";
-        cliente2.rua = "Rua do Cliente 2";
+    public static void testarEndereco() {
+        Endereco endereco = new Endereco("SP", "São Paulo", "Centro", 123, "Apto 101");
+        
+        System.out.println("Testando Endereço:");
+        endereco.apresentarLogradouro();
+        System.out.println();
+    }
 
-        // Adicionando clientes à loja
-        minhaLoja.arrayClientes[0] = cliente1;
-        minhaLoja.arrayClientes[1] = cliente2;
+    public static void testarItem() {
+        Item item = new Item(1, "Camiseta", "Vestuário", 49.99f);
+        
+        System.out.println("Testando Item:");
+        item.gerarDescricao();
+        System.out.println();
+    }
 
-        // Criando instâncias de vendedores
-        Vendedor vendedor1 = new Vendedor();
-        vendedor1.nome = "Vendedor 1";
-        vendedor1.idade = 35;
-        vendedor1.cidade = "Cidade do Vendedor 1";
-        vendedor1.bairro = "Bairro do Vendedor 1";
-        vendedor1.rua = "Rua do Vendedor 1";
-        vendedor1.salarioBase[0] = 2000;
-        vendedor1.salarioBase[1] = 2500;
-        vendedor1.salarioBase[2] = 2200;
+    public static void testarPedido() {
+        // Criando clientes e vendedores para usar no pedido
+        Cliente cliente = new Cliente("Maria", 35, "São Paulo", "Centro", "Rua A");
+        Vendedor vendedor = new Vendedor("João", 30, "São Paulo", "Centro", "Rua B", null, new Integer[]{2000, 2200, 2400}, new Integer[]{2200, 2300, 2400});
+        
+        // Criando uma loja para usar no pedido
+        Loja loja = new Loja("Minha Loja", "Empresa XYZ", "Minha Cidade", "Meu Bairro", "Minha Rua", 123456789);
+        
+        // Criando alguns itens para usar no pedido
+        ItemPedido item1 = new ItemPedido(new Item(1, "Camiseta", "Vestuário", 29.99f), 2);
+        ItemPedido item2 = new ItemPedido(new Item(2, "Calça Jeans", "Vestuário", 59.99f), 1);
+        ItemPedido[] itens = {item1, item2};
+        
+        // Criando uma data para o pedido
+        Date dataCriacao = new Date(); // A data atual
+        
+        // Criando uma instância de Pedido
+        Pedido pedido = new Pedido(1, dataCriacao, null, null, cliente, vendedor, loja, itens);
+        
+        // Testando os métodos da classe Pedido
+        System.out.println("Testando Pedido:");
+        System.out.println("Valor total do pedido: R$" + pedido.calcularValorTotal());
+        System.out.println("Descrição do pedido: " + pedido.gerarDescricaoVenda());
+        System.out.println("Confirmação de pagamento: " + pedido.confirmarPagamento());
+    }
+    
+    
 
-        // Inicializando o array salarioRecebido com valores padrão
-        vendedor1.salarioRecebido[0] = 0;
-        vendedor1.salarioRecebido[1] = 0;
-        vendedor1.salarioRecebido[2] = 0;
-
-        Vendedor vendedor2 = new Vendedor();
-        vendedor2.nome = "Vendedor 2";
-        vendedor2.idade = 28;
-        vendedor2.cidade = "Cidade do Vendedor 2";
-        vendedor2.bairro = "Bairro do Vendedor 2";
-        vendedor2.rua = "Rua do Vendedor 2";
-        vendedor2.salarioBase[0] = 1800;
-        vendedor2.salarioBase[1] = 2300;
-        vendedor2.salarioBase[2] = 2100;
-
-        // Inicializando o array salarioRecebido com valores padrão
-        vendedor2.salarioRecebido[0] = 0;
-        vendedor2.salarioRecebido[1] = 0;
-        vendedor2.salarioRecebido[2] = 0;
-
-        // Adicionando vendedores à loja
-        minhaLoja.arrayVendedores[0] = vendedor1;
-        minhaLoja.arrayVendedores[1] = vendedor2;
-
-        // Testando os métodos das classes
-        minhaLoja.apresentarse();
-
-        // Iterando sobre os clientes da loja
-        for (Cliente cliente : minhaLoja.arrayClientes) {
-            if (cliente != null) {
-                cliente.apresentarse();
-            }
-        }
-
-        // Iterando sobre os vendedores da loja
-        for (Vendedor vendedor : minhaLoja.arrayVendedores) {
-            if (vendedor != null) {
-                vendedor.apresentarse();
-                System.out.println("Média salarial: " + vendedor.calcularMedia());
-                System.out.println("Bônus: " + vendedor.calcularBonus());
-            }
-        }
-
+    public static void testarProcessaPedido() {
+        // Implemente os testes aqui
     }
 }
