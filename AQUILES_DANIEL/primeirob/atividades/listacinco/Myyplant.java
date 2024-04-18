@@ -64,15 +64,17 @@ public class Myyplant {
     // data de hoje mas com os parametros ano ,mes e dia
     Date dataSemHora = new Date(dataAtual.getYear(), dataAtual.getMonth(), dataAtual.getDate());
     // data de 23 de setembro de 2002
-    Date dataDeAniversario = new Date(102, 8, 23);
+    Date dataDeAniversario = new Date(105, 9, 06);
 
     Long diaEmMs = 86400000l;
+    Long mesEmMS = 2629800000l;
 
     System.out.println("Data de hoje: " + dataAtual);
     System.out.println("Data sem hora: " + dataSemHora);
     System.out.println("Meu aniversario: " + dataDeAniversario);
 
     System.out.println("Dias de vida: " + (dataAtual.getTime() - dataDeAniversario.getTime()) / diaEmMs);
+    System.out.println("Meses de vida: " + (dataAtual.getTime() - dataDeAniversario.getTime()) / mesEmMS);
 
   }
 }

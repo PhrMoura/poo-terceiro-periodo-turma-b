@@ -53,18 +53,24 @@ public class Myplantoficial {
     // Classe de pedido //
     System.out.println("------------------------------");
 
-    // ARRUMAR ESSA PARTE DE PEDIDOS DATA DE VENCIMENTO E DATA ATUAL
-    ProcessarPedido processador = new ProcessarPedido();
-
     Pedido pedido = new Pedido();
     pedido.dataCriacao = new Date();
-    pedido.dataVencimentoReserva = new Date();
+    pedido.dataVencimentoReserva = new Date(pedido.dataCriacao.getTime() + (3 * 86400000));
+
+    pedido.adicionarItem(itemUm);
+    pedido.adicionarItem(itemDois);
+
+    System.out.println("Data de vencimento: " + pedido.dataVencimentoReserva);
 
     pedido.gerarDescricaoVenda();
 
     // Classe de processaPedido //
     System.out.println("------------------------------");
+
+    ProcessarPedido processador = new ProcessarPedido();
     Pedido pedidoProcessado = processador.processar(pedido);
+
+    System.out.println("Data de pagamento da reserva: " + pedido.dataPagamento);
 
   }
 }
