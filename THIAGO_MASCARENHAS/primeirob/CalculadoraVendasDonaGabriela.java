@@ -12,7 +12,7 @@ public class CalculadoraVendasDonaGabriela {
             System.out.println("[2] - Calcular Troco");
             System.out.println("[3] - Sair");
 
-            System.out.print("Escolha uma opção: ");
+            System.out.print("Escolha uma opçao: ");
             opcao = input.nextInt();
 
             switch (opcao) {

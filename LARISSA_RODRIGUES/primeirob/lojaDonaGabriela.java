@@ -5,12 +5,14 @@ public class LojaDonaGabriela {
     public static void main(String[] args) {
         int opcao = 0;
         Scanner input = new Scanner(System.in);
+        double[][] matriz = new double[13][31];
 
         do {
-            System.out.println("Bem vindo(a) à floricultura da dona Gabriela!");
+            System.out.println("Bem vindo(a) à FloriudaShop!");
             System.out.println("O que você deseja fazer?");
-            System.out.println("1- Calcular valor da venda.\n2- Calcular troco.\n3- Registrar venda.\n4- Sair.");
-            System.out.println("Opção desejada: ");
+            System.out.println("1- Calcular valor da venda.\n2- Calcular troco");
+            System.out.println("3- Registrar venda.\n4- Acessar venda registrada.\n5- Sair.");
+            System.out.println("Opção desejada:");
             opcao = input.nextInt();
 
             switch (opcao) {
@@ -42,23 +44,33 @@ public class LojaDonaGabriela {
                 break;
 
                 case 3:
-                double[] vetor = new double[99];
-                System.out.println("Insira o valor da venda a ser registrado:");
+                System.out.println("Insira o mês da venda:");
+                int mes = input.nextInt();
+                System.out.println("Insira o dia da venda:");
+                int dia = input.nextInt();
+                System.out.println("Insira o valor da venda:");
                 valorTotal = input.nextDouble();
-                vetor[0] = valorTotal;
-                System.out.println("\nValor registrado: R$" + vetor[0] + "\n\n");
+                matriz[mes][dia] = valorTotal;
+                System.out.println("\nValor registrado na data " + dia + "/" + mes + ": R$" + matriz[mes][dia] + "\n\n");
+                break;
+
+                case 4:
+                System.out.println("Insira o mês da venda registrada:");
+                mes = input.nextInt();
+                System.out.println("Insira o dia da venda registrada:");
+                dia = input.nextInt();
+                System.out.println("\nValor registrado na data " + dia + "/" + mes + ": R$" + matriz[mes][dia] + "\n\n");
                 break;
     
-                case 4:
+                case 5:
                 System.out.println("\nObrigada!");
                 break;
 
                 default:
-                System.out.println("Opção inválida.");
+                System.out.println("\nOpção inválida.");
                 break;
             }
-
-        } while (opcao != 4);
+        } while (opcao != 5);
         input.close();
     }
 }
