@@ -1,4 +1,4 @@
-package primeirob.atividades;
+package primeirob.atividades.listacinco;
 
 public class Cliente {
   String nome, cidade, bairro, rua;

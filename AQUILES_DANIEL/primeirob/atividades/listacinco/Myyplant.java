@@ -1,4 +1,4 @@
-package primeirob.atividades;
+package primeirob.atividades.listacinco;
 
 import java.util.Date;
 
@@ -12,6 +12,10 @@ public class Myyplant {
     vendedor.idade = 21;
     vendedor.loja = "Myy Plant";
     vendedor.salarioBase = 2000.00;
+
+    vendedor.salarioRecebido[0] = 2000.00;
+    vendedor.salarioRecebido[1] = 3000.00;
+    vendedor.salarioRecebido[2] = 1900.00;
 
     // chamando a função apresentarse da classe Vendedor
     vendedor.apresentarse();
@@ -55,8 +59,22 @@ public class Myyplant {
 
     System.out.println("-----------------------");
 
+    // data de hoje
     Date dataAtual = new Date();
+    // data de hoje mas com os parametros ano ,mes e dia
+    Date dataSemHora = new Date(dataAtual.getYear(), dataAtual.getMonth(), dataAtual.getDate());
+    // data de 23 de setembro de 2002
+    Date dataDeAniversario = new Date(105, 9, 06);
+
+    Long diaEmMs = 86400000l;
+    Long mesEmMS = 2629800000l;
 
     System.out.println("Data de hoje: " + dataAtual);
+    System.out.println("Data sem hora: " + dataSemHora);
+    System.out.println("Meu aniversario: " + dataDeAniversario);
+
+    System.out.println("Dias de vida: " + (dataAtual.getTime() - dataDeAniversario.getTime()) / diaEmMs);
+    System.out.println("Meses de vida: " + (dataAtual.getTime() - dataDeAniversario.getTime()) / mesEmMS);
+
   }
 }

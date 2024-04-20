@@ -1,17 +1,10 @@
-package primeirob.atividades;
+package primeirob.atividades.listacinco;
 
 public class Vendedor {
   String nome, loja, cidade, bairro, rua;
   int idade;
   double salarioBase;
-  double[] salarioRecebido;
-
-  public Vendedor() {
-    salarioRecebido = new double[3];
-    salarioRecebido[0] = 2000.00;
-    salarioRecebido[1] = 3000.00;
-    salarioRecebido[2] = 1900.00;
-  }
+  double[] salarioRecebido = new double[3];
 
   public void apresentarse() {
     System.out.println("Nome: " + nome);

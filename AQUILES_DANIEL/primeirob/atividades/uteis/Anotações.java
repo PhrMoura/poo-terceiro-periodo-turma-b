@@ -1,4 +1,4 @@
-package primeirob.atividades;
+package primeirob.atividades.uteis;
 
 public class Anotações {
 
