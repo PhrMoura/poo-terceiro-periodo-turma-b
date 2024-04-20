@@ -4,9 +4,14 @@ public class Item {
     int id;
     String nome;
     String tipo;
-    long valor;
+    double valor;
 
+    public double getValor() {
+        return valor;
+    }
+    
     public void gerarDescricao(){
+
         String msg = ("\nid:" + id)
         .concat("\nNome: " + nome)
         .concat("\nTitpo: " + tipo)
