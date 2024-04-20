@@ -3,13 +3,14 @@ package primeirob.lista05.models;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Vendedor {
+import primeirob.lista06.models.AbstractPessoa;
+import primeirob.lista06.models.Endereco;
+
+public class Vendedor extends AbstractPessoa {
     public String nome;
     public Integer idade;
     public Loja loja;
-    public String cidade;
-    public String bairro;
-    public String rua;
+    public Endereco endereco;
     public Double salarioBase;
     public List<Double> salarioRecebido = new ArrayList<Double>();
 
