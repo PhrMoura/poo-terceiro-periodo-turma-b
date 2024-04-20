@@ -3,7 +3,8 @@ package primeirob.listaCinco;
 public class myyPlant {
     public static void main(String[] args) {
         
-        
+        System.out.println("------------------------");
+
         Vendedor vendedorUm = new Vendedor();
 
         vendedorUm.nome = "Prepti";
