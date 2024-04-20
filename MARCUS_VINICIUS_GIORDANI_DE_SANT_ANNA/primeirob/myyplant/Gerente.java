@@ -1,7 +1,6 @@
 package primeirob.myyplant;
 
-public class Vendedor {
-
+public class Gerente {
     private String nome;
     private Integer idade;
     private String cidade;
@@ -12,7 +11,7 @@ public class Vendedor {
     private Integer[] salarioRecebido = new Integer[3];
 
     // Construtor
-    public Vendedor(String nome, int idade, String cidade, String bairro, String rua, Loja loja, Integer[] salarioBase, Integer[] salarioRecebido) {
+    public Gerente(String nome, int idade, String cidade, String bairro, String rua, Loja loja, Integer[] salarioBase, Integer[] salarioRecebido) {
         this.nome = nome;
         this.idade = idade;
         this.cidade = cidade;
@@ -109,21 +108,27 @@ public class Vendedor {
     public double calcularBonus() {
         double bonusTotal = 0;
         for (int salario : salarioBase) {
-            bonusTotal += salario * 0.2; // Utilizei 0.2 para corresponder ao 20%
+            bonusTotal += salario * 0.35;
         }
         return bonusTotal;
     }
 
-    // Método para apresentar informações do vendedor
     public void apresentarse() {
         // Verificar se a loja está definida para evitar NullPointerException
-        String lojaNome = (loja != null) ? loja.getNomeFantasia() : "Loja não definida";
+        String lojaNome = (loja != null) ? loja.getNomeFantasia() : "Loja nao definida";
 
         // Calcular o bônus
         double bonusTotal = calcularBonus();
 
         // Construir a mensagem de apresentação
-        String msg = "Nome: " + nome + "\nIdade: " + idade + "\nLoja: " + lojaNome + "\nBônus: " + bonusTotal;
+        String msg = "Nome: "
+                .concat(nome)
+                .concat("\nIdade:  ")
+                .concat(Integer.toString(idade))
+                .concat("\nLoja: ")
+                .concat(lojaNome)
+                .concat("\nBônus: ")
+                .concat(String.valueOf(bonusTotal));
 
         // Exibir a mensagem
         System.out.println(msg);
