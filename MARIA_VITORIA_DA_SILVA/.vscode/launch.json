@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Pedido",
+            "request": "launch",
+            "mainClass": "Lista6.Pedido",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "Menu",
+            "request": "launch",
+            "mainClass": "Lista6.Menu",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "Data",
+            "request": "launch",
+            "mainClass": "Lista6.Data",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Lista6.Main",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "datas",
+            "request": "launch",
+            "mainClass": "Date.datas",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "calculadora.Main",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
             "name": "ExemploTerceiraAula",
             "request": "launch",
             "mainClass": "primeirob.exemplos.ExemploTerceiraAula",
