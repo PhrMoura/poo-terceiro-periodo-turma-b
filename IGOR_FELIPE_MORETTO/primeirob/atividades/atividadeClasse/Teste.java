@@ -1,5 +1,6 @@
 package primeirob.atividades.atividadeclasse;
 
+
 public class Teste {
     public static void main(String[] args) {
         
@@ -11,6 +12,7 @@ public class Teste {
         Item item = new Item();
         Gerente gerente = new Gerente();
         Pedido pedido = new Pedido();
+        ProcessaPedido procPedido = new ProcessaPedido();
 
         vendedor.nome = "Roger Guedes";
         vendedor.idade = 18;
@@ -58,5 +60,9 @@ public class Teste {
         item.gerarDescricao();
 
         pedido.calcularValorTotal();
+        pedido.gerarDescricaoVenda();
+
+        procPedido.processar();
+        procPedido.confirmarPagamento();
     }
 }
