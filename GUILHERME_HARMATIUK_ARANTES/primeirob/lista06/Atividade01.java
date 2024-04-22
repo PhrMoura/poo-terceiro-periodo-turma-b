@@ -39,7 +39,7 @@ public class Atividade01 {
                     condition = true;
                     break;
                 case 1:
-                    listaPedidos.add(UtilityPedido.processarPedido());
+                    // listaPedidos.add(UtilityPedido.processarPedido());
                     break;
                 case 2: 
                     confirmarPedido(listaPedidos);
