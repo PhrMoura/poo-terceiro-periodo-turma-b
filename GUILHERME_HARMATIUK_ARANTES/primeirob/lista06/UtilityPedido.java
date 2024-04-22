@@ -13,11 +13,11 @@ import primeirob.lista06.models.Pedido;
 import primeirob.lista06.models.ProcessaPedido;
 
 public class UtilityPedido {
-    public static Pedido processarPedido () {
+    public static Pedido processarPedido (List<Item> listaItems) {
         System.out.println("Processar Pedidos");
 
         System.out.println("Escolha um Item:");
-        List<Item> listaItems = ListaItems.retriveListaItems();
+        // List<Item> listaItems = ListaItems.retriveListaItems();
         List<Long> listaIds = new ArrayList<Long>();
         List<Long> listaSelecionados = new ArrayList<Long>();
         
