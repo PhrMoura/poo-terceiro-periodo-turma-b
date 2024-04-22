@@ -1,34 +1,38 @@
 package primeirob.atividades.atividadeclasse;
 
-
-
 public class ProcessaPedido extends Pedido{
     
     int i = 0;
     long mlsDia = 86400000l;
 
+    public void cadastrarItem (){
+                    System.out.println("Id da planta: ");
+                    getId()[0] = demo.nextInt();
+                    System.out.println("Nome da planta: ");
+                    getNome() [0] = demo.next();
+                    System.out.println("Tipo da planta: ");
+                    getTipo() [0] = demo.next();
+                    System.out.println("Valor da planta: ");
+                    getValor()[0] = demo.nextInt();
+                    System.out.println("Id da planta: ");
+                    getId() [1] = demo.nextInt();
+                    System.out.println("Nome da planta: ");
+                    getNome() [1] = demo.next();
+                    System.out.println("Tipo da planta: ");
+                    getTipo() [1] = demo.next();
+                    System.out.println("Valor da planta: ");
+                    getValor() [1] = demo.nextInt();
+    }
+
     public void processar(){
         System.out.println("Cliente: ");
         cliente = demo.next();
         System.out.println("Id do produto: ");
-        id = demo.nextInt();
-        if (id == 1002) {
-            System.out.println("Samambaia");
-            valorTotal = valor[0];
+        int idd = demo.nextInt();
+        if (idd == getId() [0]) {
+            System.out.println(getNome()[0]);
+            valorTotal = getValor()[0];
             valorT = valorT + valorTotal;
-        }
-        else if (id == 1003){
-            System.out.println("Suculenta");
-            valorTotal = valor[1];
-            valorT = valorT + valorTotal;
-        }
-        else if (id == 1004){
-            System.out.println("Cacto");
-            valorTotal = valor[2];
-            valorT = valorT + valorTotal;
-        }
-        else {
-            System.out.println("Id inválido");
         }
         
         while (cond != 2) {
@@ -36,25 +40,13 @@ public class ProcessaPedido extends Pedido{
                 cond = demo.nextInt();
                 if (cond == 1) {
                     System.out.println("Id do produto: ");
-                id = demo.nextInt();
-                if (id == 1002) {
-                    System.out.println("Samambaia");
-                    valorTotal = valor[0];
-                    valorT = valorT + valorTotal;
-                }
-                else if (id == 1003){
-                    System.out.println("Suculenta");
-                    valorTotal = valor[1];
-                    valorT = valorT + valorTotal;
-                }
-                else if(id == 1004){
-                    System.out.println("Cacto");
-                    valorTotal = valor[2];
-                    valorT = valorT + valorTotal;
-                }
-                else {
-                    System.out.println("Id inválido");
-                }
+        idd = demo.nextInt();
+        if (idd == getId() [1]) {
+            System.out.println(getNome() [1]);
+            valorTotal = getValor()[1];
+            valorT = valorT + valorTotal;
+        }
+        
                 } else {
                     break;
                 }
