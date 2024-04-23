@@ -22,7 +22,51 @@ public class Pedido {
         this.dataVencimentoReserva = new Date(msDaquiTres);
         this.cliente = cliente;
         this.vendedor = vendedor;
-        this.itens = itens2;
+        this.itens = new ArrayList<>();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Date getDataCriacao() {
+        return dataCriacao;
+    }
+
+    public void setDataCriacao(Date dataCriacao) {
+        this.dataCriacao = dataCriacao;
+    }
+
+    public Date getDataPagamento() {
+        return dataPagamento;
+    }
+
+    public void setDataVencimentoReserva(Date dataVencimentoReserva) {
+        this.dataVencimentoReserva = dataVencimentoReserva;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public void setVendedor(Vendedor vendedor) {
+        this.vendedor = vendedor;
+    }
+
+    public Loja getLoja() {
+        return loja;
+    }
+
+    public void setLoja(Loja loja) {
+        this.loja = loja;
+    }
+
+    public void setItens(Item item) {
+        this.itens.add(item);
     }
 
     public double calcularValorTotal() {
@@ -39,24 +83,13 @@ public class Pedido {
         System.out.println("Valor Total do Pedido: " + calcularValorTotal());
     }
 
-    public void setDataPagamento(Date dataPagamento) {
-        this.dataPagamento = dataPagamento;
-    }
-
     public Date getDataVencimentoReserva() {
-        return dataVencimentoReserva;
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getDataVencimentoReserva'");
     }
 
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    public Vendedor getVendedor() {
-        return vendedor;
-    }
-
-
-    public ArrayList<Item> getItens() {
-        return itens;
+    public void setDataPagamento(Date date) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setDataPagamento'");
     }
 }
