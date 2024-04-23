@@ -1,10 +1,10 @@
 package Lista6;
 
 public class Item {
-    int id;
-    String nome;
-    String tipo;
-    double valor;
+    private int id;
+    private String nome;
+    private String tipo;
+    private double valor;
 
     public Item(int id, String nome, String tipo, double valor) {
         this.id = id;
@@ -13,14 +13,23 @@ public class Item {
         this.valor = valor;
     }
 
-    public void gerarDescricao() {
-        System.out.println("===========================");
-        System.out.println("Item: \nId do pedido: " + id + "\nNome do pedido: " + nome + "\nTipo: " + tipo + "\nValor do pedido: R$" + valor);
-        System.out.println("===========================");
+    public int getId() {
+        return id;
+    }
+    public String getNome(){
+        return nome;
+    }
+    public String getTipo(){
+        return tipo;
+    }
+    public double getValor(){
+        return valor;
     }
 
-    public double getValor() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getValor'");
+    public void gerarDescricao() {
+        System.out.println("===========================");
+        System.out.println("Item: \nId do pedido: " + id + "\nNome do pedido: " + nome + "\nTipo: " + tipo
+                + "\nValor do pedido: R$" + valor);
+        System.out.println("===========================");
     }
 }
