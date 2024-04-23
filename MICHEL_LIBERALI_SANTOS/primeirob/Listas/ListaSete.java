@@ -1,7 +1,10 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class ListaSete {
     private static Scanner scanner = new Scanner(System.in);
+    private List<Item> itens = new ArrayList<>();
 
     public static void main(String[] args) {
         ListaSete main = new ListaSete();
@@ -20,13 +23,13 @@ public class ListaSete {
                     main.criarPedido();
                     break;
                 case 4:
-                    sair = true;
-                    break;
-                case 5:
                     main.cadastrarItem();
                     break;
-                case 6:
+                case 5:
                     main.listarItens();
+                    break;
+                case 6:
+                    sair = true;
                     break;
                 default:
                     System.out.println("Opção inválida, tente novamente.");
@@ -41,9 +44,9 @@ public class ListaSete {
         System.out.println("[1] - Calcular Preço Total");
         System.out.println("[2] - Calcular Troco");
         System.out.println("[3] - Criar Pedido");
-        System.out.println("[4] - Sair");
-        System.out.println("[5] - Cadastrar Item");
-        System.out.println("[6] - Listar Itens");
+        System.out.println("[4] - Cadastrar Item");
+        System.out.println("[5] - Listar Itens");
+        System.out.println("[6] - Sair");
         System.out.print("Escolha uma opção: ");
     }
 
@@ -53,13 +56,13 @@ public class ListaSete {
         System.out.print("Digite o preço unitário da planta: ");
         double precoUnitario = scanner.nextDouble();
         double precoTotal = quantidade * precoUnitario;
-        
+
         if (quantidade > 10) {
             double desconto = precoTotal * 0.05;
             precoTotal -= desconto;
             System.out.println("Desconto aplicado de 5% para compras acima de 10 plantas.");
         }
-        
+
         System.out.println("Preço total: R$" + precoTotal);
     }
 
@@ -78,13 +81,26 @@ public class ListaSete {
     }
 
     private void cadastrarItem() {
-        System.out.println("Cadastrando novo item...");
-        // Implementar a lógica para cadastrar um novo item
+        System.out.print("Digite o id do item: ");
+        int id = scanner.nextInt();
+        scanner.nextLine(); // Consumir a quebra de linha
+        System.out.print("Digite o nome do item: ");
+        String nome = scanner.nextLine();
+        System.out.print("Digite o tipo do item: ");
+        String tipo = scanner.nextLine();
+        System.out.print("Digite o valor do item: ");
+        double valor = scanner.nextDouble();
+
+        Item item = new Item(id, nome, tipo, valor);
+        itens.add(item);
+        System.out.println("Item cadastrado com sucesso!");
     }
 
     private void listarItens() {
-        System.out.println("Listando itens cadastrados...");
-        // Implementar a lógica para listar os itens cadastrados
+        System.out.println("Listando itens cadastrados:");
+        for (Item item : itens) {
+            System.out.println(item);
+        }
     }
 
     public static class Cliente {
@@ -200,8 +216,11 @@ public class ListaSete {
             this.valor = valor;
         }
 
-        public void gerarDescricao() {
-            System.out.println("Item: " + id + ", Nome: " + nome + ", Tipo: " + tipo + ", Valor: R$" + valor);
+        public String toString() {
+            
+            return "Item: " + id + ", Nome: " + nome + ", Tipo: " + tipo + ", Valor: R$" + valor;
         }
     }
 }
+
+           
