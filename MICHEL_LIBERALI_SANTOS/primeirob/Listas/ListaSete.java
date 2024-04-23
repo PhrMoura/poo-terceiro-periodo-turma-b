@@ -77,13 +77,12 @@ public class ListaSete {
 
     private void criarPedido() {
         System.out.println("Criando pedido fictício...");
-        // Implementar a lógica para criar um pedido
     }
 
     private void cadastrarItem() {
         System.out.print("Digite o id do item: ");
         int id = scanner.nextInt();
-        scanner.nextLine(); // Consumir a quebra de linha
+        scanner.nextLine();
         System.out.print("Digite o nome do item: ");
         String nome = scanner.nextLine();
         System.out.print("Digite o tipo do item: ");
