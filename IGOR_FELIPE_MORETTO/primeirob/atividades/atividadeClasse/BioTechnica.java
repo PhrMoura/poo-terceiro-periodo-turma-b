@@ -1,11 +1,12 @@
-package primeirob.exemplos.classemetodo;
+package primeirob.atividades.atividadeclasse;
 
-public class Postgres implements IBancoDados{
-    
-  
+import primeirob.exemplos.classemetodo.IBancoDados;
+
+public class BioTechnica implements IBancoDados{
+
     @Override
-    public void parceria(){
-        System.out.println("Parceria com PG");
+    public void parceria() {
+        System.out.println("Parceria com BioTechnica");
     }
     public void deletar() {
         System.out.println("Deletando em PG");
@@ -16,5 +17,4 @@ public class Postgres implements IBancoDados{
     public void atualizar(){
         System.out.println("Atualizando em PG");
     }
-
 }

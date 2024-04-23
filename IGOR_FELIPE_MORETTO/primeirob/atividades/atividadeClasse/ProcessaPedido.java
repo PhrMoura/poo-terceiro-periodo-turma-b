@@ -4,7 +4,7 @@ public class ProcessaPedido extends Pedido{
     
     int i = 0;
     long mlsDia = 86400000l;
-
+    
     public void cadastrarItem (){
                     System.out.println("Id da planta: ");
                     getId()[0] = demo.nextInt();
@@ -31,6 +31,7 @@ public class ProcessaPedido extends Pedido{
         int idd = demo.nextInt();
         if (idd == getId() [0]) {
             System.out.println(getNome()[0]);
+           
             valorTotal = getValor()[0];
             valorT = valorT + valorTotal;
         }

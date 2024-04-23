@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class AttSete {
     public static void main(String[] args) {
+        
         int posicao = 0, num = 0, linha = 0, quantPlanta = 0, coluna = 0;
         double precoTotal = 0.00d;
         double precoPlanta, valor, troco = 0.00d;
@@ -19,10 +20,10 @@ public class AttSete {
         Cliente clienteTres = new Cliente("Fagner", 48);
         Vendedor vendedor = new Vendedor();
         Loja loja = new Loja();
-        Item item = new Item();
         Gerente gerente = new Gerente();
         Pedido pedido = new Pedido();
         ProcessaPedido procPedido = new ProcessaPedido();
+        BioTechnica BioTechnica = new BioTechnica();
        
                     
         while (num != 13) {
@@ -142,10 +143,16 @@ public class AttSete {
                 procPedido.cadastrarItem();
             }
             if (num == 10) {
-                System.out.println(item.getId());
-                System.out.println(item.getNome());
-                System.out.println(item.getTipo());
-                System.out.println(item.getValor());
+                System.out.println("Id: " + procPedido.getId()[0]);
+                System.out.println("Nome do produto: " + procPedido.getNome()[0]);
+                System.out.println("Tipo do produto: " + procPedido.getTipo()[0]);
+                System.out.println("Valor do produto: R$" + procPedido.getValor()[0]);
+                System.out.println("Id: " + procPedido.getId()[1]);
+                System.out.println("Nome do produto: " + procPedido.getNome()[1]);
+                System.out.println("Tipo do produto: " + procPedido.getTipo()[1]);
+                System.out.println("Valor do produto: R$" + procPedido.getValor()[1]);
+                System.out.println();
+                BioTechnica.parceria();
             }
             if (num == 11) {
                 pedido.calcularValorTotal();
