@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-public class Main {
+public class ListaSete {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Main main = new Main();
+        ListaSete main = new ListaSete();
         boolean sair = false;
         while (!sair) {
             main.exibirMenu();
