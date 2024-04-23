@@ -1,6 +1,4 @@
-import java.util.Date;
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
@@ -47,13 +45,13 @@ public class Main {
         System.out.print("Digite o preço unitário da planta: ");
         double precoUnitario = scanner.nextDouble();
         double precoTotal = quantidade * precoUnitario;
-        
+
         if (quantidade > 10) {
             double desconto = precoTotal * 0.05;
             precoTotal -= desconto;
             System.out.println("Desconto aplicado de 5% para compras acima de 10 plantas.");
         }
-        
+
         System.out.println("Preço total: R$" + precoTotal);
     }
 
@@ -73,7 +71,7 @@ public class Main {
         Vendedor vendedor = new Vendedor("Maria", 25, "Loja 1", "São Paulo", "Centro", "Rua B", 2000.0, new double[]{1500.0, 1600.0, 1700.0});
         Loja loja = new Loja("Minha Loja", "Minha Empresa", "123456789", "São Paulo", "Centro", "Rua C", new Vendedor[]{vendedor}, new Cliente[]{cliente});
         Item[] itens = {new Item(1, "Planta", "Ornamental", 50.0), new Item(2, "Vaso", "Cerâmica", 30.0)};
-        
+
         ProcessaPedido processaPedido = new ProcessaPedido();
         processaPedido.processar(cliente, vendedor, loja, itens);
     }
@@ -190,3 +188,29 @@ public class Main {
 
         public void gerarDescricao() {
             System.out.println("Item: " + id + ", Nome: " + nome + ", Tipo: " + tipo + ", Valor: R$" + valor);
+        }
+    }
+
+    public class ProcessaPedido {
+        public void processar(Cliente cliente, Vendedor vendedor, Loja loja, Item[] itens) {
+            System.out.println("Processando pedido...");
+            System.out.println("Cliente: " + cliente.nome);
+            System.out.println("Vendedor: " + vendedor.nome);
+            System.out.println("Loja: " + loja.nomeFantasia);
+
+            double total = 0;
+            for (Item item : itens) {
+                total += item.valor;
+            }
+
+            System.out.println("Itens do Pedido:");
+            for (Item item : itens) {
+                System.out.println(" - " + item.nome + ": R$" + item.valor);
+            }
+
+            System.out.println("Total do Pedido: R$" + total);
+            System.out.println("Pedido processado com sucesso!");
+        }
+    }
+}
+
