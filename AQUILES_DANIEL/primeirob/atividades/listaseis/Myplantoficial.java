@@ -39,12 +39,12 @@ public class Myplantoficial {
     System.out.println("------------------------------");
 
     Gerente gerenteUm = new Gerente();
-    gerenteUm.setEndereco(new Endereco());
 
     gerenteUm.setNome("Aquiles");
     gerenteUm.setIdade(20);
     gerenteUm.setLoja(lojaUm);
     gerenteUm.setSalarioBase(3700);
+    gerenteUm.setEndereco(new Endereco());
 
     gerenteUm.apresentarse();
 
@@ -144,6 +144,7 @@ public class Myplantoficial {
         input.nextLine();
         pedido.removerItemPorId(pedido.getListaItens(), id);
       }
+
       if (escolha == 4) {
         System.out.println("Pedido feito em parceria com qual empresa?");
         System.out.println("1 - BioTechnica");
@@ -170,7 +171,6 @@ public class Myplantoficial {
         GerenciarItens pedidoFeito = new GerenciarItens();
         pedidoFeito(pedidoFeito);
       }
-
     }
     System.out.println("Data de pagamento: " + pedido.getDataPagamento());
   }

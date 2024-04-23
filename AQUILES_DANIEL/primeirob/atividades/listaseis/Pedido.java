@@ -74,11 +74,11 @@ public class Pedido {
       Item item = listaDeItens.get(i);
       if (item.getId() == id) {
         listaDeItens.remove(i);
-        System.out.println("\nItem removido com sucesso.");
+        System.out.println("Item removido com sucesso.");
         return;
       }
     }
-    System.out.println("\nItem com o ID especificado não encontrado.");
+    System.out.println("Item com o ID especificado não encontrado.");
   }
 
   public int valorTotal() {
