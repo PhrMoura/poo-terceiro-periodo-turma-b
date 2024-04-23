@@ -22,6 +22,12 @@ public class Main {
                 case 4:
                     sair = true;
                     break;
+                case 5:
+                    main.cadastrarItem();
+                    break;
+                case 6:
+                    main.listarItens();
+                    break;
                 default:
                     System.out.println("Opção inválida, tente novamente.");
             }
@@ -36,6 +42,8 @@ public class Main {
         System.out.println("[2] - Calcular Troco");
         System.out.println("[3] - Criar Pedido");
         System.out.println("[4] - Sair");
+        System.out.println("[5] - Cadastrar Item");
+        System.out.println("[6] - Listar Itens");
         System.out.print("Escolha uma opção: ");
     }
 
@@ -66,17 +74,20 @@ public class Main {
 
     private void criarPedido() {
         System.out.println("Criando pedido fictício...");
-
-        Cliente cliente = new Cliente("João", 30, "São Paulo", "Centro", "Rua A");
-        Vendedor vendedor = new Vendedor("Maria", 25, "Loja 1", "São Paulo", "Centro", "Rua B", 2000.0, new double[]{1500.0, 1600.0, 1700.0});
-        Loja loja = new Loja("Minha Loja", "Minha Empresa", "123456789", "São Paulo", "Centro", "Rua C", new Vendedor[]{vendedor}, new Cliente[]{cliente});
-        Item[] itens = {new Item(1, "Planta", "Ornamental", 50.0), new Item(2, "Vaso", "Cerâmica", 30.0)};
-        
-        ProcessaPedido processaPedido = new ProcessaPedido();
-        processaPedido.processar(cliente, vendedor, loja, itens);
+        // Implementar a lógica para criar um pedido
     }
 
-    public class Cliente {
+    private void cadastrarItem() {
+        System.out.println("Cadastrando novo item...");
+        // Implementar a lógica para cadastrar um novo item
+    }
+
+    private void listarItens() {
+        System.out.println("Listando itens cadastrados...");
+        // Implementar a lógica para listar os itens cadastrados
+    }
+
+    public static class Cliente {
         private String nome;
         private int idade;
         private String cidade;
@@ -98,7 +109,7 @@ public class Main {
 
     }
 
-    public class Vendedor {
+    public static class Vendedor {
         private String nome;
         private int idade;
         private String loja;
@@ -139,7 +150,7 @@ public class Main {
 
     }
 
-    public class Loja {
+    public static class Loja {
         private String nomeFantasia;
         private String razaoSocial;
         private String cnpj;
@@ -176,7 +187,7 @@ public class Main {
 
     }
 
-    public class Item {
+    public static class Item {
         private int id;
         private String nome;
         private String tipo;
