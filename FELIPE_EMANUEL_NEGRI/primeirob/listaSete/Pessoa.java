@@ -1,4 +1,4 @@
-package primeirob.listaSeis;
+package primeirob.listaSete;
 
 public class Pessoa {
     
