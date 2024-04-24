@@ -3,21 +3,27 @@ package primeirob.myyplant;
 import java.util.Date;
 
 public class ProcessaPedido {
-    
-    // Método para processar um pedido
-    public void processarPedido(Pedido pedido) {
-        // Processar o pedido...
-        System.out.println("Pedido processado: " + pedido.getId());
+
+    public void processarPedido(Pedido pedido, Item itemEscolhido, int quantidade) {
+        boolean itemDisponivel = verificarDisponibilidadeItem(itemEscolhido, quantidade);
+        if (itemDisponivel) {
+            ItemPedido itemPedido = new ItemPedido(itemEscolhido, quantidade);
+            pedido.adicionarItemPedido(itemPedido);
+            System.out.println("Pedido processado: " + pedido.getId());
+        } else {
+            System.out.println("Item escolhido não está disponível em quantidade suficiente.");
+        }
     }
-    
-    // Método privado para confirmar o pagamento
+
+    private boolean verificarDisponibilidadeItem(Item item, int quantidade) {
+        return true;
+    }
+
     private boolean confirmarPagamento(Pedido pedido) {
-        // Verificar se o pedido foi pago antes do vencimento da reserva
         Date dataAtual = new Date();
         return dataAtual.before(pedido.getDataVencimentoReserva());
     }
-    
-    // Método de teste para verificar o funcionamento do método confirmarPagamento
+
     public void testarConfirmarPagamento(Pedido pedido) {
         if (confirmarPagamento(pedido)) {
             System.out.println("O pagamento do pedido " + pedido.getId() + " foi confirmado.");
