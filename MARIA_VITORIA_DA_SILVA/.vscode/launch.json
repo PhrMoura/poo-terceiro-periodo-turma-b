@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Lista7.Main",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "Menu",
+            "request": "launch",
+            "mainClass": "Lista7.Menu",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
             "name": "Pedido",
             "request": "launch",
             "mainClass": "Lista6.Pedido",
