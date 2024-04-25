@@ -51,7 +51,6 @@ public class Main {
         } while (opcao != 4);
 
         entradaTeclado.close();
-
     }
 
     public static Item criarItem(Scanner scanner) {
