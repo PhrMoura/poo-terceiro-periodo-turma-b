@@ -1,18 +1,69 @@
 package primeirob.atividades.atividadeclasse;
 
-public class Item {
-    Integer [] id = new Integer[] {1002, 1003, 1004};
-    String [] nome = new String[] {"Samambaia", "Suculenta", "Cacto"};
-    String [] tipo = new String[] {"Samambaia Americana", "Kalanchoe", "Seco"};
-    Double [] valor = new Double[] {30.0d, 20.0d, 35.0d};
+import java.util.Scanner;
 
-    public void gerarDescricao(){
-        for (int i = 0; i < id.length; i++) {
-            String msg = "Produtos: \n"
-            .concat("Item " + nome[i])
-            .concat(", id " + id[i])
-            .concat(", o tipo é " + tipo[i] + " e o valor é R$" + valor[i]);
-            System.out.println(msg);
-        }
+public class Item {
+    private int [] id = new int[99]; 
+    private String [] nome = new String[99]; 
+    private String [] tipo = new String[99]; 
+    private int [] valor = new int[99]; 
+    Scanner demo = new Scanner(System.in);
+
+   
+    public int[] getId() {
+        return id;
     }
+
+
+    public void setId(int[] id) {
+        this.id = id;
+    }
+
+
+    public String[] getNome() {
+        return nome;
+    }
+
+
+    public void setNome(String[] nome) {
+        this.nome = nome;
+    }
+
+
+    public String[] getTipo() {
+        return tipo;
+    }
+
+
+    public void setTipo(String[] tipo) {
+        this.tipo = tipo;
+    }
+
+
+    public int[] getValor() {
+        return valor;
+    }
+
+
+    public void setValor(int[] valor) {
+        this.valor = valor;
+    }
+
+    
+
+    public Item (){
+        this.id = getId();
+        this.nome = getNome();
+        this.tipo = getTipo();
+        this.valor = getValor();
+    }
+    // public void gerarDescricao(){
+    //     for (int i = 0; i < getId().length; i++) {
+    //         String msg = "Produtos: \n"
+    //         .concat("Item " + getNome()[i])
+    //         .concat(", id " + getId()[i])
+    //         .concat(", o tipo é " + getTipo()[i] + " e o valor é R$" + getValor()[i]);
+    //         System.out.println(msg);
+    //     }
+    // }
 }

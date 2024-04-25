@@ -4,15 +4,16 @@ package primeirob.atividades.atividadeclasse;
 public class Teste {
     public static void main(String[] args) {
         
-        Cliente cliente = new Cliente();
-        Cliente clienteDois = new Cliente();
-        Cliente clienteTres = new Cliente();
+        Cliente cliente = new Cliente("Yuri Alberto", 20);
+        Cliente clienteDois = new Cliente("Cássio", 35);
+        Cliente clienteTres = new Cliente("Fagner", 48);
         Loja loja = new Loja();
         Vendedor vendedor = new Vendedor();
         Item item = new Item();
         Gerente gerente = new Gerente();
         Pedido pedido = new Pedido();
         ProcessaPedido procPedido = new ProcessaPedido();
+        
 
         vendedor.nome = "Roger Guedes";
         vendedor.idade = 18;
@@ -24,19 +25,12 @@ public class Teste {
         
         vendedor.apresentarse();
 
-        cliente.nome = "Yuri Alberto";
-        cliente.idade = 20;
+        System.out.println("Cliente: " + cliente.nome + " com " + cliente.idade + " anos");
         loja.contadorCliente++;
-        clienteDois.nome = "Cássio";
-        clienteDois.idade = 35;
+        System.out.println("Cliente: " + clienteDois.nome + " com " + clienteDois.idade + " anos");
         loja.contadorCliente++;
-        clienteTres.nome = "Fagner";
-        clienteTres.idade = 48;
+        System.out.println("Cliente: " + clienteTres.nome + " com " + clienteTres.idade + " anos");
         loja.contadorCliente++;
-
-        cliente.apresentarse();
-        clienteDois.apresentarse();
-        clienteTres.apresentarse();
 
         loja.nomeFantasia = "Myy Plant";
         loja.razaoSocial = "Floricultura Dona Gabrielinha LTDA.";
@@ -57,12 +51,16 @@ public class Teste {
 
         gerente.apresentarse();
 
-        item.gerarDescricao();
+        //pedido.calcularValorTotal();
+        //pedido.gerarDescricaoVenda();
 
-        pedido.calcularValorTotal();
-        pedido.gerarDescricaoVenda();
-
+        procPedido.cadastrarItem();
         procPedido.processar();
         procPedido.confirmarPagamento();
+
+        System.out.println(item.getId());
+        System.out.println(item.getNome());
+        System.out.println(item.getTipo());
+        System.out.println(item.getValor());
     }
 }
