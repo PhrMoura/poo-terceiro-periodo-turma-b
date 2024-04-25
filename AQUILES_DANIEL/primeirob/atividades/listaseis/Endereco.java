@@ -1,14 +1,39 @@
 package primeirob.atividades.listaseis;
 
 public class Endereco {
-  String rua, bairro, cidade, complemento;
-  int numero;
+  private String cidade;
+  private String bairro;
+  private String rua;
+  private int numero;
 
-  public void apresentarLogradouro() {
-    System.out.println("Rua: " + rua);
-    System.out.println("Bairro: " + bairro);
-    System.out.println("Cidade: " + cidade);
-    System.out.println("Numero: " + numero);
-    System.out.println("Complemento: " + complemento);
+  public Endereco() {
+
+  }
+
+  public Endereco(String cidade, String bairro, String rua, int numero) {
+    this.cidade = cidade;
+    this.bairro = bairro;
+    this.rua = rua;
+    this.numero = numero;
+  }
+
+  public String getCidade() {
+    return cidade;
+  }
+
+  public String getBairro() {
+    return bairro;
+  }
+
+  public String getRua() {
+    return rua;
+  }
+
+  public int getNumero() {
+    return numero;
+  }
+
+  public void apresentarse() {
+    System.out.println("Nome cidade " + cidade + " Bairro " + bairro + " Rua " + rua + " numero " + numero);
   }
 }

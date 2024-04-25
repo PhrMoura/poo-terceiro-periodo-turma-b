@@ -1,14 +1,10 @@
 package primeirob.atividades.listaseis;
 
-public class Gerente extends Endereco {
-  String nome, loja;
-  int idade;
-  double salarioBase;
-  double[] salarioRecebido = new double[3];
+public class Gerente extends Pessoa {
+  private Loja loja;
+  private double salarioBase;
 
-  public void apresentarse() {
-    System.out.println("Meu nome é " + nome + ", tenho " + idade + " anos e trabalho na " + loja);
-  }
+  double[] salarioRecebido = new double[3];
 
   public double calcularMedia() {
     double soma = 0;
@@ -22,4 +18,25 @@ public class Gerente extends Endereco {
     return salarioBase * 0.35;
   }
 
+  public Loja getLoja() {
+    return loja;
+  }
+
+  public void setLoja(Loja loja) {
+    this.loja = loja;
+  }
+
+  public double getSalarioBase() {
+    return salarioBase;
+  }
+
+  public void setSalarioBase(double salarioBase) {
+    this.salarioBase = salarioBase;
+  }
+
+  public void apresentarse() {
+    System.out.println(
+        "Nome gerente " + getNome() + " idade " + getIdade() + " loja " + loja.getNomeFantasia() + " salario "
+            + getSalarioBase());
+  }
 }
