@@ -34,16 +34,16 @@ public class SoftwareExecutavel {
         Loja lojaMyPlant = new Loja("MyPlant", 444444444, "Cascavel", "Centro", "Av. Brasil");
         
         lojaMyPlant.adicionarCliente(vendedorUm);
-        lojaMyPlant.adicionarCliente(vendedorUm);
-        lojaMyPlant.adicionarCliente(vendedorUm);
+        lojaMyPlant.adicionarCliente(vendedorDois);
+        lojaMyPlant.adicionarCliente(vendedorTres);
 
         lojaMyPlant.adicionarVendedor(clienteUm);
         lojaMyPlant.adicionarVendedor(clienteDois);
         lojaMyPlant.adicionarVendedor(clienteTres);
 
         lojaMyPlant.apresentarse();
-        System.out.println("Número de Clientes da loja" + lojaMyPlant.contarClientes());
-        System.out.println("Número de Vendedores da loja" + lojaMyPlant.contarVendedores());
+        System.out.println("Número de Clientes da loja: " + lojaMyPlant.contarClientes());
+        System.out.println("Número de Vendedores da loja: " + lojaMyPlant.contarVendedores());
 
     }
     

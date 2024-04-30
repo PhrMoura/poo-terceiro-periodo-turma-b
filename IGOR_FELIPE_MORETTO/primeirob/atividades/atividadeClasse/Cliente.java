@@ -1,21 +1,19 @@
 package primeirob.atividades.atividadeclasse;
 
-public class Cliente {
+public class Cliente extends Pessoa{
     
-    String nome;
-    Integer idade;
-    Loja loja;
-    String cidade;
-    String bairro;
-    String rua;
-    
-    public void apresentarse() {
-        String msg = "Sou o cliente "
-        .concat(nome)
-        .concat(" e tenho " + idade)
-        .concat(" anos");
+    // public void apresentarse() {
+    //     String msg = "Sou o cliente "
+    //     .concat(nome)
+    //     .concat(" e tenho " + idade)
+    //     .concat(" anos");
 
-        System.out.println(msg);
+    //     System.out.println(msg);
+    // }
+
+    public Cliente (String nome, Integer idade){
+        this.nome = nome;
+        this.idade = idade;
     }
 
 }

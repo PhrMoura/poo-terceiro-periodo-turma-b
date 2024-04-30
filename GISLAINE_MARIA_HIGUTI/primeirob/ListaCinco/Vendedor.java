@@ -34,8 +34,8 @@ public class Vendedor {
         
         String msg = "Nome do vendedor: "
                 .concat(nome)
-                .concat(", de " + idade)
-                .concat(" anos de idade, que trabalha na loja ")
+                .concat(", " + idade)
+                .concat(" anos de idade, trabalha na loja ")
                 .concat(loja);
 
         System.out.println(msg);

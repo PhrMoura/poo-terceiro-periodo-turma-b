@@ -19,6 +19,7 @@ public class AttCinco {
         Cliente clienteTres = new Cliente();
         Vendedor vendedor = new Vendedor();
         Loja loja = new Loja();
+        
                     
         while (num != 8) {
             if (linha != 0) {
@@ -133,6 +134,7 @@ public class AttCinco {
                 loja.contarClientes();
                 loja.contarVendedores();
             }
+            
             if (num == 8){
                 System.out.println("Saindo...");
             }

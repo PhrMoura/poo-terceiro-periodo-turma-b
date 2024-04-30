@@ -1,17 +1,69 @@
 package primeirob.atividades.atividadeclasse;
 
+import java.util.Scanner;
+
 public class Item {
-    Integer [] id = new Integer[] {1002, 1003, 1004};
-    String [] nome = new String[] {"Samambaia", "Suculenta", "Cacto"};
-    String [] tipo = new String[] {"Samambaia Americana", "Kalanchoe", "Seco"};
-    Double [] valor = new Double[] {30.0d, 20.0d, 35.0d};
+    private int [] id = new int[99]; 
+    private String [] nome = new String[99]; 
+    private String [] tipo = new String[99]; 
+    private int [] valor = new int[99]; 
+    Scanner demo = new Scanner(System.in);
 
-    public void gerarDescricao(){
-        String msg = "Produtos: \n"
-        .concat("Item " + nome[0])
-        .concat(", id " + id[0])
-        .concat(", o tipo é " + tipo[0] + " e o valor é R$" + valor[0]);
-
-        System.out.println(msg);
+   
+    public int[] getId() {
+        return id;
     }
+
+
+    public void setId(int[] id) {
+        this.id = id;
+    }
+
+
+    public String[] getNome() {
+        return nome;
+    }
+
+
+    public void setNome(String[] nome) {
+        this.nome = nome;
+    }
+
+
+    public String[] getTipo() {
+        return tipo;
+    }
+
+
+    public void setTipo(String[] tipo) {
+        this.tipo = tipo;
+    }
+
+
+    public int[] getValor() {
+        return valor;
+    }
+
+
+    public void setValor(int[] valor) {
+        this.valor = valor;
+    }
+
+    
+
+    public Item (){
+        this.id = getId();
+        this.nome = getNome();
+        this.tipo = getTipo();
+        this.valor = getValor();
+    }
+    // public void gerarDescricao(){
+    //     for (int i = 0; i < getId().length; i++) {
+    //         String msg = "Produtos: \n"
+    //         .concat("Item " + getNome()[i])
+    //         .concat(", id " + getId()[i])
+    //         .concat(", o tipo é " + getTipo()[i] + " e o valor é R$" + getValor()[i]);
+    //         System.out.println(msg);
+    //     }
+    // }
 }
