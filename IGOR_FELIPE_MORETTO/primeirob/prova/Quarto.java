@@ -1,4 +1,4 @@
-package IGOR_FELIPE_MORETTO.primeirob.prova;
+package primeirob.prova;
 
 import java.util.Date;
 import java.util.Scanner;
