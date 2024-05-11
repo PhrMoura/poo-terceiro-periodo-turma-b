@@ -1,4 +1,4 @@
-package primeirob.atividades.listaseis;
+package primeirob.listas.lista6;
 
 public class Cliente extends Pessoa {
   public void apresentarse() {

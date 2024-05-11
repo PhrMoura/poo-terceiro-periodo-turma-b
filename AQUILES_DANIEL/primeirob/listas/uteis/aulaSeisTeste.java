@@ -1,4 +1,4 @@
-package primeirob.atividades.uteis;
+package primeirob.listas.uteis;
 
 public class aulaSeisTeste {
   public static void main(String[] args) {

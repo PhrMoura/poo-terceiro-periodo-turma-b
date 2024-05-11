@@ -1,4 +1,4 @@
-package primeirob.atividades.listaseis;
+package primeirob.listas.lista6;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -20,6 +20,7 @@ public class Pedido {
     this.dataCriacao = new Date();
     this.dataVencimentoReserva = new Date(msDaquiTres);
     this.cliente = cliente;
+
     this.vendedor = vendedor;
   }
 
