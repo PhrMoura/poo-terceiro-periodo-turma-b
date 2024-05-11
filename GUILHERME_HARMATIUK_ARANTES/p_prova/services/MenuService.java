@@ -1,8 +1,11 @@
-package primeirob.prova;
+package p_prova.services;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import p_prova.models.Cliente;
+import p_prova.models.Quarto;
 
 public class MenuService {
     public static void opcoes () {
