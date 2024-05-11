@@ -1,13 +1,6 @@
 package segundob.listas.lista1;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 public class atividadeUm {
   public static void main(String[] args) {
@@ -21,7 +14,7 @@ public class atividadeUm {
     colegasFavoritos.add("Sandrolax");
 
     for (String nomes : colegasFavoritos) {
-      System.out.println("A" + " - " + nomes);
+      System.out.println(nomes.charAt(0) + " - " + nomes);
     }
 
     System.out.println("----------ATV 2----------");
