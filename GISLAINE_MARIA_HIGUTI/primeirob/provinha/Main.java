@@ -1,4 +1,4 @@
-package primeirob.prova;
+package primeirob.provinha;
 
 import java.util.Scanner;
 

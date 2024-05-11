@@ -1,4 +1,4 @@
-package primeirob.prova;
+package primeirob.provinha;
 
 public class CadastroCliente {
     private String nome;
@@ -39,3 +39,5 @@ public class CadastroCliente {
     
 }
 }
+
+
