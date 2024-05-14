@@ -1,3 +1,4 @@
+package primeirob.atividades.atividadeclasse;
 // package primeirob.atividades.atividadeclasse;
 
 // import java.util.Scanner;
