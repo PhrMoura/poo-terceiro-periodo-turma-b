@@ -1,4 +1,4 @@
-package primeirob.listaCinco;
+package primeiroB.listaCinco;
 
 public class Teste {
     public static void main(String[] args) {
