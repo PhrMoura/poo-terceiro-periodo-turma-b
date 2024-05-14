@@ -71,6 +71,8 @@ public class atividadeUm {
     pecasDePc.put("Placa mae", "B450M DS3H v2");
     pecasDePc.put("Ssd", "NVME 500GB");
 
-    System.out.println(pecasDePc);
+    for (Map.Entry<String, String> entry : pecasDePc.entrySet()) {
+      System.out.println(entry.getKey() + " = " + entry.getValue());
+    }
   }
 }
