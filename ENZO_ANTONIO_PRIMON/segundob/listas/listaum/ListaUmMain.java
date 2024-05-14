@@ -74,11 +74,11 @@ public class ListaUmMain {
 
         Queue<String> topFilmes = new PriorityQueue<>();
 
-        topFilmes.add("Evagelion 3.0 + 1.0: Thrice upon a time");// literalmente o melhor final de evangelion, meu caro
-                                                                 // sandrolaax
+        topFilmes.add("Evagelion 3.0 + 1.0: Thrice upon a time");// literalmente o melhor final de evangelion, meu caro sandrolaax
         topFilmes.add("Konosuba");
         topFilmes.add("Frieren");
         topFilmes.add("Mushoku Tensei");// tem umas parada meio paia mas depois compensa demais pqp bom pra cacilda
+        topFilmes.add("Horimiya");
 
         topFilmes.forEach(filme -> System.out.println(filme));
 
@@ -87,7 +87,7 @@ public class ListaUmMain {
         // Atividade cinco
 
         System.out.println("-----ATIVIDADE 5-----");
-        
+
         configuracoesHardware();
 
         System.out.println("-----FIM-----");
