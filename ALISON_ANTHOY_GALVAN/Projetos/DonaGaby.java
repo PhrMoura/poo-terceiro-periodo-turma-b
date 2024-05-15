@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Atv1Sandro {
+public class DonaGaby {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -78,6 +78,6 @@ public class Atv1Sandro {
 
             System.out.println("O valor recebido é insuficiente. Por favor, insira um valor válido.");
 
-        }
+        }  
     }
 }
