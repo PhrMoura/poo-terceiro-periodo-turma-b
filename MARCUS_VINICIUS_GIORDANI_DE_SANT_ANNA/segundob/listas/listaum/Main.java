@@ -41,7 +41,7 @@ public class Main {
 
         // ATV4
         List<String> melhoresAnimes = Arrays.asList("Hunter x Hunter", "Black Clover", "Classroom of the Elite", "Attack on Titan", "Mob Psycho 100");
-        List<String> animesOrdenados = ordenarAnimesFilmes(melhoresAnimes);
+        List<String> animesOrdenados = ordenarFilmes(melhoresAnimes);
         System.out.println("Animes ordenados: " + animesOrdenados);
 
         // ATV5
@@ -51,14 +51,14 @@ public class Main {
         }
     }
 
-    // Método para ATV3
+    // ATV3
     public static List<String> obterJogosUnicos(List<String> jogosZerados) {
         HashSet<String> setJogos = new HashSet<>(jogosZerados);
         return new ArrayList<>(setJogos);
     }
 
-    // Método para ATV4
-    public static List<String> ordenarAnimesFilmes(List<String> animesFilmes) {
+    // ATV4
+    public static List<String> ordenarFilmes(List<String> animesFilmes) {
         PriorityQueue<String> pq = new PriorityQueue<>(animesFilmes);
         List<String> ordenados = new ArrayList<>();
         while (!pq.isEmpty()) {
@@ -67,7 +67,7 @@ public class Main {
         return ordenados;
     }
 
-    // Método para ATV5
+    // ATV5
     public static Map<String, String> criarConfiguracoesHardware() {
         Map<String, String> hardware = new HashMap<>();
         hardware.put("Processador", "i7 12700H");
