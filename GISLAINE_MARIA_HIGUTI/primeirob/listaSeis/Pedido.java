@@ -23,21 +23,14 @@ public class Pedido {
 
     ArrayList<Item> itens;
 
-    public Pedido (Integer id, Cliente cliente, Vendedor vendedor, String loja, ArrayList<Item> itens) {
-
+    public Pedido(Cliente cliente, Vendedor vendedor, Item item) {
         long msDia = 86400000l;
         long msDaquiTresDias = new Date().getTime() + (3 * msDia);
-        this.id = id;
         this.cliente = cliente;
         this.vendedor = vendedor;
-        this.loja = loja;
-        this.itens = itens;
         this.dataVencimentoReserva = new Date(msDaquiTresDias);
-
     }
 
-
-    
     public double calcularValorTotal() {
         double total = 0;
         for (Item item : itens) {
@@ -52,11 +45,73 @@ public class Pedido {
     }
 
     public void adicionarItem(Item item) {
-        this.itens.add(item);
+        if (itens == null) {
+            itens = new ArrayList<Item>();
+        }
+        itens.add(item); 
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Date getDataCriacao() {
+        return dataCriacao;
+    }
+
+    public void setDataCriacao(Date dataCriacao) {
+        this.dataCriacao = dataCriacao;
+    }
+
+    public Date getDataPagamento() {
+        return dataPagamento;
+    }
+
+    public void setDataPagamento(Date dataPagamento) {
+        this.dataPagamento = dataPagamento;
     }
 
     public Date getDataVencimentoReserva() {
-        Date dataVencimentoReserva = new Date(dataCriacao.getTime() + (86400000 * 3));
         return dataVencimentoReserva;
+    }
+
+    public void setDataVencimentoReserva(Date dataVencimentoReserva) {
+        this.dataVencimentoReserva = dataVencimentoReserva;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Vendedor getVendedor() {
+        return vendedor;
+    }
+
+    public void setVendedor(Vendedor vendedor) {
+        this.vendedor = vendedor;
+    }
+
+    public String getLoja() {
+        return loja;
+    }
+
+    public void setLoja(String loja) {
+        this.loja = loja;
+    }
+
+    public ArrayList<Item> getItens() {
+        return itens;
+    }
+
+    public void setItens(ArrayList<Item> itens) {
+        this.itens = itens;
     }
 }
