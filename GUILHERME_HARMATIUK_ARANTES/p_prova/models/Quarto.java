@@ -1,4 +1,4 @@
-package primeirob.prova;
+package p_prova.models;
 
 import java.util.Scanner;
 
