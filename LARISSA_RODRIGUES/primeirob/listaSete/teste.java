@@ -1,4 +1,4 @@
-package primeiroB.listaSeis;
+package primeiroB.listaSete;
 
 public class teste {
     public static void main(String[] args) {
@@ -71,18 +71,41 @@ public class teste {
         gerenteTres.calcularBonus();
 
 
+        // Loja
+        Endereco enderecoLoja = new Endereco("Acre", 1561, "Ipê", "Medianeira", "PR", "Sala comercial");
+        Loja loja = new Loja("MyyPlant" , "MyyPlant LTDA" , "74.920.581/0001-36" , enderecoLoja);
+        System.out.println("\n\n------ LOJA  ------\n");
+        loja.apresentarse();
+        loja.adicionarCliente(clienteUm);
+        loja.adicionarCliente(clienteDois);
+        loja.adicionarCliente(clienteTres);
+        loja.adicionarVendedor(vendedorUm);
+        loja.adicionarVendedor(vendedorDois);
+        loja.adicionarVendedor(vendedorTres);
+        loja.adicionarGerente(gerenteUm);
+        loja.adicionarGerente(gerenteDois);
+        loja.adicionarGerente(gerenteTres);
+        loja.contarCliente();
+        loja.contarVendedor();
+        loja.contarGerente();
+
+
         // Pedido
         System.out.println("\n\n------ Pedido ------\n");
 
-        Item itemUm = new Item(01, "Samambaia", "Planta", 10);
+        Item[] itens = {new Item(01, "Samambaia", "Planta", 50.0),
+                        new Item(02, "Suculenta", "Planta", 5.0),
+                        new Item(03, "Tulipa", "Flor", 25.0)};
 
-        ProcessarPedido processaPedido = new ProcessarPedido();
-        Pedido pedido = processaPedido.processar(clienteTres, vendedorTres, new Item[] {itemUm});
-
-        processaPedido.confirmarPagamento(pedido);
-        System.out.println(pedido.dataPagamento);
-
-        itemUm.gerarDescricao();
-
+        ProcessarPedido processador = new ProcessarPedido();
+        Pedido pedido = new Pedido(01, clienteUm, vendedorUm, loja, itens);
+        pedido.gerarDescricaoVenda();
+        System.out.println("Pedido criado com sucesso!");
+        boolean pagamentoConfirmado = processador.confirmarPagamento(pedido);
+        if (pagamentoConfirmado) {
+            System.out.println("Pagamento confirmado.");
+        } else {
+            System.out.println("Erro ao confirmar o pagamento. A reserva está vencida.");
+        }
     }
 }

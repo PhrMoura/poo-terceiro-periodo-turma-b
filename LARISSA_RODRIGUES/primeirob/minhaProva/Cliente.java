@@ -1,5 +1,4 @@
-package primeiroB.prova;
-
+package primeiroB.minhaProva;
 import java.util.ArrayList;
 
 public class Cliente {

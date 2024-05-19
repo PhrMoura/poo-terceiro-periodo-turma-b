@@ -1,4 +1,4 @@
-package primeiroB.listaSeis;
+package primeiroB.listaSete;
 
 public class Endereco {
     private String estado;
@@ -9,8 +9,8 @@ public class Endereco {
     private String complemento;
 
     public void apresentarLogradouro() {
-        System.out.println("Endereço: Rua " + rua + ", " + numero + ", " + bairro + ", " + cidade + 
-        ", " + estado + ".\nComplemento: " + complemento);
+        System.out.println("Endereço: Rua " + rua + ", " + numero + ", " + bairro + ", " + cidade + ", " +
+        estado + ".\nComplemento: " + complemento);
     }
 
     public Endereco(String rua, int numero, String bairro, String cidade, String estado, String complemento) {

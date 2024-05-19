@@ -1,4 +1,4 @@
-package primeiroB.listaSeis;
+package primeiroB.listaSete;
 
 public class Vendedor extends Funcionario{
     Endereco endereco;

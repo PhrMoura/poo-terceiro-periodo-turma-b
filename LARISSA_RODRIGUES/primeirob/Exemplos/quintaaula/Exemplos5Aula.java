@@ -1,4 +1,4 @@
-package primeirob.exemplos.quintaAula;
+package primeiroB.exemplos.quintaAula;
 
 public class Exemplos5Aula {
     public static void main(String[] args) {

@@ -1,14 +1,14 @@
-package primeiroB.listaSeis;
+package primeiroB.listaSete;
 
-public class Vendedor extends Funcionario{
+public class Gerente extends Funcionario{
     Endereco endereco;
-
+    
     public void apresentarse() {
-        System.out.println("Vendedor: " + nome + "\nIdade: " + idade + "\nLoja: " + loja);
+        System.out.println("Gerente: " + nome + "\nIdade: " + idade + "\nLoja: " + loja);
         endereco.apresentarLogradouro();
     }
-
-    public Vendedor(String nome, int idade, String loja, int salarioBase, Endereco endereco) {
+    
+    public Gerente(String nome, int idade, String loja, int salarioBase, Endereco endereco) {
         this.nome = nome;
         this.idade = idade;
         this.loja = loja;
@@ -16,8 +16,9 @@ public class Vendedor extends Funcionario{
         this.endereco = endereco;
     }
 
+    @Override
     public void calcularMedia() {
-        int[] salarioRecebido = new int[] {1800 , 1800 , 1800};
+        int[] salarioRecebido = new int[] {2400 , 2400 , 2400};
         double soma = 0;
         int cont = 0;
         for (int i = 0 ; i < 3 ; i++) {
@@ -28,8 +29,9 @@ public class Vendedor extends Funcionario{
         System.out.println("Média salarial: R$" + mediaSalario);
     }
 
+    @Override
     public void calcularBonus() {
-        double bonus = salarioBase * 0.2;
+        double bonus = salarioBase * 0.35;
         System.out.println("Bônus do salário: R$" + bonus);
     }
 }
