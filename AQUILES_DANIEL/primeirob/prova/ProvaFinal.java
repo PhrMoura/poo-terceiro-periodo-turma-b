@@ -1,4 +1,4 @@
-package AQUILES_DANIEL.primeirob.prova;
+package primeirob.prova;
 
 import java.util.Scanner;
 
@@ -110,5 +110,3 @@ public class ProvaFinal {
     implementacao.quartoCadastrado();
   }
 }
-
-// FALTOU ESPECIFICAR O QUE É UM CHECK IN MAS VALEU PROFESSOR !

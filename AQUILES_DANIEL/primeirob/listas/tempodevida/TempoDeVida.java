@@ -1,4 +1,4 @@
-package primeirob.atividades.tempodevida;
+package primeirob.listas.tempodevida;
 
 import java.util.Date;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package primeirob.atividades.uteis;
+package primeirob.listas.uteis;
 
 import java.util.Date;
 
