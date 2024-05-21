@@ -11,7 +11,7 @@ public class SistemaHotelPedro {
         Scanner entradaTeclado = new Scanner(System.in);
 
         int opcao = 0;
-
+ 
         do {
             System.out.println("Menu:");
             System.out.println("[1] - Cadastrar quarto");

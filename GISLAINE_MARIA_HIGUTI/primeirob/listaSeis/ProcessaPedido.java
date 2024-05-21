@@ -3,14 +3,13 @@ package primeirob.listaSeis;
 import java.util.Date;
 import java.util.ArrayList;
 
-public class ProcessaPedido extends Pedido {
+public class ProcessaPedido {
 
     public ProcessaPedido(Integer id, Date dataCriacao, Cliente cliente, Vendedor vendedor, String loja, ArrayList<Item> itens) {
-        super(id, cliente, vendedor, loja, itens);
     }
 
     public Pedido processar(Cliente cliente, Vendedor vendedor, ArrayList<Item> itens) {
-        Pedido pedido = new Pedido(id, cliente, vendedor, loja, itens);
+        Pedido pedido = new Pedido(cliente, vendedor, null);
         
         return pedido;
     }

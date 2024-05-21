@@ -8,6 +8,83 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "Listas.Lista1.Main",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "atividade5",
+            "request": "launch",
+            "mainClass": "Listas.Lista1.atividade5",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "atividade4",
+            "request": "launch",
+            "mainClass": "Listas.Lista1.atividade4",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "atividade3",
+            "request": "launch",
+            "mainClass": "Listas.Lista1.atividade3",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "atividade2",
+            "request": "launch",
+            "mainClass": "Listas.Lista1.atividade2",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "SetSample",
+            "request": "launch",
+            "mainClass": "Aulas.aula2.SetSample",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "MapSample",
+            "request": "launch",
+            "mainClass": "Aulas.aula2.MapSample",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "atividade1",
+            "request": "launch",
+            "mainClass": "Listas.Lista1.atividade1",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "QueueSample",
+            "request": "launch",
+            "mainClass": "Aulas.aula2.QueueSample",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "ListSample",
+            "request": "launch",
+            "mainClass": "Aulas.aula2.ListSample",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "Menu",
+            "request": "launch",
+            "mainClass": "Prova.Menu",
+            "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "Lista7.Main",
             "projectName": "MARIA_VITORIA_DA_SILVA_3e655390"
         },

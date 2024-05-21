@@ -122,7 +122,7 @@ public class Pedido {
 
 
     public void adicionarItemPedido(ItemPedido itemPedido) {
-        // TODO Auto-generated method stub
+       
         throw new UnsupportedOperationException("Unimplemented method 'adicionarItemPedido'");
     }
 }
