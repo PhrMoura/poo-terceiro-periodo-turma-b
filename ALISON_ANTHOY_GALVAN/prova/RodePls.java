@@ -1,4 +1,4 @@
-package ALISON_ANTHOY_GALVAN.prova;
+package prova;
 
 import java.util.Scanner;
 
@@ -87,6 +87,21 @@ public class RodePls {
         x = scanner.nextInt();
     
         x -=1;
+
+        if(i == 1){
+
+            i -= 1;
+
+        }else if(i == 2){ //Corrijido erro ao mostrar o cliente e seu cpf.
+
+            i = i;
+
+        }else{
+
+            i *= 2;
+            i -= 2;
+
+        }
     
         System.out.println("O cliente " + cltns[i] + " reservou o quarto " + qrts[x] + " com sucesso");
 
