@@ -84,11 +84,6 @@ public class lista1 {
 
         System.out.println("Atividade 2\n");
 
-        /*
-         * Crie um HashSet de números inteiros e adicione 
-         * alguns números repetidos. Verifique se o conjunto contém um número específico e imprima o resultado.
-         */
-
         Set<Integer> numerosInteiros = new HashSet<>();
 
         numerosInteiros.add(5);
@@ -142,8 +137,6 @@ public class lista1 {
         //Atividade 5
 
         System.out.println("\nAtividade 5\n");
-
-
 
     }
 }   
