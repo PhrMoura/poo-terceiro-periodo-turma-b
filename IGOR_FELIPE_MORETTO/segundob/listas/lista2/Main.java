@@ -1,7 +1,10 @@
 package segundob.listas.lista2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -40,6 +43,45 @@ public class Main {
         .toList();
 
         nomesMaisc.forEach(nome -> System.out.println(nome));
+
+        System.out.println("-----------------------");
+
+        //Att 3
+
+        List <String> listaPalavras = new ArrayList<>();
+
+        listaPalavras.add("se");
+        listaPalavras.add("talvez");
+        listaPalavras.add("hoje");
+        listaPalavras.add("sábado");
+        listaPalavras.add("se");
+        listaPalavras.add("quarta");
+        listaPalavras.add("sábado");
+
+         Map<String, Long> contPalavras = listaPalavras.stream()
+            .collect(Collectors.groupingBy(palavra -> palavra, Collectors.counting()));
+
+        // Exibir o resultado
+        contPalavras.forEach((word, count) -> {
+            System.out.println(word + ": " + count);
+        });
+
+        System.out.println("-----------------------");
+
+        //Att 4
+
+        List <Produtos> listaProdutos = Arrays.asList(
+            new Produtos("Tomate", 100.0),
+            new Produtos("Laranja", 20.0),
+            new Produtos("Abacate", 150.0),
+            new Produtos("Limão", 50.0)
+        );
+
+        List <Produtos> produtoFilt = listaProdutos.stream()
+        .filter(produto -> produto.getPreco() > 100.0)
+        .toList();
+
+        produtoFilt.forEach(prod -> System.out.println(prod));
     }
 
 }
