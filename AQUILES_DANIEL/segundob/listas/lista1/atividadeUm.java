@@ -2,7 +2,7 @@ package segundob.listas.lista1;
 
 import java.util.*;
 
-public class atividadeUm {
+public class AtividadeUm {
   public static void main(String[] args) {
     System.out.println("----------ATV 1----------");
     List<String> colegasFavoritos = new ArrayList<>();
