@@ -1,4 +1,4 @@
-package LARISSA_RODRIGUES.primeirob.prova;
+package primeiroB.prova;
 
 import java.util.ArrayList;
 

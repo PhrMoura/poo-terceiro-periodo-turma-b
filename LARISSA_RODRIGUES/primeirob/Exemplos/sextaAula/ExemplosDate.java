@@ -1,4 +1,4 @@
-package primeirob.exemplos.sextaAula;
+package primeiroB.exemplos.sextaAula;
 import java.util.Date;
 
 public class ExemplosDate {

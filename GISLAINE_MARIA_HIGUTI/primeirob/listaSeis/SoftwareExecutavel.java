@@ -1,6 +1,5 @@
 package primeirob.listaSeis;
 
-import java.util.Scanner;
 
 public class SoftwareExecutavel {
     
@@ -77,36 +76,17 @@ public class SoftwareExecutavel {
         System.out.println("Número de Vendedores da loja: " + lojaMyPlant.contarVendedores());
         System.out.println("-------------------------");
 
-
-        Scanner input = new Scanner(System.in);
+        Item item = new Item();
+            item.setId(1);
+            item.setNome("Flor de Lótus");
+            item.setValor(45d);
+            item.setTipo("Flor");
         
-        Pedido pedidoUm = new Pedido(null, clienteTres, vendedorTres, null, null);
+        Pedido pedidoUm = new Pedido(clienteTres, vendedorTres, item);
 
-        System.out.println("Informações para o Pedido:");
-        System.out.print("Informe o ID do Pedido: ");
-        Integer id = input.nextInt();
-        input.nextLine();
-    
-        pedidoUm.calcularValorTotal();
-        pedidoUm.gerarDescricaoVenda();
+        pedidoUm.adicionarItem(item);
 
-        System.out.println("Informações para o Processador de Pedido:");
-        System.out.print("Informe o ID do Item: ");
-        Integer idItem = input.nextInt();
-        input.nextLine(); 
-        System.out.print("Informe o nome do Item: ");
-        String nomeItem = input.nextLine();
-        System.out.print("Informe o tipo do Item: ");
-        String tipoItem = input.nextLine();
-        System.out.print("Informe o valor do Item: ");
-        Double valorItem = input.nextDouble();
-
-        ProcessaPedido processadorPedidoUm = new ProcessaPedido(idItem, null, clienteTres, vendedorTres, tipoItem, null);
-
-        input.close();
-
-        processadorPedidoUm.processar(clienteTres, vendedorTres, null);
-        processadorPedidoUm.confirmarPagamento(processadorPedidoUm);
-
-    }
+        }
 }
+
+        
