@@ -1,4 +1,4 @@
-package a;
+package Atv6;
 
 public class Endereco {
     String estado;
