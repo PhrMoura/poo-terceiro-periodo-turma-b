@@ -48,7 +48,8 @@ public class main {
 
         System.out.println("Produtos com preço maior que R$ 100,00:");
         produtosMaisCarosQue100.forEach(System.out::println);
-
+ 
+        
         // Atividade 5
         double valorTotal = produtos.stream()
                 .mapToDouble(Produto::getPreco)
