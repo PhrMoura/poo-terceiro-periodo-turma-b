@@ -1,4 +1,4 @@
-package MAYLO_DOS_SANTOS_DUARTE.primeirob.prova;
+package primeirob.prova;
 
 public class Cliente {
     private String nome;
