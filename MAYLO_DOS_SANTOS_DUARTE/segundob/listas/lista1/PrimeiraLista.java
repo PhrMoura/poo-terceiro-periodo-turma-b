@@ -12,6 +12,9 @@ import java.util.Set;
 
 public class PrimeiraLista {
     public static void main(String[] args) {
+
+        // Atividade 1
+
         List<String> nomeAlunos = new ArrayList<>();
 
         nomeAlunos.add("Enzo");
@@ -23,6 +26,8 @@ public class PrimeiraLista {
         nomeAlunos.forEach(nome -> System.out.println(nome.charAt(0) + " - "  + nome));
 
         System.out.println("--------------------------------");
+
+        // Atividade 2
 
         Set<Integer> numeros = new HashSet<>();
 
@@ -39,6 +44,8 @@ public class PrimeiraLista {
         System.out.println(numeros.contains(30));
 
         System.out.println("--------------------------------");
+
+        // Atividade 3
 
         List<String> jogosZerados = new ArrayList<>();
 
@@ -59,6 +66,8 @@ public class PrimeiraLista {
 
         System.out.println("--------------------------------");
 
+        // Atividade 4
+
         List<String> animesFavoritos = new ArrayList<>();
 
         animesFavoritos.add("Sword Art Online");
@@ -73,6 +82,8 @@ public class PrimeiraLista {
 
         System.out.println("--------------------------------");
 
+        // Atividade 5
+        
         Map<String, String> hardwareComputador = new HashMap<>();
 
         hardwareComputador.put("Processador", "Ryzen 7 5700U");
