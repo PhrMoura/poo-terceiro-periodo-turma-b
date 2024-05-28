@@ -1,4 +1,4 @@
-package lista5;
+package listas.lista5;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package lista7;
+package listas.lista7;
 
 import java.util.Calendar;
 import java.util.Date;

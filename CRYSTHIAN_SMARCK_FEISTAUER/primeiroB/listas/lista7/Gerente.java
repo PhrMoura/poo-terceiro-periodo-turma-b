@@ -1,4 +1,4 @@
-package lista7;
+package listas.lista7;
 
 public class Gerente {
     String nome;

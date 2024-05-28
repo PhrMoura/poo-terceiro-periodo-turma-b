@@ -1,4 +1,4 @@
-package Lista1CalculadoradaDonaGabrielinha;
+package listas.Lista1CalculadoradaDonaGabrielinha;
 
 import java.util.Scanner;
 
