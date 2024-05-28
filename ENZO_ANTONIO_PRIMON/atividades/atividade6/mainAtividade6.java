@@ -1,95 +1,75 @@
 package atividades.atividade6;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Date;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class mainAtividade6 {
+
     public static void main(String[] args) {
+        Loja lojaUm = new Loja("Nu Bank", "Nu Pagamentos S.A", new Endereco("Cascavel", "Centro", "Parana"));
 
-        Loja loja = new Loja();
-        loja.nomeFantasia = "Myy Plant";
-        loja.razãoSocial = "Gabrielinha's shop";
-        loja.cidade = "Cascavel";
-        loja.bairro = "Centro";
-        loja.rua = "Av Brasil";
-        loja.cnpj = "varios numeros de cnpj inseridos aqui";
+        System.out.println(lojaUm.getNomeFantasia());
+        System.out.println(lojaUm.getRazaoSocial());
 
-        Vendedor vendedor1 = new Vendedor();
-        vendedor1.loja = "Myy Plant";
-        vendedor1.cidade = "Cascavel";
-        vendedor1.nome = "Maylo";
-        vendedor1.bairro = "shangrila";
-        vendedor1.rua = "Morada de Judas";
-        vendedor1.idade = 35;
-        vendedor1.salarioRecebido = new ArrayList<Double>();
-        vendedor1.salarioRecebido.add(1500.0);
-        vendedor1.salarioRecebido.add(1600.0);
-        vendedor1.salarioRecebido.add(1550.0);
+        Vendedor vendedorUm = new Vendedor("Ricardo", 37, new Endereco("Cascavel", "Centro", "Parana"), 1500d );
 
-        Vendedor vendedor2 = new Vendedor();
-        vendedor2.loja = "Myy Plant";
-        vendedor2.cidade = "Cascavel";
-        vendedor2.nome = "Bruno";
-        vendedor2.bairro = "arabe";
-        vendedor2.rua = "mahal habib";
-        vendedor2.idade = 47;
-        vendedor2.salarioRecebido = new ArrayList<Double>();
-        vendedor2.salarioRecebido.add(1500.0);
-        vendedor2.salarioRecebido.add(1500.0);
-        vendedor2.salarioRecebido.add(1550.0);
 
-        Cliente cliente1 = new Cliente();
-        cliente1.nome = "Felipe";
-        cliente1.cidade = "Cascavel";
-        cliente1.bairro = "Lamal";
-        cliente1.rua = "bingbong";
-        cliente1.idade = 19;
+        Cliente clienteUm = new Cliente("Ricardo", 19, new Endereco("Cascavel", "Centro", "Parana"));
 
-        loja.vendedores = new ArrayList<Vendedor>();
-        loja.vendedores.add(vendedor1);
-        loja.vendedores.add(vendedor2);
-        loja.clientes = new ArrayList<Cliente>();
-        loja.clientes.add(cliente1);
 
-        loja.apresentarse();
-        loja.contarVendedores();
-        loja.contarClientes();
+        lojaUm.addClienteLista(clienteUm);
+        lojaUm.addVendedorLista(vendedorUm);
 
-        System.out.println("Vendedores:");
-        Iterator<Vendedor> iteratorVendedor = loja.vendedores.iterator();
-        while (iteratorVendedor.hasNext()) {
-            Vendedor vendedorIte = iteratorVendedor.next();
-            vendedorIte.apresentarseVendedor();
-            vendedorIte.calcularMedia();
-            vendedorIte.calcularBonus();
-            System.out.println("\n");
-        }
+        ProcessaPedido processaPedido = new ProcessaPedido();
 
-        System.out.println("Clientes:");
-        Iterator<Cliente> iteratorClientes = loja.clientes.iterator();
-        while (iteratorClientes.hasNext()) {
-            Cliente clienteIte = iteratorClientes.next();
-            clienteIte.apresentarse();
-        }
+        Item item = new Item(1, "Samambaia", "Flor", 10d);
 
-        Pedido novoPedido = new Pedido();
-        novoPedido.id = 1; 
-        novoPedido.dataCriacao = (new Date()); 
-        novoPedido.cliente = cliente1; 
-        novoPedido.vendedor = vendedor1; 
-        novoPedido.loja = "MyyPlant"; 
-
-        Item item1 = new Item();
-        item1.id = 1;
-        item1.nome = "Camisa";
-        item1.tipo = "Vestuário";
-        item1.valor = 50.0;
-
-        novoPedido.itens.add(item1);
         
-        novoPedido.calcularValorTotal();
-        novoPedido.gerarDescricaoVenda();
+        Pedido pedido = processaPedido.processar(clienteUm, vendedorUm, new ArrayList<>(Arrays.asList(item)));
 
+        processaPedido.cofirmarPagamento(pedido);
+
+        System.out.println(pedido.getDataPagamento());
+
+        Scanner input = new Scanner(System.in);
+        int opcao = 0;
+
+        while (opcao != 3) {
+            System.out.println("1 para cadastrar item");
+            System.out.println("2 para listar itens");
+            System.out.println("3 para sair");
+
+
+            opcao = input.nextInt();
+
+            switch (opcao) {
+                case 1: 
+                    System.out.println("Id do item");
+                    int id = input.nextInt();
+
+                    System.out.println("Nome do item");
+                    String nomeItem = input.next();
+
+                    System.out.println("Tipo do item");
+                    String tipoItem = input.next();
+
+                    System.out.println("Valor do item");
+                    double valorItem = input.nextDouble();
+
+                    Item itemNovo = new Item(id, nomeItem, tipoItem, valorItem);
+                    pedido.adicionarItem(itemNovo);
+                break;
+
+                case 2:
+                    pedido.listarItens();
+                break;
+                default:
+                
+                    break;
+            }
+        }
+        input.close();
     }
+
 }

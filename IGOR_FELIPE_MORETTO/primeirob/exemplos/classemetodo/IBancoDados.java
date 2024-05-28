@@ -2,7 +2,7 @@ package primeirob.exemplos.classemetodo;
 
 public interface IBancoDados {
     void salvar();
-    void buscar();
+    void parceria();
     void atualizar();
     void deletar();
 }

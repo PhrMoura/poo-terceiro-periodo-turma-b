@@ -1,31 +1,54 @@
 package atividades.atividade6;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class Loja extends Endereço{
+public class Loja {
     
-    String nomeFantasia;
-    String razãoSocial;
-    String cnpj;
-    
-    
-    List<Vendedor> vendedores = new ArrayList<Vendedor>();
-    List<Cliente> clientes = new ArrayList<Cliente>();
-    
+    private String razaoSocial;
+    private String nomeFantasia;
+    private Endereco endereco;
+    private ArrayList<Vendedor> listaVendedores;
+    private ArrayList<Cliente> ListaClientes;
 
-    public void apresentarse () {
-        String msg = ("Loja:" + nomeFantasia)
-        .concat(" - Cnpj:" + cnpj)
-        .concat(" Na cidade de: " + cidade + ", " + bairro + ", " + numero); 
-        
-        System.out.println(msg);
+    public Loja(String razaoSocial, String nomeFantasia, Endereco endereco) {
+        this.razaoSocial = razaoSocial;
+        this.nomeFantasia = nomeFantasia;
+        this.endereco = endereco;
+        this.listaVendedores = new ArrayList<>();
+        this.ListaClientes = new ArrayList<>();
     }
 
-    public void contarClientes () {
-        System.out.println("Total de cliente: " + clientes.size());
+    public void addVendedorLista(Vendedor vendedor){
+        this.listaVendedores.add(vendedor);
+        vendedor.setLoja(this);
     }
-    public void contarVendedores () {
-        System.out.println("Total de vendedores " + vendedores.size());
+
+    public void mostrarListaVendedores(){
+        for (Vendedor vendedor : listaVendedores) {
+            vendedor.apresentarse();
+        }
     }
+
+    public void addClienteLista(Cliente cliente){
+        this.ListaClientes.add(cliente);
+    }
+
+    public void mostrarListaClientes(){
+        for (Cliente cliente : ListaClientes) {
+            cliente.apresentarse();
+        }
+    }
+
+    public String getRazaoSocial() {
+        return razaoSocial;
+    }
+
+    public String getNomeFantasia() {
+        return nomeFantasia;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
 }

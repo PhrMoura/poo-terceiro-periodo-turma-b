@@ -1,14 +1,12 @@
 package atividades.atividade6;
 
-public class Cliente extends Pessoa{
-    
-    public void apresentarse() {
+public class Cliente extends Pessoa {
 
-        String msg = "Nome do cliente "
-            .concat(nome)
-            .concat(", ")
-            .concat(idade + " anos.");
+    public Cliente(String nome, Integer idade, Endereco endereco){
+        super(nome, idade, endereco);
+    }
 
-            System.out.println(msg);
+    public void apresentarse(){
+        System.out.println("Nome: " + getNome() + " Idade: " + getIdade());
     }
 }

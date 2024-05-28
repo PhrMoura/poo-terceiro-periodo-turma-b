@@ -1,41 +1,45 @@
 package atividades.atividade6;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class Vendedor extends Pessoa{
-    Endereço endereço;
-    String loja;
+public class Vendedor extends Pessoa {
 
-    double salarioBase = 1500;
-    public List<Double> salarioRecebido = new ArrayList<Double>();
-
-    public void apresentarseVendedor() {
-
-        String msg = "Nome do vendedor "
-                .concat(nome)
-                .concat(", ")
-                .concat( idade + " anos, trabalha na loja: ")
-                .concat(loja);
-                
-
-        System.out.println(msg);
+    private Loja loja;
+    private Double salarioBase;
+    private ArrayList<Double> salarioRecebido;
+    
+    public Vendedor(String nome, Integer idade, Endereco endereco, Double salarioBase) {
+        super(nome, idade, endereco);
+        this.salarioBase = salarioBase;
+        this.salarioRecebido = new ArrayList<>();
+        this.salarioRecebido.add(1800d);
+        this.salarioRecebido.add(1800d);
+        this.salarioRecebido.add(1800d);
     }
 
-    public void calcularBonus() {
 
-        System.out.println("Bonus de salário: " + (salarioBase * 0.2));
-
+    public Loja getLoja() {
+        return loja;
     }
 
-    public void calcularMedia() {
+    public void setLoja(Loja loja) {
+        this.loja = loja;
+    }
 
+    public Double getSalarioBase() {
+        return salarioBase;
+    }
+
+    public double calcularMedia() {
         double soma = 0;
-        for (double salario : salarioRecebido) {
+        for (Double salario : salarioRecebido) {
             soma += salario;
         }
-        double media = soma / salarioRecebido.size();
+        return soma/salarioRecebido.size();
+    }
 
-        System.out.println("A media dos salários é de: " + media);
+    public void apresentarse() {
+        System.out.println("Nome vendedor " + getNome() + " Idade " + getIdade() + " loja " + loja.getNomeFantasia()
+                + " salario " + getSalarioBase());
     }
 }

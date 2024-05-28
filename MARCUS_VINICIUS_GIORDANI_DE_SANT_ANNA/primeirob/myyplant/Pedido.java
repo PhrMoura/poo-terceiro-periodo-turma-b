@@ -118,4 +118,11 @@ public class Pedido {
     public void setItens(ItemPedido[] itens) {
         this.itens = itens;
     }
+
+
+
+    public void adicionarItemPedido(ItemPedido itemPedido) {
+       
+        throw new UnsupportedOperationException("Unimplemented method 'adicionarItemPedido'");
+    }
 }

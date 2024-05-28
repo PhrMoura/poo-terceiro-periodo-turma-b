@@ -10,16 +10,16 @@ public class TesteAulaOito {
         // conta.setSaldo(330d);
         // conta.setDocumento("12345678900");
 
-        Postgres postgres = new Postgres();
-        Oracle oracle = new Oracle();
-        Mongo mongo = new Mongo();
+    //     Postgres postgres = new Postgres();
+    //     Oracle oracle = new Oracle();
+    //     Mongo mongo = new Mongo();
 
-        salvar(postgres);
+    //     salvar(postgres);
 
 
-    }
+    // }
 
-    public static void salvar(IBancoDados banco) {
-        banco.salvar();
+    // public static void salvar(IBancoDados banco) {
+    //     banco.salvar();
     }
 }

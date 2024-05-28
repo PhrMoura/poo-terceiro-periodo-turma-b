@@ -4,8 +4,8 @@ public class Postgres implements IBancoDados{
     
   
     @Override
-    public void buscar() {
-        System.out.println("Buscando em PG");
+    public void parceria(){
+        System.out.println("Parceria com PG");
     }
     public void deletar() {
         System.out.println("Deletando em PG");
