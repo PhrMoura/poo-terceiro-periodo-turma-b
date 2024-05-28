@@ -1,4 +1,4 @@
-package ENZO_ANTONIO_PRIMON.prova;
+package prova;
 
 import java.util.Scanner;
 

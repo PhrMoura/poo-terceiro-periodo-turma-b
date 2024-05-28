@@ -1,4 +1,4 @@
-package primeirob.exemplos.quintaAula;
+package primeiroB.exemplos.quintaAula;
 
 public class Professor {
     String nome;

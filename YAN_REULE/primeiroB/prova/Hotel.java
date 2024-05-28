@@ -1,4 +1,4 @@
-package YAN_REULE.primeiroB.prova;
+package prova;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package GISLAINE_MARIA_HIGUTI.primeirob.prova;
+package primeirob.prova;
 
 public class CadastroCliente {
     private String nome;

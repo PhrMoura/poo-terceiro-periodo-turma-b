@@ -1,4 +1,4 @@
-package GUILHERME_HARMATIUK_ARANTES.primeirob.prova;
+package primeirob.prova;
 
 public class Application {
     public static void main(String[] args) {
