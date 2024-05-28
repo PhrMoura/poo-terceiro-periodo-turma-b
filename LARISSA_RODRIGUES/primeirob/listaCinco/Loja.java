@@ -1,4 +1,4 @@
-package primeirob.listaCinco;
+package primeiroB.listaCinco;
 import java.util.ArrayList;
 
 public class Loja {

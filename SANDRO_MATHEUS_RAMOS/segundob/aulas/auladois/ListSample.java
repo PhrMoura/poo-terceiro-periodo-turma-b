@@ -38,7 +38,8 @@ public class ListSample {
         
         
         //removendo o elementos por condicional
-        listaNomes.removeIf(nome -> nome.contains("i") || nome.contains("I"));
+        listaNomes.removeIf(nome -> nome.contains("i")
+            || nome.contains("I"));
         
         //Iterando a lista
         listaNomes.forEach(nome -> System.out.println(nome));
