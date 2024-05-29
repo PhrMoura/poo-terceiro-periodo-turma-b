@@ -21,7 +21,7 @@ public class ListaDois {
         numerosLista.add(18);
         numerosLista.add(47);
 
-        List<Integer> numeroPar = numerosLista.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());
+        List<Integer> numeroPar = numerosLista.stream().filter(n -> n % 2 == 0).toList();
 
         System.out.println("Numeros pares da lista:");
         numeroPar.forEach(System.out::println);
@@ -37,7 +37,7 @@ public class ListaDois {
         nomesLista.add("caio");
         nomesLista.add("vinicius");
 
-        List<String> nomesMaiusculo = nomesLista.stream().map(String::toUpperCase).collect(Collectors.toList());
+        List<String> nomesMaiusculo = nomesLista.stream().map(String::toUpperCase).toList();
 
         System.out.println("Nomes CAPSLOCK:");
         nomesMaiusculo.forEach(System.out::println);
@@ -71,7 +71,7 @@ public class ListaDois {
         produtos.add(new Produto("Aliança", 2000.00));
         produtos.add(new Produto("Caltao vermei", 11.50));
 
-        List<Produto> filtroProdutos = produtos.stream().filter(produto -> produto.getPreco() > 100).collect(Collectors.toList());
+        List<Produto> filtroProdutos = produtos.stream().filter(produto -> produto.getPreco() > 100).toList();
 
         filtroProdutos.forEach(System.out::println);
 
@@ -96,11 +96,9 @@ public class ListaDois {
         linguagensLista.add("JavaSricpt");
         linguagensLista.add("Ruby");
 
-        List<String> tamanhoPalavras = linguagensLista.stream().sorted((p1, p2) -> Integer.compare(p1.length(), p2.length())).collect(Collectors.toList());
+        List<String> tamanhoPalavras = linguagensLista.stream().sorted((p1, p2) -> Integer.compare(p1.length(), p2.length())).toList();
 
         tamanhoPalavras.forEach(System.out::println);
-
-        
 
     }
 }
