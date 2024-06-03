@@ -1,4 +1,4 @@
-package MARCUS_VINICIUS_GIORDANI_DE_SANT_ANNA.primeirob.prova;
+package primeirob.prova;
 
 public class Clientes{
 
@@ -43,7 +43,6 @@ public class Clientes{
     }
 
     public int getNumero() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getNumero'");
     }
 

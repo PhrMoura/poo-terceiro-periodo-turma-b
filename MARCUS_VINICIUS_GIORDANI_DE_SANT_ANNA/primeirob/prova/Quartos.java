@@ -1,4 +1,4 @@
-package MARCUS_VINICIUS_GIORDANI_DE_SANT_ANNA.primeirob.prova;
+package primeirob.prova;
 
 public class Quartos {
 
@@ -52,32 +52,32 @@ public class Quartos {
     }
 
     public int getTipo() {
-        // TODO Auto-generated method stub
+        
         throw new UnsupportedOperationException("Unimplemented method 'getTipo'");
     }
 
     public boolean getDisponivel() {
-        // TODO Auto-generated method stub
+        
         throw new UnsupportedOperationException("Unimplemented method 'getDisponivel'");
     }
 
     public void setDisponivel(boolean b) {
-        // TODO Auto-generated method stub
+        
         throw new UnsupportedOperationException("Unimplemented method 'setDisponivel'");
     }
 
     public void setClientes(Clientes clientes) {
-        // TODO Auto-generated method stub
+        
         throw new UnsupportedOperationException("Unimplemented method 'setClientes'");
     }
 
     public Object getClientes() {
-        // TODO Auto-generated method stub
+        
         throw new UnsupportedOperationException("Unimplemented method 'getClientes'");
     }
 
     public void setOcupado(boolean b) {
-        // TODO Auto-generated method stub
+        
         throw new UnsupportedOperationException("Unimplemented method 'setOcupado'");
     }
 
