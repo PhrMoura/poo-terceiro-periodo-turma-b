@@ -1,4 +1,4 @@
-package segundobi.aulas.aulaquatro;
+package segundob.aulas.aulaquatro;
 
 import java.util.ArrayList;
 import java.util.Collections;

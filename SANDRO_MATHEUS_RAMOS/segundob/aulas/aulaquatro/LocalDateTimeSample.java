@@ -1,4 +1,4 @@
-package segundobi.aulas.aulaquatro;
+package segundob.aulas.aulaquatro;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -19,16 +19,16 @@ public class LocalDateTimeSample {
         System.out.println(fiveAM);
         System.out.println(cristianoRonaldoTime);
         
-        //LocalDate samples
+        // //LocalDate samples
         LocalDate today = LocalDate.now();
         LocalDate yearOfBirth = LocalDate.of(1998, 11, 24);
         LocalDate dateInJapan = LocalDate.now(ZoneId.of("Asia/Tokyo"));
-        
+
         System.out.println(today);
         System.out.println(yearOfBirth);
         System.out.println(dateInJapan);
         
-        //LocalDateTime samples
+        // //LocalDateTime samples
         LocalDateTime nowDateTime = LocalDateTime.now();
         LocalDateTime dateTimeMillenniumBug = LocalDateTime.of(2000, 1, 1, 0, 0);
         LocalDateTime dateTimeInJapan = LocalDateTime.now(ZoneId.of("Asia/Tokyo"));
