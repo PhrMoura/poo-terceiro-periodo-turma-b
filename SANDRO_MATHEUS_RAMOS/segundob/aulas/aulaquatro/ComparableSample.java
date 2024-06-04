@@ -1,4 +1,4 @@
-package segundobi.aulas.aulaquatro;
+package segundob.aulas.aulaquatro;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,8 +20,8 @@ public class ComparableSample {
         cars.forEach(car -> System.out.println(car.getName() + " - " + car.getYear()));
 
         // Ordenando
-        // Collections.sort(cars);
-        cars = cars.stream().sorted().toList();
+        Collections.sort(cars);
+        // cars = cars.stream().sorted().toList();
 
         System.out.println("\nOrdenado padrão da classe(ano):");
         cars.forEach(car -> System.out.println(car.getName() + " - " + car.getYear()));
