@@ -3,13 +3,12 @@ import javax.swing.JOptionPane;
 public class lista3 {
     public static void main(String[] args) {
         atv1();
-        System.out.println();
+
         atv2();
-        System.out.println();
+
         atv3();
-        System.err.println();
+
         atv4();
-        System.err.println();
 
 
                //Atv5
