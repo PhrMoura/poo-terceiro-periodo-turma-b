@@ -1,4 +1,4 @@
-package GUSTAVO_SERAPIAO_ALMEIDA.primeirob.prova;
+package prova;
 
 import java.util.Scanner;
 

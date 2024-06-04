@@ -1,4 +1,4 @@
-package GUILHERME_HARMATIUK_ARANTES.primeirob.prova;
+package primeirob.prova;
 
 import java.util.Scanner;
 

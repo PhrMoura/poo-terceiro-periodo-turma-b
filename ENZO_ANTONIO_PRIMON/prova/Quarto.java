@@ -1,4 +1,4 @@
-package ENZO_ANTONIO_PRIMON.prova;
+package prova;
 
 public class Quarto {
     private Double numero;
