@@ -100,6 +100,7 @@ public class ProvaFinal {
         System.out.println("Check In feito no dia: " + quartoUm.getDataCheckIn());
       }
     }
+    input.close();
   }
 
   public static void clienteCadastrado(Menu implementacao) {

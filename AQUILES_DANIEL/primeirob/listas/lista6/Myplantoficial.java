@@ -173,6 +173,7 @@ public class Myplantoficial {
       }
     }
     System.out.println("Data de pagamento: " + pedido.getDataPagamento());
+    input.close();
   }
 
   public static void cadastrar(Menu implementacao) {
