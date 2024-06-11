@@ -1,4 +1,4 @@
-package segundobi.aulas.aulaquatro;
+package segundob.aulas.aulaquatro;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -19,7 +19,7 @@ public class GenericSample {
 
         GenericBox<Teacher> boxWithTeacher = new GenericBox<>(new Teacher());
         GenericBox<Student> boxWithStudent = new GenericBox<>(studentAfterPrint);
-        GenericBox<Date> boxWithDate = new GenericBox<Date>(new Date());
+        GenericBox<String> boxWithDate = new GenericBox<>("");
 
         System.out.println(boxWithTeacher.getContent());
         System.out.println(boxWithStudent.getContent());
