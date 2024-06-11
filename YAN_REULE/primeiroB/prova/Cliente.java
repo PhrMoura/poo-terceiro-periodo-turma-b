@@ -1,4 +1,4 @@
-package YAN_REULE.primeiroB.prova;
+package prova;
 
 public class Cliente {
     private Integer idCliente;
