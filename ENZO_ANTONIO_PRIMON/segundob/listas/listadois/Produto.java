@@ -1,4 +1,4 @@
-package segundob.listas.listaum.listadois;
+package segundob.listas.listadois;
 
 public class Produto {
     private String nome;

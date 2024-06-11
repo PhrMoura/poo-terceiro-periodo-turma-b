@@ -1,4 +1,4 @@
-package segundob.listas.listaum.listadois;
+package segundob.listas.listadois;
 
 import java.util.ArrayList;
 import java.util.List;
