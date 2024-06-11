@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AtividadeUm {
+public class Main {
 
     // ATV3 ------------------------------------------
 
