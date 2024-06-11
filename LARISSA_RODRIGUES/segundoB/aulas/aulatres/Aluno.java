@@ -1,4 +1,4 @@
-package segundoB.aulas.aulatres;
+package segundoB.aulas.aulaTres;
 
 public class Aluno {
     private String nome;

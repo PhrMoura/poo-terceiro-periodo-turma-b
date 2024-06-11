@@ -1,4 +1,4 @@
-package segundoB.aulas.aulatres;
+package segundoB.aulas.aulaTres;
 import java.util.ArrayList;
 import java.util.List;
 
