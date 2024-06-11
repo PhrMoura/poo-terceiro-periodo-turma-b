@@ -10,14 +10,14 @@ public class Main {
         List<Integer> numerosPares = numeros.stream()
                 .filter(n -> n % 2 == 0)
                 .collect(Collectors.toList());
-        System.out.println("Números Pares: " + numerosPares);
+        System.out.println("Numeros Pares: " + numerosPares);
 
         // ATV2
         List<String> nomes = Arrays.asList("roberto", "josé", "caio", "vinicius");
         List<String> nomesMaiusculos = nomes.stream()
                 .map(String::toUpperCase)
                 .collect(Collectors.toList());
-        System.out.println("Nomes em Maiúsculas: " + nomesMaiusculos);
+        System.out.println("Nomes Maiusculos: " + nomesMaiusculos);
 
         // ATV3
         List<String> palavras = Arrays.asList("se", "talvez", "hoje", "sábado", "se", "quarta", "sábado");
