@@ -1,4 +1,4 @@
-package primeirob.listaCinco;
+package primeiroB.listaCinco;
 
 public class Cliente {
     String nome;
