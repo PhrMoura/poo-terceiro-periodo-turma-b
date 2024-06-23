@@ -33,11 +33,11 @@ public class AtividadeCinco {
             JOptionPane.INFORMATION_MESSAGE);
         break;
       case "Consulta de boletos":
-      JOptionPane.showMessageDialog(
-        null,
-        consultaDeBoleto(),
-        "Boleto (de um jeito meio tripa)",
-        JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(
+            null,
+            consultaDeBoleto(),
+            "Boleto (de um jeito meio tripa)",
+            JOptionPane.INFORMATION_MESSAGE);
         break;
       default:
         // eu sou um aluno gasoso !
@@ -82,10 +82,10 @@ public class AtividadeCinco {
 
       HttpURLConnection connection = (HttpURLConnection) url.openConnection();
       String linhaDigitavel = JOptionPane.showInputDialog(
-        null,
-        "Coloque o código do boleto !",
-        null,
-        JOptionPane.QUESTION_MESSAGE);
+          null,
+          "Coloque o código do boleto !",
+          null,
+          JOptionPane.QUESTION_MESSAGE);
 
       String json = "{\n" + //
           "  \"barCode\": {\n" + //
