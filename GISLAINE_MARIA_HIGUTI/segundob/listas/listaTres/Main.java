@@ -61,8 +61,6 @@ public class Main {
             
             perguntarContinuar();
         }
-
-        JOptionPane.showMessageDialog(null, "Obrigado por usar a Calculadora!", "Calculadora", JOptionPane.INFORMATION_MESSAGE);
     }
 
     //Atividade 1
