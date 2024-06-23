@@ -16,11 +16,11 @@ import javax.swing.JTextField;
 public class Main {
     public static void main(String[] args) {
         // atividadeUm();
-        // atividadeDois();
+         atividadeDois();
         // atividadeTres();
         // atividadeQuatro();
-        // atividadeCinco();
-        //  .;atividadeSeis();
+         // atividadeCinco();
+         //atividadeSeis();
     }
 
     // Atividade 1
