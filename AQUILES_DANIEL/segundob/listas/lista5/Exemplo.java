@@ -1,22 +1,32 @@
-package segundob.listas.lista4;
+package segundob.listas.lista5;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import javax.swing.JOptionPane;
-
-public class AtividadeQuatro {
+public class Exemplo {
   public static void main(String[] args) {
-
     try {
+      System.out.println(getJsonData());
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+
+  public static String getJsonData() {
+    try {
+      // URL alvo da request
       URL url = new URL("https://economia.awesomeapi.com.br/json/last/USD-BRL");
+
+      // criando conexão HTTP para a URL especificada
       HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
+      // config método da requisição(GET)
       connection.setRequestMethod("GET");
-      BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 
+      // lendo response
+      BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
       StringBuilder response = new StringBuilder();
       String line;
 
@@ -26,16 +36,14 @@ public class AtividadeQuatro {
 
       reader.close();
 
+      // fechando a conexão
       connection.disconnect();
 
-      JOptionPane.showMessageDialog(
-          null,
-          response.toString(),
-          "USD-BRL",
-          JOptionPane.INFORMATION_MESSAGE);
-
+      return response.toString();
     } catch (Exception e) {
       e.printStackTrace();
+
+      return null;
     }
   }
 }
