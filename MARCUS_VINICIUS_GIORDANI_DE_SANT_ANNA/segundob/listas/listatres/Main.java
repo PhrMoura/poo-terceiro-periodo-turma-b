@@ -85,17 +85,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // ATV1
-        exibirMensagemOlaMundo();
+        // // ATV1
+        // exibirMensagemOlaMundo();
 
-        // ATV2
-        solicitarNomeEExibirMensagem();
+        // // ATV2
+        // solicitarNomeEExibirMensagem();
 
-        // ATV3
-        perguntarSeDesejaContinuar();
+        // // ATV3
+        // perguntarSeDesejaContinuar();
 
-        // ATV4
-        apresentarListaDeOpcoes();
+        // // ATV4
+        // apresentarListaDeOpcoes();
 
         // ATV5 - Teste da exceção personalizada
         try {
