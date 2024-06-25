@@ -1,4 +1,4 @@
-package segundoB.listas.lista2;
+package listas.lista2;
 
 import java.util.ArrayList;
 import java.util.Comparator;

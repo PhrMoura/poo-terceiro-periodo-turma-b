@@ -1,4 +1,4 @@
-package segundoB.listas.lista2;
+package listas.lista2;
 
 public class Produto {
 
