@@ -1,6 +1,3 @@
-package MICHEL_LIBERALI_SANTOS.primeirob.prova;
-
-public class Quarto {
     private int numero;
     private String tipo;
     private boolean disponivel;
