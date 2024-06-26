@@ -1,0 +1,122 @@
+//print 1
+{
+    "USDBRL": {
+      "code": "USD",
+      "codein": "BRL",
+      "name": "Dólar Americano/Real Brasileiro",
+      "high": "5.4427",
+      "low": "5.4349",
+      "varBid": "0.0054",
+      "pctChange": "0.1",
+      "bid": "5.441",
+      "ask": "5.4417",
+      "timestamp": "1718746200",
+      "create_date": "2024-06-18 18:30:00"
+    },
+    "EURBRL": {
+      "code": "EUR",
+      "codein": "BRL",
+      "name": "Euro/Real Brasileiro",
+      "high": "5.8351",
+      "low": "5.8351",
+      "varBid": "0",
+      "pctChange": "0",
+      "bid": "5.8311",
+      "ask": "5.8391",
+      "timestamp": "1718748067",
+      "create_date": "2024-06-18 19:01:07"
+    }
+  }
+  //print 2
+  [
+  {
+    "code": "USD",
+    "codein": "BRL",
+    "name": "Dólar Americano/Real Brasileiro",
+    "high": "5.4427",
+    "low": "5.4349",
+    "varBid": "0.0046",
+    "pctChange": "0.08",
+    "bid": "5.44",
+    "ask": "5.441",
+    "timestamp": "1718746145",
+    "create_date": "2024-06-18 18:29:05"
+  },
+  {
+    "high": "5.4259",
+    "low": "5.4194",
+    "varBid": "0.0054",
+    "pctChange": "0.1",
+    "bid": "5.4245",
+    "ask": "5.4253",
+    "timestamp": "1718659777"
+  }
+]
+//print 3
+[
+  {
+    "code": "USD",
+    "codein": "BRL",
+    "name": "Dólar Americano/Real Brasileiro",
+    "high": "5.1764",
+    "low": "5.1304",
+    "varBid": "0.0207",
+    "pctChange": "0.4",
+    "bid": "5.1645",
+    "ask": "5.1652",
+    "timestamp": "1716584393",
+    "create_date": "2024-05-24 17:59:53"
+  }
+]
+//print 4
+[
+  {
+    "code": "EUR",
+    "codein": "BRL",
+    "name": "Euro/Real Brasileiro",
+    "high": "5.8351",
+    "low": "5.8351",
+    "varBid": "0",
+    "pctChange": "0",
+    "bid": "5.8311",
+    "ask": "5.8391",
+    "timestamp": "1718748581",
+    "create_date": "2024-06-18 19:09:41"
+  },
+  {
+    "high": "5.82",
+    "low": "5.82",
+    "varBid": "0",
+    "pctChange": "0",
+    "bid": "5.816",
+    "ask": "5.824",
+    "timestamp": "1718668777"
+  },
+  {
+    "high": "5.7376",
+    "low": "5.7376",
+    "varBid": "0",
+    "pctChange": "0",
+    "bid": "5.7126",
+    "ask": "5.7626",
+    "timestamp": "1718582316"
+  },
+  {
+    "high": "5.8313",
+    "low": "5.7117",
+    "varBid": "-0.0056",
+    "pctChange": "-0.1",
+    "bid": "5.7565",
+    "ask": "5.7645",
+    "timestamp": "1718398771"
+  },
+  {
+    "high": "5.8313",
+    "low": "5.7117",
+    "varBid": "-0.0056",
+    "pctChange": "-0.1",
+    "bid": "5.7565",
+    "ask": "5.7645",
+    "timestamp": "1718398717"
+  }
+]

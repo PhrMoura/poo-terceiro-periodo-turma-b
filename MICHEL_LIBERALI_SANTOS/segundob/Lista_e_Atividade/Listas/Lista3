@@ -1,0 +1,107 @@
+import javax.swing.JOptionPane;
+
+public class Main {
+    public static void main(String[] args) {
+        // ATV1
+        exibirMensagem();
+
+        // ATV2
+        boasVindasUsuario();
+
+        // ATV3
+        perguntarParaContinuar();
+
+        // ATV4
+        mostrarOpcoes();
+
+        // ATV5 - A exceção personalizada será usada na ATV6
+
+        // ATV6
+        calculadora();
+    }
+
+    // ATV1: Método para exibir uma mensagem "Olá galera!"
+    public static void exibirMensagem() {
+        JOptionPane.showMessageDialog(null, "Olá, galera!");
+    }
+
+    // ATV2: Método para perguntar o nome do usuário e exibir uma mensagem de boas-vindas
+    public static void boasVindasUsuario() {
+        String nome = JOptionPane.showInputDialog("Qual é o seu nome?");
+        if (nome != null && !nome.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Bem-vindo, " + nome + "!");
+        } else {
+            JOptionPane.showMessageDialog(null, "Você não inseriu seu nome.");
+        }
+    }
+
+    // ATV3: Metodo para perguntar se o usuário deseja continuar e mostrar uma mensagem baseada na resposta
+    public static void perguntarParaContinuar() {
+        int resposta = JOptionPane.showConfirmDialog(null, "Você deseja continuar?", "Confirmação", JOptionPane.YES_NO_OPTION);
+        if (resposta == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(null, "Você escolheu continuar!");
+        } else {
+            JOptionPane.showMessageDialog(null, "Você escolheu parar.");
+        }
+    }
+
+    // ATV4: Metodo para apresentar uma lista de opções ao usuário e mostrar uma mensagem baseada na opção escolhida
+    public static void mostrarOpcoes() {
+        String[] opcoes = { "Opção 1", "Opção 2", "Opção 3" };
+        int escolha = JOptionPane.showOptionDialog(null, "Escolha uma opção", "Lista de Opções", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opcoes, opcoes[0]);
+        if (escolha >= 0) {
+            JOptionPane.showMessageDialog(null, "Você escolheu: " + opcoes[escolha]);
+        }
+    }
+
+    // ATV5: Exceção personalizada que mostra um diálogo (ERROR_MESSAGE) com a mensagem do erro que ocorreu
+    static class MinhaExcecaoPersonalizada extends Exception {
+        public MinhaExcecaoPersonalizada(String mensagem) {
+            super(mensagem);
+            JOptionPane.showMessageDialog(null, mensagem, "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    // ATV6: Método para criar uma calculadora utilizando JOptionPane
+    public static void calculadora() {
+        String[] operacoes = { "Adição", "Subtração", "Multiplicação", "Divisão" };
+        int operacaoEscolhida = JOptionPane.showOptionDialog(null, "Selecione uma operação", "Calculadora", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, operacoes, operacoes[0]);
+
+        if (operacaoEscolhida >= 0) {
+            try {
+                String entrada1 = JOptionPane.showInputDialog("Digite o primeiro número:");
+                String entrada2 = JOptionPane.showInputDialog("Digite o segundo número:");
+
+                double numero1 = Double.parseDouble(entrada1);
+                double numero2 = Double.parseDouble(entrada2);
+                double resultado = 0;
+
+                switch (operacaoEscolhida) {
+                    case 0: // Adição
+                        resultado = numero1 + numero2;
+                        break;
+                    case 1: // Subtração
+                        resultado = numero1 - numero2;
+                        break;
+                    case 2: // Multiplicação
+                        resultado = numero1 * numero2;
+                        break;
+                    case 3: // Divisão
+                        if (numero2 == 0) {
+                            throw new MinhaExcecaoPersonalizada("Divisão por zero não é permitida!");
+                        }
+                        resultado = numero1 / numero2;
+                        break;
+                    default:
+                        throw new MinhaExcecaoPersonalizada("Operação inválida!");
+                }
+
+                JOptionPane.showMessageDialog(null, "O resultado é: " + resultado, "Resultado", JOptionPane.INFORMATION_MESSAGE);
+            } catch (NumberFormatException e) {
+                new MinhaExcecaoPersonalizada("Entrada inválida! Por favor, insira números válidos.");
+            } catch (MinhaExcecaoPersonalizada e) {
+                // A exceção personalizada ja trata a exibição do erro
+            }
+        }
+    }
+}
