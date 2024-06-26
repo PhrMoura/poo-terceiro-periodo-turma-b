@@ -4,7 +4,7 @@ public class RegistrandoVendas {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int opcao;
-        double[][] vendasPorDiaEMes = new double[31][12]; // Matriz criada 1para armazenar as vendas por dia e mês
+        double[][] vendasPorDiaEMes = new double[31][12]; // Matriz criada 1 para armazenar as vendas por dia e mês
         double valorTotalVendido = 0;
         double totalDescontos = 0;
         int quantidadeTotalVendida = 0;

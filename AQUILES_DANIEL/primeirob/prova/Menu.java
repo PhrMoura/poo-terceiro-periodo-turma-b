@@ -1,7 +1,7 @@
-package AQUILES_DANIEL.primeirob.prova;
+package primeirob.prova;
 
 public interface Menu {
-    void clienteCadastrado();
-  
-    void quartoCadastrado();
-  }
+  void clienteCadastrado();
+
+  void quartoCadastrado();
+}
