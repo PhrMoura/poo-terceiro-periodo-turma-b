@@ -1,7 +1,10 @@
 package segundob.listas.lista2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -40,6 +43,73 @@ public class Main {
         .toList();
 
         nomesMaisc.forEach(nome -> System.out.println(nome));
-    }
 
+        System.out.println("-----------------------");
+
+        //Att 3
+
+        List <String> listaPalavras = new ArrayList<>();
+
+        listaPalavras.add("se");
+        listaPalavras.add("talvez");
+        listaPalavras.add("hoje");
+        listaPalavras.add("sábado");
+        listaPalavras.add("se");
+        listaPalavras.add("quarta");
+        listaPalavras.add("sábado");
+
+         Map<String, Long> contPalavras = listaPalavras.stream()
+            .collect(Collectors.groupingBy(palavra -> palavra, Collectors.counting()));
+
+        // Exibir o resultado
+        contPalavras.forEach((word, count) -> {
+            System.out.println(word + ": " + count);
+        });
+
+        System.out.println("-----------------------");
+
+        //Att 4
+
+        List <Produtos> listaProdutos = Arrays.asList(
+            new Produtos("Tomate", 105.0),
+            new Produtos("Laranja", 20.0),
+            new Produtos("Abacate", 150.0),
+            new Produtos("Limão", 50.0)
+        );
+
+        List <Produtos> produtoFilt = listaProdutos.stream()
+        .filter(prod -> prod.getPreco() > 100.0)
+        .toList();
+
+        produtoFilt.forEach(prod -> System.out.println(prod));
+
+        System.out.println("-----------------------");
+        //Att 5
+
+        Double somaProd = listaProdutos.stream()
+        .map(soma -> {
+            return soma.getPreco();
+        })  
+        .reduce(0.0, (precAnt, precAt) -> precAnt + precAt);
+
+        System.out.println("A soma do preço dos produtos é R$" + somaProd);
+
+        System.out.println("-----------------------");
+
+        //Att 6
+
+        List <String> linguagens = new ArrayList<>();
+
+        linguagens.add ("Java");
+        linguagens.add ("Python");
+        linguagens.add ("C");
+        linguagens.add ("JavaScript");
+        linguagens.add ("Ruby");
+
+        List <String> menorMaior = linguagens.stream()
+        .sorted((l1, l2) -> Integer.compare(l1.length(), l2.length()))
+        .toList();
+
+        System.out.println(menorMaior);
+    }
 }
