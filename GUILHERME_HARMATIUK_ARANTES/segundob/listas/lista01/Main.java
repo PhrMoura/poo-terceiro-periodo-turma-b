@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-       // ATV 1 
+        // ATV 1 
         atividade01();
         // ATV 2
         atividade02();
@@ -108,5 +108,5 @@ public class Main {
         map.forEach((k, v) -> {
             System.out.println(k + ": " + v);
         });
-    }
+    }   
 }
