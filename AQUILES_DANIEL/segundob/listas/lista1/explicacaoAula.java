@@ -10,7 +10,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Set;
 
-public class explicacaoAula {
+public class ExplicacaoAula {
   public static void main(String[] args) {
     Set<String> nomes = new HashSet<>();
 
