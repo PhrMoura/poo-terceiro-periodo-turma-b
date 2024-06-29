@@ -1,4 +1,4 @@
-package PEDRO_HENRIQUE.prova;
+package PEDRO_HENRIQUE.primeirob.prova;
 
 public class Cliente {
     private String nome;

@@ -1,4 +1,4 @@
-package CRYSTHIAN_SMARCK_FEISTAUER.prova;
+package CRYSTHIAN_SMARCK_FEISTAUER.primeiroB.prova;
 
 import java.util.ArrayList;
 import java.util.Scanner;
