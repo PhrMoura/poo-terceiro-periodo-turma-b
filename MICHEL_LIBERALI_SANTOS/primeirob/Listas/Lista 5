@@ -1,0 +1,159 @@
+import java.util.Scanner;
+
+public class Calculadora {
+    private static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        Calculadora calculadora = new Calculadora();
+        boolean sair = false;
+        while (!sair) {
+            calculadora.exibirMenu();
+            int opcao = scanner.nextInt();
+            switch (opcao) {
+                case 1:
+                    calculadora.calcularPrecoTotal();
+                    break;
+                case 2:
+                    calculadora.calcularTroco();
+                    break;
+                case 3:
+                    sair = true;
+                    break;
+                default:
+                    System.out.println("Invalida, tente novamente.");
+            }
+        }
+        System.out.println("Obrigado por utilizar a calculadora!");
+        scanner.close();
+    }
+
+    private void exibirMenu() {
+        System.out.println("Menu:");
+        System.out.println("[1] - Calcular Preco Total");
+        System.out.println("[2] - Calcular Troco");
+        System.out.println("[3] - Sair");
+        System.out.print("Escolha uma opção: ");
+    }
+
+    private void calcularPrecoTotal() {
+        System.out.print("Digite a quantidade das plantas vendidas: ");
+        int quantidade = scanner.nextInt();
+        System.out.print("Digite o preco unitario da planta: ");
+        double precoUnitario = scanner.nextDouble();
+        double precoTotal = quantidade * precoUnitario;
+        
+        if (quantidade > 10) {
+            double desconto = precoTotal * 0.05;
+            precoTotal -= desconto;
+            System.out.println("Desconto aplicado de 5% para compras acima de 10 plantas.");
+        }
+        
+        System.out.println("Preco total: R$" + precoTotal);
+    }
+
+    private void calcularTroco() {
+        System.out.print("Digite o valor recebido pelo cliente: ");
+        double valorRecebido = scanner.nextDouble();
+        System.out.print("Digite o valor total da compra: ");
+        double valorTotal = scanner.nextDouble();
+        double troco = valorRecebido - valorTotal;
+        System.out.println("Troco: R$" + troco);
+    }
+
+    public class Vendedor {
+        private String nome;
+        private int idade;
+        private String loja;
+        private String cidade;
+        private String bairro;
+        private String rua;
+        private double salarioBase;
+        private double[] salarioRecebido = new double[3];
+
+        public Vendedor(String nome, int idade, String loja, String cidade, String bairro, String rua, double salarioBase, double[] salarioRecebido) {
+            this.nome = nome;
+            this.idade = idade;
+            this.loja = loja;
+            this.cidade = cidade;
+            this.bairro = bairro;
+            this.rua = rua;
+            this.salarioBase = salarioBase;
+            this.salarioRecebido = salarioRecebido;
+        }
+
+        public void apresentarSe() {
+            System.out.println("Nome: " + nome);
+            System.out.println("Idade: " + idade);
+            System.out.println("Loja: " + loja);
+        }
+
+        public double calcularMedia() {
+            double total = 0;
+            for (double salario : salarioRecebido) {
+                total += salario;
+            }
+            return total / salarioRecebido.length;
+        }
+
+        public double calcularBonus() {
+            return salarioBase * 0.2;
+        }
+    }
+
+    public class Cliente {
+        private String nome;
+        private int idade;
+        private String cidade;
+        private String bairro;
+        private String rua;
+
+        public Cliente(String nome, int idade, String cidade, String bairro, String rua) {
+            this.nome = nome;
+            this.idade = idade;
+            this.cidade = cidade;
+            this.bairro = bairro;
+            this.rua = rua;
+        }
+
+        public void apresentarSe() {
+            System.out.println("Nome: " + nome);
+            System.out.println("Idade: " + idade);
+        }
+    }
+
+    public class Loja {
+        private String nomeFantasia;
+        private String razaoSocial;
+        private String cnpj;
+        private String cidade;
+        private String bairro;
+        private String rua;
+        private Vendedor[] vendedores;
+        private Cliente[] clientes;
+
+        public Loja(String nomeFantasia, String razaoSocial, String cnpj, String cidade, String bairro, String rua, Vendedor[] vendedores, Cliente[] clientes) {
+            this.nomeFantasia = nomeFantasia;
+            this.razaoSocial = razaoSocial;
+            this.cnpj = cnpj;
+            this.cidade = cidade;
+            this.bairro = bairro;
+            this.rua = rua;
+            this.vendedores = vendedores;
+            this.clientes = clientes;
+        }
+
+        public void apresentarSe() {
+            System.out.println("Nome Fantasia: " + nomeFantasia);
+            System.out.println("CNPJ: " + cnpj);
+            System.out.println("Endereço: " + cidade + ", " + bairro + ", " + rua);
+        }
+
+        public int contarClientes() {
+            return clientes.length;
+        }
+
+        public int contarVendedores() {
+            return vendedores.length;
+        }
+    }
+}

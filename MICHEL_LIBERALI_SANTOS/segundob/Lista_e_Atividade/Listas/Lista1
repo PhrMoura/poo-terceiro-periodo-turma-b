@@ -1,0 +1,81 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.PriorityQueue;
+
+public class Main {
+    public static void main(String[] args) {
+        // Atividade 1
+        ArrayList<String> colegas = new ArrayList<>();
+        colegas.add("João");
+        colegas.add("Maria");
+        colegas.add("André");
+        colegas.add("Ana");
+        colegas.add("Fernanda");
+
+        System.out.println("Atividade 1:");
+        for (String colega : colegas) {
+            System.out.println(colega.charAt(0) + " - " + colega);
+        }
+
+        // Atividade 2
+        HashSet<Integer> numeros = new HashSet<>();
+        numeros.add(1);
+        numeros.add(2);
+        numeros.add(3);
+        numeros.add(2); // Número repetido
+
+        int numeroProcurado = 2;
+        System.out.println("\nAtividade 2:");
+        System.out.println("Contém " + numeroProcurado + "? " + numeros.contains(numeroProcurado));
+
+        // Atividade 3
+        List<String> jogosZerados = new ArrayList<>();
+        jogosZerados.add("The Witcher 3");
+        jogosZerados.add("The Witcher 3");
+        jogosZerados.add("Dark Souls");
+        jogosZerados.add("Dark Souls");
+        jogosZerados.add("Skyrim");
+
+        List<String> jogosUnicos = getJogosUnicos(jogosZerados);
+        System.out.println("\nAtividade 3:");
+        System.out.println("Jogos únicos:");
+        for (String jogo : jogosUnicos) {
+            System.out.println(jogo);
+        }
+
+        // Atividade 4
+        PriorityQueue<String> animesFilmes = new PriorityQueue<>();
+        animesFilmes.add("Death Note");
+        animesFilmes.add("One Piece");
+        animesFilmes.add("Naruto");
+        animesFilmes.add("Attack on Titan");
+        animesFilmes.add("Bleach");
+
+        System.out.println("\nAtividade 4:");
+        System.out.println("Animes/Filmes ordenados:");
+        while (!animesFilmes.isEmpty()) {
+            System.out.println(animesFilmes.poll());
+        }
+
+        // Atividade 5
+        System.out.println("\nAtividade 5:");
+        System.out.println("Configurações de hardware:");
+        salvarConfiguracoesHardware("Processador", "i5 9600k ");
+        salvarConfiguracoesHardware("Memória RAM", "16GB");
+        salvarConfiguracoesHardware("Placa de vídeo", "Nvidia GTX 1070ti");
+        salvarConfiguracoesHardware("Armazenamento", "SSD 1TB");
+        salvarConfiguracoesHardware("Monitor", "28 polegadas");
+    }
+
+    // Método para atividade 3
+    public static List<String> getJogosUnicos(List<String> jogosZerados) {
+        HashSet<String> unicos = new HashSet<>(jogosZerados);
+        return new ArrayList<>(unicos);
+    }
+
+    // Método para atividade 5
+    public static void salvarConfiguracoesHardware(String componente, String valor) {
+        System.out.println(componente + ": " + valor);
+    }
+}

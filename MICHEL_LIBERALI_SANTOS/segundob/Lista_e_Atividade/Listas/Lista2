@@ -1,0 +1,69 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        // ATV1
+        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        List<Integer> numerosPares = numeros.stream()
+                                            .filter(n -> n % 2 == 0)
+                                            .collect(Collectors.toList());
+        System.out.println("ATV1 - Números Pares: " + numerosPares);
+
+        // ATV2
+        List<String> nomes = Arrays.asList("roberto", "josé", "caio", "vinicius");
+        List<String> nomesMaiusculos = nomes.stream()
+                                            .map(String::toUpperCase)
+                                            .collect(Collectors.toList());
+        System.out.println("ATV2 - Nomes em Maiúsculas: " + nomesMaiusculos);
+
+        // ATV3
+        List<String> palavras = Arrays.asList("se", "talvez", "hoje", "sábado", "se", "quarta", "sábado");
+        Map<String, Long> contagemPalavras = palavras.stream()
+                                                     .collect(Collectors.groupingBy(e -> e, Collectors.counting()));
+        System.out.println("ATV3 - Contagem de Palavras: " + contagemPalavras);
+
+        // ATV4
+        class Produto {
+            String nome;
+            double preco;
+
+            Produto(String nome, double preco) {
+                this.nome = nome;
+                this.preco = preco;
+            }
+
+            @Override
+            public String toString() {
+                return nome + " - R$" + preco;
+            }
+        }
+
+        List<Produto> produtos = Arrays.asList(
+            new Produto("Produto A", 120.00),
+            new Produto("Produto B", 90.00),
+            new Produto("Produto C", 150.00),
+            new Produto("Produto D", 80.00)
+        );
+
+        List<Produto> produtosCaros = produtos.stream()
+                                              .filter(p -> p.preco > 100.00)
+                                              .collect(Collectors.toList());
+        System.out.println("ATV4 - Produtos com preço maior que R$100,00: " + produtosCaros);
+
+        // ATV5
+        double somaPrecoProdutos = produtos.stream()
+                                           .mapToDouble(p -> p.preco)
+                                           .sum();
+        System.out.println("ATV5 - Soma dos preços dos produtos: R$" + somaPrecoProdutos);
+
+        // ATV6
+        List<String> linguagens = Arrays.asList("Java", "Python", "C", "JavaScript", "Ruby");
+        List<String> linguagensOrdenadas = linguagens.stream()
+                                                     .sorted((a, b) -> Integer.compare(a.length(), b.length()))
+                                                     .collect(Collectors.toList());
+        System.out.println("ATV6 - Linguagens ordenadas pelo tamanho: " + linguagensOrdenadas);
+    }
+}

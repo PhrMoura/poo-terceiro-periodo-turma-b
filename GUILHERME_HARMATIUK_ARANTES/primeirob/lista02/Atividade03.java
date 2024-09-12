@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Atividade03 {
     public static void main(String[] args) {
-        System.out.println();
         /*
          * 3. Adicionar ao menu existente função 2 e aprimorar cálculo do valor a pagar com a função 1. 
          */
@@ -44,6 +43,9 @@ public class Atividade03 {
             }
             System.out.println("");
             System.out.println("==================");
+
+            
+            action_input.close();
         }
     }
 }

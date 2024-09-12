@@ -21,13 +21,16 @@ public class Atividade02 {
         float[] valorVendasArr = new float[qtdVendas];
         int[] descontosArr = new int[qtdVendas];
 
+        Scanner valuePlantasInput = new Scanner(System.in);
+        Scanner qtdPlantasInput = new Scanner(System.in);
+
         for (int index = 0; index < qtdVendas; index++) {
             System.err.println("Quantidade de plantas vendidas: ");
-            Scanner qtdPlantasInput = new Scanner(System.in);
+            
             int qtdPlantas = qtdPlantasInput.nextInt();
 
             System.err.println("Preço da planta vendida: ");
-            Scanner valuePlantasInput = new Scanner(System.in);
+            
             float valuePlantas = valuePlantasInput.nextFloat();
 
             qtdVendasArr[index] = qtdPlantas;
@@ -47,7 +50,10 @@ public class Atividade02 {
             System.err.println("Qtd de Plantas Vendidas: " + qtdVendasArr[index]);
             System.err.println("Preço das Plantas Vendidas: " + valorVendasArr[index]);
             System.err.println("Desconto da venda: " + descontosArr[index] + "%");
-        
         }
+
+        qtdVendasInput.close();
+        qtdPlantasInput.close();
+        valuePlantasInput.close();
     }
 }
